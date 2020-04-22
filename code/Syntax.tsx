@@ -1,7 +1,7 @@
 import * as React from "react"
 import { Frame, addPropertyControls, ControlType } from "framer"
 import SyntaxHighlighter from "react-syntax-highlighter"
-import { vs } from "react-syntax-highlighter/dist/esm/styles/hljs"
+import { vs, monoBlue } from "react-syntax-highlighter/dist/esm/styles/hljs"
 // Open Preview: Command + P
 // Learn more: https://framer.com/api
 
@@ -38,7 +38,11 @@ wixData.aggregate("PopulationData")
 
     return (
         <div style={{ paddingTop: "35px" }}>
-            <SyntaxHighlighter showLineNumbers language="javascript" style={vs}>
+            <SyntaxHighlighter
+                showLineNumbers
+                language="javascript"
+                style={monoBlue}
+            >
                 {codeString}
             </SyntaxHighlighter>
         </div>

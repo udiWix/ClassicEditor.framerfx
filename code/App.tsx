@@ -15,6 +15,7 @@ const data = Data({
     activeIndex: 0,
     inspector: false,
     toaster: true,
+    propsBtn: false,
     IDEtabs: [
         {
             tab: "Home.js",
@@ -391,4 +392,14 @@ export function calPos(comp) {
     let y = comp.top + height + 60
 
     return { x: x, y: y }
+}
+
+export function propsBtn(props): Override {
+    return {
+        focused: data.propsBtn,
+        onClick() {
+            const pb = !data.propsBtn
+            data.propsBtn = pb
+        },
+    }
 }

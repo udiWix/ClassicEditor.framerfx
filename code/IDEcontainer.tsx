@@ -1,10 +1,17 @@
 import * as React from "react"
-import { Frame, Scroll, PropertyControls, ControlType, Draggable } from "framer"
-import { IDEswitch } from "./App"
-import { IDEheader } from "./App"
+import {
+    Frame,
+    Scroll,
+    Stack,
+    PropertyControls,
+    ControlType,
+    Draggable,
+} from "framer"
+import { IDEswitch, IDEheader, propsBtn } from "./App"
 import { IDETabs2 } from "./IDETabs2"
 import { IDE } from "./canvas"
 import { Syntax } from "./Syntax"
+import { PropertiesPanel } from "./PropertiesPanel"
 
 const mainWindow: React.CSSProperties = {
     background: "white",
@@ -17,13 +24,12 @@ const header: React.CSSProperties = {
     position: "absolute",
     width: "100%",
     height: 36,
-    background: "#F4F4F4",
     borderTop: "1px solid #c2cad5",
 }
 
 const corner: React.CSSProperties = {
     position: "absolute",
-    background: "green",
+    background: "transparent",
 }
 
 // Define type of property
@@ -166,6 +172,7 @@ export class IDEcontainer extends React.Component<Props> {
                     width={"100%"}
                     height={20}
                     left={0}
+                    background={"#EAEEF4"}
                     top={-this.margin / 2}
                     onPan={this.cornerPanHandler.bind(this, "top")}
                     onPanStart={this.cornerPanStartHandler.bind(this, "top")}
@@ -177,20 +184,23 @@ export class IDEcontainer extends React.Component<Props> {
                     )}
                     onMouseLeave={this.mouseLeaveHandler}
                 />
-                <Scroll
-                    background={"transparent"}
-                    y={10}
-                    width={"100%"}
-                    height={"100%"}
-                >
-                    <Frame
-                        width={"100%"}
-                        height={800}
+                <div>
+                    <Scroll
                         background={"transparent"}
+                        y={10}
+                        width={"100%"}
+                        height={"100%"}
                     >
-                        <Syntax />
-                    </Frame>
-                </Scroll>
+                        <Frame
+                            width={"100%"}
+                            height={800}
+                            background={"#EAEEF4"}
+                        >
+                            <Syntax />
+                        </Frame>
+                    </Scroll>
+                    <PropertiesPanel right={0} top={0} {...propsBtn()} />
+                </div>
                 <Frame style={header} top={0} left={0}>
                     <IDETabs2 {...IDEheader()} />
                 </Frame>
