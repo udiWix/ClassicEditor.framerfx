@@ -180,15 +180,6 @@ export function Grid3(props) {
                                 position: "absolute",
                             }}
                         >
-                            <Frame
-                                style={{
-                                    position: "relative",
-                                    height: "48px",
-                                    width: "auto",
-                                }}
-                            >
-                                <MiniTools style={{ width: "100%" }} />
-                            </Frame>
                             <Stage
                                 height={"100%"}
                                 width={"100%"}
@@ -209,7 +200,7 @@ export function Grid3(props) {
 }
 
 Grid3.defaultProps = {
-    layout: "stage",
+    layout: "bottom",
     onTabFocusChange: x => {},
     setLayout: () => {},
 }

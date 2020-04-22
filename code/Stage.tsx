@@ -2,7 +2,7 @@ import * as React from "react"
 import { Frame, addPropertyControls, ControlType, Stack } from "framer"
 import { Home } from "./canvas"
 import { About } from "./canvas"
-import { Gallery } from "./canvas"
+import { Gallery, Left_Menu } from "./canvas"
 import { IDEcontainer } from "./IDEcontainer"
 
 // Open Preview: Command + P
@@ -63,7 +63,15 @@ export function Stage(props) {
             <Frame width={"100%"} height={"100%"}>
                 {selectPage()}
             </Frame>
-
+            <div
+                style={{
+                    position: "absolute",
+                    top: "30px",
+                    left: "15px",
+                }}
+            >
+                <Left_Menu />
+            </div>
             <div
                 style={{
                     width: "100%",

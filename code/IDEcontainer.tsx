@@ -23,7 +23,7 @@ const header: React.CSSProperties = {
 
 const corner: React.CSSProperties = {
     position: "absolute",
-    background: "transparent",
+    background: "green",
 }
 
 // Define type of property
