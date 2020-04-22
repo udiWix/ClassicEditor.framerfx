@@ -1,5 +1,5 @@
 import * as React from "react"
-import { Frame, PropertyControls, ControlType, Draggable } from "framer"
+import { Frame, Scroll, PropertyControls, ControlType, Draggable } from "framer"
 import { IDEswitch } from "./App"
 import { IDEheader } from "./App"
 import { IDETabs2 } from "./IDETabs2"
@@ -177,14 +177,20 @@ export class IDEcontainer extends React.Component<Props> {
                     )}
                     onMouseLeave={this.mouseLeaveHandler}
                 />
-                <Frame
+                <Scroll
                     background={"transparent"}
-                    y={40}
+                    y={10}
                     width={"100%"}
                     height={"100%"}
                 >
-                    <Syntax />
-                </Frame>
+                    <Frame
+                        width={"100%"}
+                        height={800}
+                        background={"transparent"}
+                    >
+                        <Syntax />
+                    </Frame>
+                </Scroll>
                 <Frame style={header} top={0} left={0}>
                     <IDETabs2 {...IDEheader()} />
                 </Frame>

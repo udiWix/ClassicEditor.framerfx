@@ -8843,89 +8843,6 @@
           {
             "__class" : "CodeComponentNode",
             "aspectRatio" : null,
-            "bottom" : 0,
-            "centerAnchorX" : 0.12013473053892215,
-            "centerAnchorY" : 0.55985037406483795,
-            "children" : [
-
-            ],
-            "clip" : true,
-            "codeComponentIdentifier" : ".\/Panels.tsx_Panels",
-            "codeComponentProps" : {
-              "children" : [
-                {
-                  "enabled" : true,
-                  "type" : "componentinstance",
-                  "value" : "p97jvbH4A"
-                },
-                {
-                  "enabled" : true,
-                  "type" : "componentinstance",
-                  "value" : "LjLcE6kSz"
-                },
-                {
-                  "enabled" : true,
-                  "type" : "componentinstance",
-                  "value" : "m_1qk6YvT"
-                },
-                {
-                  "enabled" : true,
-                  "type" : "componentinstance",
-                  "value" : "SUQjm9US8"
-                },
-                {
-                  "enabled" : true,
-                  "type" : "componentinstance",
-                  "value" : "EVGR7mtRg"
-                }
-              ]
-            },
-            "codeOverrideEnabled" : true,
-            "codeOverrideFile" : ".\/App.tsx",
-            "codeOverrideIdentifier" : ".\/App.tsx_setPanelView",
-            "codeOverrideName" : "setPanelView",
-            "constraintsLocked" : false,
-            "deviceType" : null,
-            "exportOptions" : [
-
-            ],
-            "fillColor" : "rgba(255,255,255,1)",
-            "fillEnabled" : false,
-            "fillImage" : null,
-            "fillImageOriginalName" : null,
-            "fillImagePixelHeight" : null,
-            "fillImagePixelWidth" : null,
-            "fillImageResize" : "fill",
-            "fillType" : "color",
-            "height" : 706,
-            "heightType" : 0,
-            "id" : "wQqYZAf7b",
-            "intrinsicHeight" : null,
-            "intrinsicWidth" : null,
-            "left" : 0,
-            "locked" : false,
-            "name" : null,
-            "opacity" : 1,
-            "originalid" : null,
-            "parentid" : "GfUin_tcv",
-            "previewSettings" : null,
-            "radius" : 0,
-            "radiusBottomLeft" : 0,
-            "radiusBottomRight" : 0,
-            "radiusIsRelative" : false,
-            "radiusPerCorner" : false,
-            "radiusTopLeft" : 0,
-            "radiusTopRight" : 0,
-            "right" : null,
-            "rotation" : 0,
-            "top" : 96,
-            "visible" : true,
-            "width" : 321,
-            "widthType" : 0
-          },
-          {
-            "__class" : "CodeComponentNode",
-            "aspectRatio" : null,
             "bottom" : null,
             "centerAnchorX" : 0.17365269461077845,
             "centerAnchorY" : 0.67082294264339148,
@@ -8976,7 +8893,7 @@
             "right" : null,
             "rotation" : 0,
             "top" : null,
-            "visible" : true,
+            "visible" : false,
             "width" : 240,
             "widthType" : 0
           },
@@ -22264,11 +22181,6 @@
                         {
                           "length" : 33,
                           "offset" : 0,
-                          "style" : "ALIGN:left"
-                        },
-                        {
-                          "length" : 33,
-                          "offset" : 0,
                           "style" : "FONT:Menlo-Regular"
                         },
                         {
@@ -22310,6 +22222,11 @@
                           "length" : 33,
                           "offset" : 0,
                           "style" : "SIZE:12"
+                        },
+                        {
+                          "length" : 33,
+                          "offset" : 0,
+                          "style" : "ALIGN:left"
                         }
                       ],
                       "key" : "3mp88",

@@ -75,12 +75,12 @@ export function Stage(props) {
             <div
                 style={{
                     width: "100%",
-                    height: "200px",
+                    height: "400px",
                     alignSelf: "flex-end",
                     position: "relative",
                 }}
             >
-                <IDEcontainer height={200} />
+                <IDEcontainer height={400} />
             </div>
         </div>
     )
