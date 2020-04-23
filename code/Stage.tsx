@@ -80,6 +80,7 @@ export function Stage(props) {
                     position: "relative",
                 }}
             >
+                <div />
                 <IDEcontainer height={400} />
             </div>
         </div>

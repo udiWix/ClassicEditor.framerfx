@@ -20,8 +20,8 @@ export function MenuBtn(props) {
                 <Icon
                     icon={"more-horizontal"}
                     set={"feather"}
-                    height={"14px"}
-                    width={"14px"}
+                    height={14}
+                    width={14}
                     color={"#404040"}
                 />
             </Frame>

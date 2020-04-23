@@ -30,8 +30,8 @@ export function IDEbutton(props) {
             <Icon
                 set={"feather"}
                 icon={full ? "minimize-2" : "maximize-2"}
-                width={"14px"}
-                height={"14px"}
+                width={14}
+                height={14}
                 color={"#4D4D4D"}
             />
         </Frame>

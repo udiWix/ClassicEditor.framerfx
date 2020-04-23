@@ -6,7 +6,7 @@ import { currentPage, onUpdateTabs } from "./App"
 import PanelGroup from "react-panelgroup"
 import { SiteTabs } from "./SiteTabs"
 import { IDETabs2 } from "./IDETabs2"
-import { IDE, MiniTools } from "./canvas"
+import { IDE } from "./canvas"
 import { LeftTree } from "./LeftTree"
 import { DataView } from "./DataView"
 import { Layers } from "./Layers"
@@ -105,9 +105,7 @@ export function Grid3(props) {
                                     height: "48px",
                                     width: "auto",
                                 }}
-                            >
-                                <MiniTools style={{ width: "100%" }} />
-                            </Frame>
+                            ></Frame>
                             <Stage
                                 height={"100%"}
                                 width={"100%"}

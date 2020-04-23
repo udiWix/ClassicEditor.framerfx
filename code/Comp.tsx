@@ -37,7 +37,7 @@ export function Comp(props) {
             style={comp}
             drag
             dragMomentum={false}
-            {...compClick()}
+            {...compClick(null)}
         >
             <Stack
                 style={{ position: "relative", width: "auto", height: "auto" }}

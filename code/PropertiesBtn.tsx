@@ -28,8 +28,8 @@ export function PropertiesBtn(props) {
             <Icon
                 set={"feather"}
                 icon={"zap"}
-                width={"18px"}
-                height={"18px"}
+                width={18}
+                height={18}
                 color={props.focused ? "white" : "#4D4D4D"}
             />
         </Frame>

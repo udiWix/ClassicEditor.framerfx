@@ -19,31 +19,21 @@ const data = Data({
     IDEtabs: [
         {
             tab: "Home.js",
-            component: (
-                <div>
-                    <Frame>frame1</Frame>
-                </div>
-            ),
             id: 0,
             closeable: true,
         },
         {
             tab: "Gallery.js",
-            component: (
-                <div style="width:400px;height:400px; background-color:#000;">
-                    Item details for 2
-                </div>
-            ),
             id: 1,
             closeable: true,
         },
         {
             tab: "About.js",
-            component: <div>Item details for 3</div>,
             id: 2,
             closeable: true,
         },
     ],
+    focusedTab: null,
 })
 
 export function onUpdateTabs(props): Override {
@@ -93,7 +83,6 @@ export function enableCorvid(props): Override {
                 data.iconTabsActive = null
             } else {
                 data.layout = "stage"
-                data.toolTip = false
             }
         },
     }
@@ -170,13 +159,6 @@ export function toggleDevBtn(props): Override {
         style: { cursor: "pointer" },
         onClick() {
             data.layout = "stage"
-            data.toolTip = false
-        },
-        onMouseOver() {
-            data.toolTip = true
-        },
-        onMouseLeave() {
-            data.toolTip = false
         },
     }
 }
@@ -232,8 +214,8 @@ export function layoutPick(props): Override {
                 data.previousLayout = ly
                 data.layout = ly
             } else {
-                let curTab = browser.tabs.getCurrent()
-                console.log(curTab)
+                // let curTab = browser.tabs.getCurrent()
+                // console.log(curTab)
             }
         },
     }

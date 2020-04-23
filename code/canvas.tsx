@@ -10,7 +10,7 @@ export const Home = createDesignComponent<{parentSize?:{width:number|string,heig
 export const IDE = createDesignComponent<{parentSize?:{width:number|string,height:number|string},width?:number|string,height?:number|string}>(canvas, "id_IDjoR3U8v", {}, 440,492);
 export const Left_Menu = createDesignComponent<{parentSize?:{width:number|string,height:number|string},width?:number|string,height?:number|string}>(canvas, "id_qrPxQZopj", {}, 48,348);
 export const Popup = createDesignComponent<{parentSize?:{width:number|string,height:number|string},width?:number|string,height?:number|string}>(canvas, "id_h7DNVCYav", {}, 569,315);
-export const Stage = createDesignComponent<{parentSize?:{width:number|string,height:number|string},width?:number|string,height?:number|string}>(canvas, "id_hYO3RPveh", {}, 1588,851);
+export const StageContainer = createDesignComponent<{parentSize?:{width:number|string,height:number|string},width?:number|string,height?:number|string}>(canvas, "id_hYO3RPveh", {}, 1588,851);
 export const Toast = createDesignComponent<{parentSize?:{width:number|string,height:number|string},width?:number|string,height?:number|string}>(canvas, "id_xMLRwYcsM", {}, 121,29);
 export const Triangle = createDesignComponent<{parentSize?:{width:number|string,height:number|string},width?:number|string,height?:number|string}>(canvas, "id_yuIcBTuOt", {}, 25,18);
 

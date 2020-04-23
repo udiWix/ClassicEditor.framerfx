@@ -27,8 +27,8 @@ export function LeftTree(props) {
                     <Icon
                         icon={"search"}
                         set={"feather"}
-                        height={"16px"}
-                        width={"16px"}
+                        height={16}
+                        width={16}
                     ></Icon>
                 </Stack>
             </Frame>
@@ -55,8 +55,8 @@ export function Folder(props) {
             <Section onClick={onTap}>
                 <Icon
                     icon={open ? "keyboard_arrow_down" : "keyboard_arrow_right"}
-                    height={"18px"}
-                    width={"18px"}
+                    height={"18"}
+                    width={"18"}
                     color={"#162D3D"}
                 />
                 <Frame style={labelStyle}>{props.section}</Frame>
@@ -69,14 +69,14 @@ export function Folder(props) {
         </div>
     )
 }
-
+const bg = "white"
 const treeStyle: React.CSSProperties = {
     position: "relative",
     flexDirection: "column",
     justifyContent: "start",
     width: "100%",
     height: "100%",
-    background: "#F4F4F4",
+    background: bg,
 }
 
 const HeaderStyle: React.CSSProperties = {
@@ -84,7 +84,7 @@ const HeaderStyle: React.CSSProperties = {
         "HelveticaNeueW01-55Ligh, HelveticaNeueW02-55Ligh, HelveticaNeueW10-55Ligh, Helvetica Neue, Helvetica, Arial, メイリオ, meiryo, ヒラギノ角ゴ pro w3, hiragino kaku gothic pro, sans-serif",
     fontSize: "14px",
     textAlign: "left",
-    background: "#F4F4F4",
+    background: bg,
     justifyContent: "left",
     color: "#162D3D",
     borderBottom: "1px solid #DEDEDE",
@@ -103,7 +103,7 @@ const labelStyle: React.CSSProperties = {
 
 const Section = styled.div`
     text-align: left;
-    background: #F4F4F4;
+    background: bg
     color: #162D3D;
     width: 100%;
     height: 30px;
@@ -113,7 +113,7 @@ const Section = styled.div`
     cursor: pointer;
     padding-left: 0px;
     &:hover{
-        background: #E6E6E6;
+        background: #F2F2F2;
     }
 `
 
@@ -129,9 +129,9 @@ const File = styled.div`
     align-items: center;
     justify-content: left;
     cursor: pointer;
-    background: #F4F4F4;
+    background: white;
     &:hover{
-        background: #E6E6E6;
+        background: #F2F2F2;
     }
 `
 
@@ -196,19 +196,17 @@ export function Item(props) {
                     {label}
                 </FileFocus>
             )
-            }else{
+        } else {
             return (
                 <File onClick={onClick}>
                     <Frame style={lineStyle} />
                     {label}
                 </File>
             )
-            }
         }
-    
-    return (
-            render()
-    )
+    }
+
+    return render()
 }
 
 Item.defaultProps = {

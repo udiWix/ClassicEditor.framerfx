@@ -38,7 +38,6 @@ export interface Props {
     width: number
     minWidth: number
     minHeight: number
-    left: number
     top: number
     IDETabs: any
 }
@@ -165,7 +164,7 @@ export class IDEcontainer extends React.Component<Props> {
                 height={this.state.newHeight}
                 style={mainWindow}
                 width={400}
-                {...IDEswitch()}
+                {...IDEswitch(null)}
             >
                 <Frame
                     style={corner}
@@ -193,13 +192,13 @@ export class IDEcontainer extends React.Component<Props> {
                     >
                         <Frame
                             width={"100%"}
-                            height={800}
+                            height={1000}
                             background={"#EAEEF4"}
                         >
                             <Syntax />
                         </Frame>
                     </Scroll>
-                    <PropertiesPanel right={0} top={0} {...propsBtn()} />
+                    <PropertiesPanel right={0} top={0} {...propsBtn(null)} />
                 </div>
                 <Frame style={header} top={0} left={0}>
                     <IDETabs2 {...IDEheader()} />
