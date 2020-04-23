@@ -11,7 +11,6 @@ export const IDE = createDesignComponent<{parentSize?:{width:number|string,heigh
 export const Left_Menu = createDesignComponent<{parentSize?:{width:number|string,height:number|string},width?:number|string,height?:number|string}>(canvas, "id_qrPxQZopj", {}, 48,348);
 export const Popup = createDesignComponent<{parentSize?:{width:number|string,height:number|string},width?:number|string,height?:number|string}>(canvas, "id_h7DNVCYav", {}, 569,315);
 export const StageContainer = createDesignComponent<{parentSize?:{width:number|string,height:number|string},width?:number|string,height?:number|string}>(canvas, "id_hYO3RPveh", {}, 1588,851);
-export const Toast = createDesignComponent<{parentSize?:{width:number|string,height:number|string},width?:number|string,height?:number|string}>(canvas, "id_xMLRwYcsM", {}, 121,29);
 export const Triangle = createDesignComponent<{parentSize?:{width:number|string,height:number|string},width?:number|string,height?:number|string}>(canvas, "id_yuIcBTuOt", {}, 25,18);
 
 export const colors = Object.freeze({

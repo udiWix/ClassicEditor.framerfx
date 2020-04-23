@@ -129,10 +129,10 @@
   version "0.7.3"
   resolved "https://repo.dev.wixpress.com/artifactory/api/npm/npm-repos/@emotion/unitless/-/unitless-0.7.3.tgz#6310a047f12d21a1036fb031317219892440416f"
 
-"@framer/wix.baseui-poc@^1.4.0":
-  version "1.4.0"
-  resolved "https://registry.framer.com/@framer/wix.baseui-poc/-/@framer/wix.baseui-poc-1.4.0.tgz#f4f5c45762c0527e1bbcd3730d5b39d6b739dfe3"
-  integrity sha512-6LREhDr+T/To8XSe5FUQzH+tuGC4n5Wj+wxvoNPKi9qLgafLjpxLBWyuQDe5udktHEs79DUiSQkDALst8iRPLg==
+"@framer/wix.baseui-poc@^1.0.0":
+  version "1.0.0"
+  resolved "https://registry.framer.com/@framer/wix.baseui-poc/-/@framer/wix.baseui-poc-1.0.0.tgz#8a7cc8ff45a0e15f1cb63f82d9d2c91758643d49"
+  integrity sha512-2S1yKPrLreXAaXcmATJeiIV1myYzFCs0H5uFvBpf5o3PYVBcsZ8UvwcnEew00EgoQvB6Qidli/bty9kd44AUOA==
 
 "@material-ui/core@^4.8.2":
   version "4.8.2"

@@ -12,7 +12,7 @@ export function PropertiesPanel(props) {
             {...rest}
             top={36}
             visible={focused}
-            height={300}
+            height={"100%"}
             background={"#EAEEF4"}
             style={{ borderLeft: "1px solid #C2CAD5", padding: "0px 12px" }}
         >

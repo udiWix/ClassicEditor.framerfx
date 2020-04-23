@@ -1,8 +1,8 @@
 import * as React from "react"
 import { useState, useEffect, useCallback } from "react"
-import { Frame, addPropertyControls, ControlType } from "framer"
+import { Frame, Scroll, addPropertyControls, ControlType } from "framer"
 import { Stage } from "./Stage"
-import { currentPage, onUpdateTabs } from "./App"
+import { currentPage, onUpdateTabs, propsBtn } from "./App"
 import PanelGroup from "react-panelgroup"
 import { SiteTabs } from "./SiteTabs"
 import { IDETabs2 } from "./IDETabs2"
@@ -12,6 +12,7 @@ import { DataView } from "./DataView"
 import { Layers } from "./Layers"
 import { Tools } from "./Tools"
 import { Syntax } from "./Syntax"
+import { PropertiesPanel } from "./PropertiesPanel"
 
 export function Grid3(props) {
     const [active, setActive] = React.useState("code")
@@ -138,13 +139,27 @@ export function Grid3(props) {
                                     position: "absolute",
                                 }}
                             >
-                                <Frame
-                                    width={"100%"}
-                                    height={"100%"}
-                                    background={"transparent"}
-                                >
-                                    <Syntax />
-                                </Frame>
+                                <div>
+                                    <Scroll
+                                        background={"transparent"}
+                                        y={10}
+                                        width={"100%"}
+                                        height={"100%"}
+                                    >
+                                        <Frame
+                                            width={"100%"}
+                                            height={1000}
+                                            background={"#EAEEF4"}
+                                        >
+                                            <Syntax />
+                                        </Frame>
+                                    </Scroll>
+                                    <PropertiesPanel
+                                        right={0}
+                                        top={0}
+                                        {...propsBtn(null)}
+                                    />
+                                </div>
                                 <IDETabs2
                                     data={props.IDETabs}
                                     full={true}
