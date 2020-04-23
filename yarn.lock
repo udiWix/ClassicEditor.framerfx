@@ -129,10 +129,10 @@
   version "0.7.3"
   resolved "https://repo.dev.wixpress.com/artifactory/api/npm/npm-repos/@emotion/unitless/-/unitless-0.7.3.tgz#6310a047f12d21a1036fb031317219892440416f"
 
-"@framer/jordanrobertdobson.text-color-tool@^1.0.0":
-  version "1.0.0"
-  resolved "https://registry.framer.com/@framer/jordanrobertdobson.text-color-tool/-/@framer/jordanrobertdobson.text-color-tool-1.0.0.tgz#a8fb8bb871937fbd6067642825126f85ea4e3969"
-  integrity sha512-0sg7cSr+FUpi+YK6jDSlmh89tLvv6CyQQCKg4mFAVjRfyio9P2jz20W6KYoKZ4W7PT0m6NXgAcIKReHV1xzbLQ==
+"@framer/wix.baseui-poc@^1.4.0":
+  version "1.4.0"
+  resolved "https://registry.framer.com/@framer/wix.baseui-poc/-/@framer/wix.baseui-poc-1.4.0.tgz#f4f5c45762c0527e1bbcd3730d5b39d6b739dfe3"
+  integrity sha512-6LREhDr+T/To8XSe5FUQzH+tuGC4n5Wj+wxvoNPKi9qLgafLjpxLBWyuQDe5udktHEs79DUiSQkDALst8iRPLg==
 
 "@material-ui/core@^4.8.2":
   version "4.8.2"

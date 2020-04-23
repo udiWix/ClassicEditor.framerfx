@@ -2,8 +2,6 @@ import * as React from "react"
 import { Frame, useCycle } from "framer"
 import CloseableTabs from "./ReactCloseableTabs"
 import { Icon } from "./Icon"
-import { LayoutPicker } from "./LayoutPicker"
-import { layoutPick } from "./App"
 import { toggleFullIDE } from "./App"
 import { IDEbutton } from "./IDEbutton"
 import { PropertiesBtn } from "./PropertiesBtn"
@@ -70,15 +68,15 @@ export class IDETabs2 extends React.Component<Props> {
                 ></CloseableTabs>
                 <Frame
                     onTap={this.onTap}
-                    width={26}
-                    height={26}
+                    width={36}
+                    height={36}
                     style={{
                         position: "relative",
                         float: "right",
                         cursor: "pointer",
                         background: "transparent",
-                        padding: "4px 4px",
-                        top: "-30px",
+                        padding: "9px 9px",
+                        top: "-36px",
                         marginRight: "5px",
                     }}
                 >
@@ -89,28 +87,19 @@ export class IDETabs2 extends React.Component<Props> {
                         height={18}
                         color={"#4D4D4D"}
                     />
-
-                    {this.state.dropDown ? (
-                        <Frame height={36} width={100} x={-100}>
-                            <LayoutPicker
-                                {...layoutPick(null)}
-                                isDropdown={this.closeDropdown}
-                            />
-                        </Frame>
-                    ) : null}
                 </Frame>
 
                 <IDEbutton full={this.props.full} {...toggleFullIDE(null)} />
                 <Frame
-                    width={26}
-                    height={26}
+                    width={36}
+                    height={36}
                     style={{
                         position: "relative",
                         float: "right",
                         cursor: "pointer",
                         background: "transparent",
-                        padding: "4px 4px",
-                        top: "-30px",
+                        padding: "9px 9px",
+                        top: "-36px",
                         marginRight: "5px",
                     }}
                 >

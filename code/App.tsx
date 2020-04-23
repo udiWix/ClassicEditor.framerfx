@@ -239,6 +239,7 @@ export function IDEheader(props): Override {
         data: data.IDEtabs,
         onTabFocusChange(x, y, z) {
             data.focusedTab = x
+            console.log(data.focusedTab)
         },
     }
 }

@@ -20,16 +20,16 @@ export function PropertiesBtn(props) {
                 position: "relative",
                 float: "right",
                 cursor: "pointer",
-                padding: "9px",
+                padding: "11px",
                 top: "-36px",
                 marginRight: "5px",
             }}
         >
             <Icon
                 set={"feather"}
-                icon={"zap"}
-                width={18}
-                height={18}
+                icon={"hash"}
+                width={16}
+                height={16}
                 color={props.focused ? "white" : "#4D4D4D"}
             />
         </Frame>
