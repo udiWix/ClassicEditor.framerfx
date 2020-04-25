@@ -30,6 +30,25 @@ const data = Data({
     ],
     focusedTab: null,
 })
+export function enableCorvid(props): Override {
+    return {
+        layout: data.layout,
+        IDETabs: data.IDEtabs,
+
+        updateTabs(array, element) {
+            data.IDEtabs = remove(array, element)
+        },
+        setLayout() {
+            let layout = data.layout
+            if (layout === "stage") {
+                data.layout = data.previousLayout
+                data.iconTabsActive = null
+            } else {
+                data.layout = "stage"
+            }
+        },
+    }
+}
 
 export function onUpdateTabs(props): Override {
     return {
@@ -174,8 +193,10 @@ export function layoutPick(props): Override {
 export function toggleFullIDE(props): Override {
     return {
         layout: data.previousLayout,
+
         setLayout(ly) {
             data.layout = ly
+            console.log(data.layout)
         },
     }
 }
