@@ -1,7 +1,6 @@
 import * as React from "react"
 import { useEffect, useState, useRef } from "react"
 import { Frame, Stack, addPropertyControls, ControlType } from "framer"
-import { PropertiesPanel } from "./PropertiesPanel"
 import { compClick } from "./App"
 
 // Open Preview: Command + P

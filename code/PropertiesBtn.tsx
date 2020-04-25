@@ -6,8 +6,11 @@ import { Icon } from "./Icon"
 // Learn more: https://framer.com/api
 
 export function PropertiesBtn(props) {
+    const [focus, setFocus] = React.useState(props.focused)
+
     const onTap = () => {
         props.onClick()
+        setFocus(!focus)
     }
 
     return (
@@ -15,7 +18,7 @@ export function PropertiesBtn(props) {
             onTap={onTap}
             width={36}
             height={36}
-            background={props.focused ? "#3899EC" : "transparent"}
+            background={focus ? "#3899EC" : "transparent"}
             style={{
                 position: "relative",
                 float: "right",
@@ -30,7 +33,7 @@ export function PropertiesBtn(props) {
                 icon={"hash"}
                 width={16}
                 height={16}
-                color={props.focused ? "white" : "#4D4D4D"}
+                color={focus ? "white" : "#4D4D4D"}
             />
         </Frame>
     )

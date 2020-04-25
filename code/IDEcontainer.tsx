@@ -7,7 +7,7 @@ import {
     ControlType,
     Draggable,
 } from "framer"
-import { IDEswitch, IDEheader, propsBtn } from "./App"
+import { IDEswitch, IDEheader, propsBtn, propsPanel } from "./App"
 import { IDETabs2 } from "./IDETabs2"
 import { IDE } from "./canvas"
 import { Syntax } from "./Syntax"
@@ -198,7 +198,7 @@ export class IDEcontainer extends React.Component<Props> {
                             <Syntax />
                         </Frame>
                     </Scroll>
-                    <PropertiesPanel right={0} top={0} {...propsBtn(null)} />
+                    <PropertiesPanel right={0} top={0} {...propsPanel()} />
                 </div>
                 <Frame style={header} top={0} left={0}>
                     <IDETabs2 {...IDEheader()} />

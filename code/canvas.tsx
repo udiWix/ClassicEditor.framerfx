@@ -2,14 +2,11 @@
 import { createDesignComponent, CanvasStore } from "framer"
 const canvas = CanvasStore.shared(); // CANVAS_DATA;
 export const About = createDesignComponent<{parentSize?:{width:number|string,height:number|string},width?:number|string,height?:number|string}>(canvas, "id_MgcH2yo0F", {}, 1336,706);
-export const Content1 = createDesignComponent<{parentSize?:{width:number|string,height:number|string},width?:number|string,height?:number|string}>(canvas, "id_Z4DOlncgU", {}, 472,163);
-export const Content2 = createDesignComponent<{parentSize?:{width:number|string,height:number|string},width?:number|string,height?:number|string}>(canvas, "id_Ft7KqOoFO", {}, 313,241);
 export const Editor = createDesignComponent<{parentSize?:{width:number|string,height:number|string},width?:number|string,height?:number|string}>(canvas, "id_GfUin_tcv", {}, 1336,802);
 export const Gallery = createDesignComponent<{parentSize?:{width:number|string,height:number|string},width?:number|string,height?:number|string}>(canvas, "id_IEPXwhyjp", {}, 1336,706);
 export const Home = createDesignComponent<{parentSize?:{width:number|string,height:number|string},width?:number|string,height?:number|string}>(canvas, "id_Ixyetc5wu", {}, 1336,706);
 export const IDE = createDesignComponent<{parentSize?:{width:number|string,height:number|string},width?:number|string,height?:number|string}>(canvas, "id_IDjoR3U8v", {}, 440,492);
 export const Left_Menu = createDesignComponent<{parentSize?:{width:number|string,height:number|string},width?:number|string,height?:number|string}>(canvas, "id_qrPxQZopj", {}, 48,348);
-export const Popup = createDesignComponent<{parentSize?:{width:number|string,height:number|string},width?:number|string,height?:number|string}>(canvas, "id_h7DNVCYav", {}, 569,315);
 export const StageContainer = createDesignComponent<{parentSize?:{width:number|string,height:number|string},width?:number|string,height?:number|string}>(canvas, "id_hYO3RPveh", {}, 1588,851);
 export const Triangle = createDesignComponent<{parentSize?:{width:number|string,height:number|string},width?:number|string,height?:number|string}>(canvas, "id_yuIcBTuOt", {}, 25,18);
 

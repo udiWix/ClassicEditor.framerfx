@@ -5,14 +5,13 @@ import { Frame, Stack, addPropertyControls, ControlType } from "framer"
 // Learn more: https://framer.com/api
 
 export function PropertiesPanel(props) {
-    const { focused, ...rest } = props
-
     return (
         <Stack
-            {...rest}
-            top={36}
-            visible={focused}
             height={"100%"}
+            width={258}
+            top={36}
+            right={0}
+            visible={props.focused}
             background={"#EAEEF4"}
             style={{ borderLeft: "1px solid #C2CAD5", padding: "0px 12px" }}
         >

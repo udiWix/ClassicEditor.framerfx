@@ -4,17 +4,12 @@ import { Data, Override, Frame } from "framer"
 // Override Docs: https://framer.com/docs/overrides
 const data = Data({
     iconTabsActive: "null",
-    popup: false,
-    dev: false,
     layout: "bottom",
     page: "Home.js",
     previousLayout: "bottom",
-    propertiesPanel: false,
+    // propertiesPanel: false,
     propPosition: { x: null, y: null },
-    popupState: { type: "Primary", text: "Enable Corvid" },
     activeIndex: 0,
-    inspector: false,
-    toaster: true,
     propsBtn: false,
     IDEtabs: [
         {
@@ -67,27 +62,6 @@ const remove = (array, element) => {
     return array.filter(el => el !== element)
 }
 
-export function enableCorvid(props): Override {
-    return {
-        layout: data.layout,
-        IDETabs: data.IDEtabs,
-        pPanel: data.propertiesPanel,
-
-        updateTabs(array, element) {
-            data.IDEtabs = remove(array, element)
-        },
-        setLayout() {
-            let layout = data.layout
-            if (layout === "stage") {
-                data.layout = data.previousLayout
-                data.iconTabsActive = null
-            } else {
-                data.layout = "stage"
-            }
-        },
-    }
-}
-
 export function isCorvidSelector(props): Override {
     return {
         animate: { left: data.layout != "stage" ? 70 : 0 },
@@ -129,15 +103,6 @@ export function switchBtn(props): Override {
                 data.layout = "stage"
             }
         },
-    }
-}
-export function toaster(props): Override {
-    return {
-        animate: {
-            bottom: data.layout != "stage" && data.toaster ? 24 : -40,
-            opacity: data.layout != "stage" ? 1 : 0,
-        },
-        transition: { delay: 0.2, duration: 0.4 },
     }
 }
 
@@ -191,20 +156,6 @@ function setPage(v) {
         return v
     }
 }
-export function inspector(props): Override {
-    return {
-        animate: { right: data.inspector ? 0 : -260 },
-    }
-}
-
-export function toggleInspector(props): Override {
-    return {
-        onClick() {
-            let current = data.inspector
-            data.inspector = !current
-        },
-    }
-}
 
 export function layoutPick(props): Override {
     return {
@@ -244,12 +195,6 @@ export function IDEheader(props): Override {
     }
 }
 
-export function ShowPopup(props): Override {
-    return {
-        visible: data.popup,
-    }
-}
-
 export function compClick(props): Override {
     return {
         onContextMenu(e) {
@@ -260,20 +205,6 @@ export function compClick(props): Override {
 
             data.propPosition.x = pos.x
             data.propPosition.y = pos.y
-
-            let pp = data.propertiesPanel
-            data.propertiesPanel = !pp
-        },
-    }
-}
-
-export function propertiesPanel(props): Override {
-    return {
-        visible: data.propertiesPanel,
-        left: data.propPosition.x,
-        top: data.propPosition.y,
-        callback(hide) {
-            data.propertiesPanel = false
         },
     }
 }
@@ -383,6 +314,12 @@ export function propsBtn(props): Override {
         onClick() {
             const pb = !data.propsBtn
             data.propsBtn = pb
+            console.log(data.propsBtn)
         },
+    }
+}
+export function propsPanel(props): Override {
+    return {
+        focused: data.propsBtn,
     }
 }
