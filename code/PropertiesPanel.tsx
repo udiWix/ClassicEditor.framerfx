@@ -1,6 +1,8 @@
 import * as React from "react"
 import { Frame, Stack, addPropertyControls, ControlType } from "framer"
-
+import { Input } from "./Input"
+import { Checkbox } from "../../../wix-base-ui"
+import "../../../wix-base-ui/dist/style.css"
 // Open Preview: Command + P
 // Learn more: https://framer.com/api
 
@@ -20,11 +22,32 @@ export function PropertiesPanel(props) {
                 width={"100%"}
                 background={"transparent"}
                 direction="horizontal"
+                gap={5}
                 style={{
                     borderBottom: "1px solid #D6E1E8",
                 }}
             >
-                <span style={label}>ID</span>
+                <Frame
+                    width={12}
+                    height={12}
+                    background={"transparent"}
+                    style={label}
+                    top={2}
+                >
+                    ID
+                </Frame>
+                <Frame height={40} width={195} background="transparent">
+                    <Input />
+                </Frame>
+                <Frame
+                    width={12}
+                    height={12}
+                    style={link}
+                    background="transparent"
+                    top={2}
+                >
+                    API
+                </Frame>
             </Stack>
             <Stack
                 height={66}
@@ -37,6 +60,14 @@ export function PropertiesPanel(props) {
                 }}
             >
                 <span style={label}>On Load Value</span>
+                <Stack height={40} direction="horizontal">
+                    <Frame height={30} width={90} background="transparent">
+                        <Checkbox label={"Hidden"} labelAfterSymbol={true} />
+                    </Frame>
+                    <Frame height={30} width={120} background="transparent">
+                        <Checkbox label={"Collapsed"} labelAfterSymbol={true} />
+                    </Frame>
+                </Stack>
             </Stack>
             <Frame height={280} width={"100%"} background={"transparent"}>
                 <span style={label}>Event Handlers</span>
@@ -52,10 +83,16 @@ PropertiesPanel.defaultProps = {
 }
 
 const label: React.CSSProperties = {
-    background: "transparent",
     fontFamily:
         "HelveticaNeueW01-65Medium, HelveticaNeueW02-65Medium, HelveticaNeueW10-65Medium, Helvetica Neue, Helvetica, Arial, メイリオ, meiryo, ヒラギノ角ゴ pro w3, hiragino kaku gothic pro, sans-serif",
     fontSize: "12px",
     color: "#7A92A5",
+    textAlign: "left",
+}
+const link: React.CSSProperties = {
+    fontFamily:
+        "HelveticaNeueW01-65Medium, HelveticaNeueW02-65Medium, HelveticaNeueW10-65Medium, Helvetica Neue, Helvetica, Arial, メイリオ, meiryo, ヒラギノ角ゴ pro w3, hiragino kaku gothic pro, sans-serif",
+    fontSize: "12px",
+    color: "#3899EC",
     textAlign: "left",
 }

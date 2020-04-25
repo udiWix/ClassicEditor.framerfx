@@ -13023,21 +13023,6 @@
                         {
                           "length" : 45,
                           "offset" : 0,
-                          "style" : "LINEHEIGHT:1.5"
-                        },
-                        {
-                          "length" : 45,
-                          "offset" : 0,
-                          "style" : "SIZE:12"
-                        },
-                        {
-                          "length" : 45,
-                          "offset" : 0,
-                          "style" : "ALIGN:left"
-                        },
-                        {
-                          "length" : 45,
-                          "offset" : 0,
                           "style" : "FONT:Menlo-Regular"
                         },
                         {
@@ -13074,6 +13059,21 @@
                           "length" : 45,
                           "offset" : 0,
                           "style" : "LETTERSPACING:0.0"
+                        },
+                        {
+                          "length" : 45,
+                          "offset" : 0,
+                          "style" : "LINEHEIGHT:1.5"
+                        },
+                        {
+                          "length" : 45,
+                          "offset" : 0,
+                          "style" : "SIZE:12"
+                        },
+                        {
+                          "length" : 45,
+                          "offset" : 0,
+                          "style" : "ALIGN:left"
                         }
                       ],
                       "key" : "ab7uk",
@@ -13246,6 +13246,26 @@
                         {
                           "length" : 33,
                           "offset" : 0,
+                          "style" : "LETTERSPACING:0.0"
+                        },
+                        {
+                          "length" : 33,
+                          "offset" : 0,
+                          "style" : "LINEHEIGHT:1.5"
+                        },
+                        {
+                          "length" : 33,
+                          "offset" : 0,
+                          "style" : "SIZE:12"
+                        },
+                        {
+                          "length" : 33,
+                          "offset" : 0,
+                          "style" : "ALIGN:left"
+                        },
+                        {
+                          "length" : 33,
+                          "offset" : 0,
                           "style" : "FONT:Menlo-Regular"
                         },
                         {
@@ -13272,26 +13292,6 @@
                           "length" : 3,
                           "offset" : 0,
                           "style" : "COLOR:rgb(122, 146, 165)"
-                        },
-                        {
-                          "length" : 33,
-                          "offset" : 0,
-                          "style" : "LETTERSPACING:0.0"
-                        },
-                        {
-                          "length" : 33,
-                          "offset" : 0,
-                          "style" : "LINEHEIGHT:1.5"
-                        },
-                        {
-                          "length" : 33,
-                          "offset" : 0,
-                          "style" : "SIZE:12"
-                        },
-                        {
-                          "length" : 33,
-                          "offset" : 0,
-                          "style" : "ALIGN:left"
                         }
                       ],
                       "key" : "3mp88",
@@ -20028,23 +20028,7 @@
         "clip" : true,
         "codeComponentIdentifier" : ".\/Input.tsx_Input",
         "codeComponentProps" : {
-          "backgroundColor" : "#FFF",
-          "border" : "rgba(0,0,0,0.1)",
-          "borderWidth" : 1,
-          "focusColor" : "#09F",
-          "fontSize" : 15,
-          "multiLine" : false,
-          "padding" : 15,
-          "paddingBottom" : 15,
-          "paddingLeft" : 15,
-          "paddingPerSide" : false,
-          "paddingRight" : 15,
-          "paddingTop" : 15,
-          "password" : false,
-          "placeholder" : "Type something…",
-          "radius" : 10,
-          "textColor" : "#000",
-          "value" : ""
+
         },
         "codeOverrideEnabled" : false,
         "constraintsLocked" : false,
