@@ -55,8 +55,8 @@ export function Folder(props) {
             <Section onClick={onTap}>
                 <Icon
                     icon={open ? "keyboard_arrow_down" : "keyboard_arrow_right"}
-                    height={18}
-                    width={18}
+                    height={"18"}
+                    width={"18"}
                     color={"#162D3D"}
                 />
                 <Frame style={labelStyle}>{props.section}</Frame>

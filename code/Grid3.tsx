@@ -88,7 +88,7 @@ export function Grid3(props) {
                                     <Syntax />
                                 </Frame>
                                 <IDETabs2
-                                    {...onUpdateTabs(null)}
+                                    {...onUpdateTabs()}
                                     style={{ zIndex: 10 }}
                                 />
                             </div>

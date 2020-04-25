@@ -201,7 +201,7 @@ export class IDEcontainer extends React.Component<Props> {
                     <PropertiesPanel right={0} top={0} {...propsBtn(null)} />
                 </div>
                 <Frame style={header} top={0} left={0}>
-                    <IDETabs2 {...IDEheader(null)} />
+                    <IDETabs2 {...IDEheader()} />
                 </Frame>
             </Frame>
         )

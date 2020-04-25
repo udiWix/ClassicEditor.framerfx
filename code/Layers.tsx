@@ -37,6 +37,21 @@ export function Item(props) {
     const [panelHover, setPanelHover] = React.useState(false)
     const node = useRef()
 
+    const handleClick = e => {
+        if (node.current.contains(e.target)) {
+            showPanel(false)
+            return
+        }
+        showPanel(false)
+    }
+    useEffect(() => {
+        document.addEventListener("mousedown", handleClick)
+
+        return () => {
+            document.removeEventListener("mousedown", handleClick)
+        }
+    }, [])
+
     const MouseOver = e => {
         e.stopPropagation()
         setIcon(true)
