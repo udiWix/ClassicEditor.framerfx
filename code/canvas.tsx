@@ -2,6 +2,7 @@
 import { createDesignComponent, CanvasStore } from "framer"
 const canvas = CanvasStore.shared(); // CANVAS_DATA;
 export const About = createDesignComponent<{parentSize?:{width:number|string,height:number|string},width?:number|string,height?:number|string}>(canvas, "id_MgcH2yo0F", {}, 1336,706);
+export const AddBtn = createDesignComponent<{parentSize?:{width:number|string,height:number|string},width?:number|string,height?:number|string}>(canvas, "id_ZPylIWeAS", {}, 15,15);
 export const Editor = createDesignComponent<{parentSize?:{width:number|string,height:number|string},width?:number|string,height?:number|string}>(canvas, "id_GfUin_tcv", {}, 1336,802);
 export const Gallery = createDesignComponent<{parentSize?:{width:number|string,height:number|string},width?:number|string,height?:number|string}>(canvas, "id_IEPXwhyjp", {}, 1336,706);
 export const Home = createDesignComponent<{parentSize?:{width:number|string,height:number|string},width?:number|string,height?:number|string}>(canvas, "id_Ixyetc5wu", {}, 1336,706);

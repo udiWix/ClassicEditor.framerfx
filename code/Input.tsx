@@ -17,6 +17,7 @@ interface Props {
     borderWidth: number
     multiLine: boolean
     password: boolean
+    autoFocus: boolean
 }
 
 interface State {
@@ -30,11 +31,15 @@ export class Input extends React.Component<Partial<Props>, State> {
         placeholder: "",
         backgroundColor: "#FFF",
         textColor: "#000",
-        focusColor: "#09F",
+        focusColor: "#3899EC",
         fontSize: 12,
         radius: 6,
         multiLine: false,
         password: false,
+        border: "1px solid #3899EC",
+        borderWidth: 1,
+        width: 190,
+        autoFocus: true,
     }
 
     state = {
@@ -86,10 +91,11 @@ export class Input extends React.Component<Partial<Props>, State> {
             textColor,
             fontSize,
             radius,
-
             border,
             borderWidth,
             password,
+            width,
+            autoFocus,
         } = this.props
 
         const { value } = this.state
@@ -105,6 +111,7 @@ export class Input extends React.Component<Partial<Props>, State> {
                     boxShadow: `inset 0 0 0 ${borderWidth}px ${border}`,
                 }}
                 type={password ? "password" : "text"}
+                autoFocus={autoFocus}
             />
         )
     }
@@ -112,7 +119,6 @@ export class Input extends React.Component<Partial<Props>, State> {
 
 const style: React.CSSProperties = {
     border: "none",
-    width: 190,
     height: 22,
     padding: "8px",
     position: "absolute",
