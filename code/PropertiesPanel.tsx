@@ -3,10 +3,15 @@ import { Frame, Stack, addPropertyControls, ControlType } from "framer"
 import { Input } from "./Input"
 import { Checkbox } from "../../../wix-base-ui"
 import "../../../wix-base-ui/dist/style.css"
+import { Handler } from "./Handler"
 // Open Preview: Command + P
 // Learn more: https://framer.com/api
 
 export function PropertiesPanel(props) {
+    const events = props.events.map(event => {
+        return <Handler label={event + "( )"} />
+    })
+
     return (
         <Stack
             height={"100%"}
@@ -37,7 +42,7 @@ export function PropertiesPanel(props) {
                     ID
                 </Frame>
                 <Frame height={40} width={195} background="transparent">
-                    <Input />
+                    <Input value={"#text1"} />
                 </Frame>
                 <Frame
                     width={12}
@@ -71,6 +76,9 @@ export function PropertiesPanel(props) {
             </Stack>
             <Frame height={280} width={"100%"} background={"transparent"}>
                 <span style={label}>Event Handlers</span>
+                <Stack top={20} alignment={"start"} gap={28}>
+                    {events}
+                </Stack>
             </Frame>
         </Stack>
     )
@@ -80,6 +88,15 @@ PropertiesPanel.defaultProps = {
     height: "100%",
     width: 258,
     focused: true,
+    active: false,
+    events: [
+        "onClick",
+        "onDbClick",
+        "onMouseIn",
+        "onMouseOut",
+        "onViewPortEnter",
+        "onViewPortLeave",
+    ],
 }
 
 const label: React.CSSProperties = {
