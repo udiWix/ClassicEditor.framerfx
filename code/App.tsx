@@ -7,7 +7,7 @@ const data = Data({
     layout: "bottom",
     page: "Home.js",
     previousLayout: "bottom",
-    selectedComp: "test",
+    selectedComp: "",
     propPosition: { x: null, y: null },
     activeIndex: 0,
     propsBtn: false,
@@ -203,7 +203,7 @@ export function calPos(comp) {
 export function propsBtn(props): Override {
     return {
         focused: data.propsBtn,
-        onClick() {
+        toggleFocus() {
             const pb = !data.propsBtn
             data.propsBtn = pb
         },
@@ -220,6 +220,7 @@ export function compClick(props): Override {
     return {
         setSelection(n) {
             data.selectedComp = n
+            data.propsBtn = true
         },
     }
 }

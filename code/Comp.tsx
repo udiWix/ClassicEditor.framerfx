@@ -9,8 +9,25 @@ export function Comp(props) {
     let activeView = null
     const [hover, setHover] = React.useState(false)
     const [dropDown, setDropdown] = React.useState(false)
+    const [clicked, setClicked] = React.useState(false)
     const compStyle = hover ? { border: "1px solid #09F" } : {}
     const compName = props.text
+    const node = useRef()
+
+    const handleClick = e => {
+        if (node.current.contains(e.target)) {
+            return
+        }
+        setClicked(false)
+        setHover(false)
+    }
+    useEffect(() => {
+        document.addEventListener("mousedown", handleClick)
+
+        return () => {
+            document.removeEventListener("mousedown", handleClick)
+        }
+    }, [])
 
     React.Children.forEach(props.children, child => {
         activeView = React.cloneElement(child, { style: compStyle })
@@ -21,11 +38,16 @@ export function Comp(props) {
     }
 
     const onLeave = e => {
-        setHover(false)
+        clicked ? null : setHover(false)
     }
+
+    const onClick = e => {
+        setClicked(!clicked)
+    }
+
     const id = "#" + props.text
     return (
-        <Frame style={comp} drag dragMomentum={false}>
+        <Frame style={comp} drag dragMomentum={false} ref={node}>
             <Stack
                 style={{ position: "relative", width: "auto", height: "auto" }}
             >
@@ -42,6 +64,7 @@ export function Comp(props) {
                     gap={0}
                 >
                     <Frame
+                        visible={hover}
                         style={{
                             background: "#F0F3F5",
                             color: "#162D3D",
@@ -56,7 +79,11 @@ export function Comp(props) {
                         {id}
                     </Frame>
                     {activeView}
-                    <CompRaper text={id} {...compClick()} />
+                    <CompRaper
+                        text={id}
+                        setClicked={onClick}
+                        {...compClick()}
+                    />
                 </Stack>
             </Stack>
         </Frame>
@@ -86,6 +113,7 @@ export function CompRaper(props) {
     const n = props.text
     const onClick = e => {
         props.setSelection(n)
+        props.setClicked()
     }
     return <div style={raper} onClick={onClick}></div>
 }
@@ -93,6 +121,7 @@ export function CompRaper(props) {
 CompRaper.defaultProps = {
     text: "text",
     setSelection: () => {},
+    setClicked: () => {},
 }
 
 const raper: React.CSSProperties = {

@@ -39,7 +39,7 @@ export function Handler(props) {
 
     const onClickLink = () => {
         setDisplay(!addDisplay)
-        showInputField(true)
+        showInputField(!inputField)
     }
     const onAddClick = () => {
         setActive(false)
