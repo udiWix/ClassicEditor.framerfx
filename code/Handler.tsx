@@ -114,12 +114,18 @@ EventName.defaultProps = {
 }
 
 export function FuncName(props) {
-    // const [input, setInput] = React.useState(props.isActive)
+    const [isInput, setInput] = React.useState(props.isActive)
 
     const item = props.isActive ? (
         <Input value={props.value} />
     ) : (
-        <Frame height={20} width={100} top={14} left={3} background={"transparent"}>
+        <Frame
+            height={20}
+            width={100}
+            top={14}
+            left={3}
+            background={"transparent"}
+        >
             <FunLabel>{props.value}</FunLabel>
         </Frame>
     )

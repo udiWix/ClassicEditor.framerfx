@@ -8,10 +8,11 @@ import { Handler } from "./Handler"
 // Learn more: https://framer.com/api
 
 export function PropertiesPanel(props) {
-    const events = props.events.map(event => {
-        return <Handler label={event + "( )"} />
+    const events = props.events.map((event, index) => {
+        return <Handler key={index} label={event + "( )"} />
     })
 
+    const v = props.comp
     return (
         <Stack
             height={"100%"}
@@ -42,7 +43,7 @@ export function PropertiesPanel(props) {
                     ID
                 </Frame>
                 <Frame height={40} width={195} background="transparent">
-                    <Input value={"#text1"} />
+                    <Input value={v} />
                 </Frame>
                 <Frame
                     width={12}
@@ -85,6 +86,7 @@ export function PropertiesPanel(props) {
 }
 
 PropertiesPanel.defaultProps = {
+    comp: "#text1",
     height: "100%",
     width: 258,
     focused: true,

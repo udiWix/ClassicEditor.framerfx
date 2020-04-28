@@ -2,7 +2,6 @@ import * as React from "react"
 import { useEffect, useState, useRef } from "react"
 import { Frame, Stack, addPropertyControls, ControlType } from "framer"
 import { compClick } from "./App"
-
 // Open Preview: Command + P
 // Learn more: https://framer.com/api
 
@@ -11,16 +10,11 @@ export function Comp(props) {
     const [hover, setHover] = React.useState(false)
     const [dropDown, setDropdown] = React.useState(false)
     const compStyle = hover ? { border: "1px solid #09F" } : {}
-    const node = useRef(null)
+    const compName = props.text
 
     React.Children.forEach(props.children, child => {
         activeView = React.cloneElement(child, { style: compStyle })
     })
-
-    const onContex = e => {
-        e.preventDefault()
-        setDropdown(!dropDown)
-    }
 
     const onEnter = e => {
         setHover(true)
@@ -31,13 +25,7 @@ export function Comp(props) {
     }
 
     return (
-        <Frame
-            ref={node}
-            style={comp}
-            drag
-            dragMomentum={false}
-            {...compClick(null)}
-        >
+        <Frame style={comp} drag dragMomentum={false}>
             <Stack
                 style={{ position: "relative", width: "auto", height: "auto" }}
             >
@@ -51,14 +39,14 @@ export function Comp(props) {
                     onMouseLeave={onLeave}
                     direction="vertical"
                     alignment="start"
-                    gap={5}
+                    gap={0}
                 >
                     <Frame
                         style={{
-                            background: "#2076FD",
-                            color: "white",
-                            padding: "5px 8px",
-                            borderRadius: "3px",
+                            background: "#F0F3F5",
+                            color: "#162D3D",
+                            padding: "3px 5px",
+                            borderRadius: "0px",
                             width: "auto",
                             height: "auto",
                             position: "relative",
@@ -68,6 +56,7 @@ export function Comp(props) {
                         {props.text}
                     </Frame>
                     {activeView}
+                    <CompRaper text={props.text} {...compClick()} />
                 </Stack>
             </Stack>
         </Frame>
@@ -91,4 +80,23 @@ const comp: React.CSSProperties = {
     width: "auto",
     height: "auto",
     background: "transparent",
+}
+
+export function CompRaper(props) {
+    const n = props.text
+    const onClick = e => {
+        props.setSelection(n)
+    }
+    return <div style={raper} onClick={onClick}></div>
+}
+
+CompRaper.defaultProps = {
+    text: "text",
+    setSelection: () => {},
+}
+
+const raper: React.CSSProperties = {
+    width: "100%",
+    height: "100%",
+    position: "absolute",
 }

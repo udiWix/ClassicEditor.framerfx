@@ -42,3 +42,11 @@ export function FlipOutput(): Override {
         animate: { rotateY: data.rotateY },
     }
 }
+
+export function TestFun(): Override {
+    return {
+        setSelected(n) {
+            console.log(n)
+        },
+    }
+}
