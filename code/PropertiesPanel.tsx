@@ -8,11 +8,42 @@ import { Handler } from "./Handler"
 // Learn more: https://framer.com/api
 
 export function PropertiesPanel(props) {
+    const v = props.comp.substr(1)
+
+    const eventShort = event => {
+        switch (event) {
+            case "onClick":
+                return "_click"
+                break
+            case "onDbClick":
+                return "_dbClick"
+                break
+            case "onMouseIn":
+                return "_mouseIn"
+                break
+            case "onMouseOut":
+                return "_mouseOut"
+                break
+            case "onViewPortEnter":
+                return "_vpEnter"
+                break
+            case "onViewPortLeave":
+                return "_vpLeave"
+                break
+        }
+    }
+
     const events = props.events.map((event, index) => {
-        return <Handler key={index} label={event + "( )"} />
+        return (
+            <Handler
+                key={index}
+                component={v}
+                eventName={eventShort(event)}
+                label={event + "( )"}
+            />
+        )
     })
 
-    const v = props.comp
     return (
         <Stack
             height={"100%"}

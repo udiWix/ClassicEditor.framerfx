@@ -61,7 +61,11 @@ export function Handler(props) {
                     onClick={onClickLink}
                 />
 
-                <FuncName show={inputField} isActive={!del} />
+                <FuncName
+                    show={inputField}
+                    isActive={!del}
+                    value={props.component + props.eventName}
+                />
                 <Frame
                     height={16}
                     width={16}
@@ -92,7 +96,7 @@ export function Handler(props) {
 
 Handler.defaultProps = {
     label: "onClick()",
-    event: "_click",
+    eventName: "_click",
     component: "text1",
     active: true,
 }

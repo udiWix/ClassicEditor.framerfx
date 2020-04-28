@@ -23,7 +23,7 @@ export function Comp(props) {
     const onLeave = e => {
         setHover(false)
     }
-
+    const id = "#" + props.text
     return (
         <Frame style={comp} drag dragMomentum={false}>
             <Stack
@@ -53,10 +53,10 @@ export function Comp(props) {
                             left: "0px",
                         }}
                     >
-                        {props.text}
+                        {id}
                     </Frame>
                     {activeView}
-                    <CompRaper text={props.text} {...compClick()} />
+                    <CompRaper text={id} {...compClick()} />
                 </Stack>
             </Stack>
         </Frame>
