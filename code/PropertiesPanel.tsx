@@ -8,7 +8,7 @@ import { Handler } from "./Handler"
 // Learn more: https://framer.com/api
 
 export function PropertiesPanel(props) {
-    const v = props.comp.substr(1)
+    const v = props.comp
 
     const eventShort = event => {
         switch (event) {

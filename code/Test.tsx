@@ -7,10 +7,6 @@ import { Frame, addPropertyControls, ControlType } from "framer"
 export function Test(props) {
     const { text, tint, ...rest } = props
 
-    const onClick = e => {
-        props.setSelected(props.text)
-    }
-
     return (
         <Frame
             {...rest}
@@ -23,7 +19,6 @@ export function Test(props) {
                 fontSize: 16,
                 fontWeight: 600,
             }}
-            onClick={onClick}
         >
             {text}
         </Frame>
@@ -34,8 +29,7 @@ Test.defaultProps = {
     height: 128,
     width: 240,
     text: "Get started!",
-    tint: "#0099ff",
-    setSelected: () => {},
+    tint: "red",
 }
 
 // Learn more: https://framer.com/api/property-controls/

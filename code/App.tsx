@@ -7,7 +7,7 @@ const data = Data({
     layout: "bottom",
     page: "Home.js",
     previousLayout: "bottom",
-    selectedComp: "",
+    selectedComp: "-",
     propPosition: { x: null, y: null },
     activeIndex: 0,
     propsBtn: false,
@@ -59,9 +59,6 @@ export function onUpdateTabs(props): Override {
             let page = data.IDEtabs[x].tab
             data.page = page
         },
-        // updateTabs(array, element) {
-        //     data.IDEtabs = remove(array, element)
-        // },
     }
 }
 
@@ -218,6 +215,7 @@ export function propsPanel(props): Override {
 
 export function compClick(props): Override {
     return {
+        comp: data.selectedComp,
         setSelection(n) {
             data.selectedComp = n
             data.propsBtn = true

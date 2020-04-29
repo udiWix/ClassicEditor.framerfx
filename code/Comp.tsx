@@ -8,46 +8,33 @@ import { compClick } from "./App"
 export function Comp(props) {
     let activeView = null
     const [hover, setHover] = React.useState(false)
-    const [dropDown, setDropdown] = React.useState(false)
-    const [clicked, setClicked] = React.useState(false)
-    const compStyle = hover ? { border: "1px solid #09F" } : {}
-    const compName = props.text
-    const node = useRef()
-
-    const handleClick = e => {
-        if (node.current.contains(e.target)) {
-            return
-        }
-        setClicked(false)
-        setHover(false)
-    }
-    useEffect(() => {
-        document.addEventListener("mousedown", handleClick)
-
-        return () => {
-            document.removeEventListener("mousedown", handleClick)
-        }
-    }, [])
+    // const [clicked, setClicked] = React.useState(false)
+    const [selected, setSelected] = React.useState(false)
+    const compStyle = selected ? { border: "1px solid #09F" } : {}
 
     React.Children.forEach(props.children, child => {
         activeView = React.cloneElement(child, { style: compStyle })
     })
 
-    const onEnter = e => {
-        setHover(true)
-    }
+    // const onEnter = e => {
+    //     setHover(true)
+    // }
 
-    const onLeave = e => {
-        clicked ? null : setHover(false)
-    }
+    // const onLeave = e => {
+    //     clicked ? null : setHover(false)
+    // }
 
-    const onClick = e => {
-        setClicked(!clicked)
+    // const onClick = e => {
+    //     setClicked(!clicked)
+    // }
+
+    const callBack = selected => {
+        setSelected(selected)
     }
 
     const id = "#" + props.text
     return (
-        <Frame style={comp} drag dragMomentum={false} ref={node}>
+        <Frame style={comp} drag dragMomentum={false}>
             <Stack
                 style={{ position: "relative", width: "auto", height: "auto" }}
             >
@@ -57,14 +44,14 @@ export function Comp(props) {
                         width: "auto",
                         height: "auto",
                     }}
-                    onMouseEnter={onEnter}
-                    onMouseLeave={onLeave}
+                    // onMouseEnter={onEnter}
+                    // onMouseLeave={onLeave}
                     direction="vertical"
                     alignment="start"
                     gap={0}
                 >
                     <Frame
-                        visible={hover}
+                        visible={selected}
                         style={{
                             background: "#F0F3F5",
                             color: "#162D3D",
@@ -80,9 +67,9 @@ export function Comp(props) {
                     </Frame>
                     {activeView}
                     <CompRaper
-                        text={id}
-                        setClicked={onClick}
-                        {...compClick()}
+                        text={props.text}
+                        callback={callBack}
+                        {...compClick(null)}
                     />
                 </Stack>
             </Stack>
@@ -108,20 +95,30 @@ const comp: React.CSSProperties = {
     height: "auto",
     background: "transparent",
 }
-
+//////////////////////////////////////////////////////////////////////
 export function CompRaper(props) {
-    const n = props.text
-    const onClick = e => {
-        props.setSelection(n)
-        props.setClicked()
+    const isSelected = () => {
+        if (props.comp == props.text) {
+            return true
+        } else {
+            return false
+        }
     }
+
+    const onClick = e => {
+        props.setSelection(props.text)
+        console.log(props.comp)
+        props.callback(isSelected())
+    }
+
     return <div style={raper} onClick={onClick}></div>
 }
 
 CompRaper.defaultProps = {
     text: "text",
+    comp: "",
+    callback: () => {},
     setSelection: () => {},
-    setClicked: () => {},
 }
 
 const raper: React.CSSProperties = {
