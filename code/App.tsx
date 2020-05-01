@@ -1,5 +1,5 @@
 import { Data, Override, Frame } from "framer"
-
+import { CompRaper } from "./comp"
 // import { Unsplash } from "@framer/unsplash.unsplash/code/Unsplash";
 // Override Docs: https://framer.com/docs/overrides
 const data = Data({
@@ -218,7 +218,11 @@ export function compClick(props): Override {
         comp: data.selectedComp,
         setSelection(n) {
             data.selectedComp = n
-            data.propsBtn = true
+           data.propsBtn = true
+        },
+        pushComp() {
+            let c = data.selectedComp
+            return c
         },
     }
 }

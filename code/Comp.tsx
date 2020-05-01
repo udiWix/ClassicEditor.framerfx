@@ -16,20 +16,8 @@ export function Comp(props) {
         activeView = React.cloneElement(child, { style: compStyle })
     })
 
-    // const onEnter = e => {
-    //     setHover(true)
-    // }
-
-    // const onLeave = e => {
-    //     clicked ? null : setHover(false)
-    // }
-
-    // const onClick = e => {
-    //     setClicked(!clicked)
-    // }
-
-    const callBack = selected => {
-        setSelected(selected)
+    const callBack = v => {
+        setSelected(v)
     }
 
     const id = "#" + props.text
@@ -51,7 +39,7 @@ export function Comp(props) {
                     gap={0}
                 >
                     <Frame
-                        visible={selected}
+                        opacity={selected ? 1 : 0}
                         style={{
                             background: "#F0F3F5",
                             color: "#162D3D",
@@ -97,26 +85,29 @@ const comp: React.CSSProperties = {
 }
 //////////////////////////////////////////////////////////////////////
 export function CompRaper(props) {
-    const isSelected = () => {
-        if (props.comp == props.text) {
-            return true
-        } else {
-            return false
-        }
-    }
-
+    const [selected, setSelected] = React.useState(false)
     const onClick = e => {
         props.setSelection(props.text)
-        console.log(props.comp)
-        props.callback(isSelected())
+        props.callback(true)
     }
+    const node = useRef()
 
-    return <div style={raper} onClick={onClick}></div>
+    const handleClick = e => {
+        props.callback(false)
+        props.setSelection("")
+    }
+    useEffect(() => {
+        document.addEventListener("mousedown", handleClick)
+        return () => {
+            document.removeEventListener("mousedown", handleClick)
+        }
+    }, [])
+
+    return <div style={raper} onClick={onClick} ref={node}></div>
 }
 
 CompRaper.defaultProps = {
     text: "text",
-    comp: "",
     callback: () => {},
     setSelection: () => {},
 }
