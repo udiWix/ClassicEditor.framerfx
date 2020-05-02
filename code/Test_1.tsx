@@ -29,7 +29,7 @@ Test.defaultProps = {
     height: 128,
     width: 240,
     text: "Get started!",
-    tint: "red",
+    tint: "#0099ff",
 }
 
 // Learn more: https://framer.com/api/property-controls/
