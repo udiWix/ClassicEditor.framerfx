@@ -6,11 +6,13 @@ import { Icon } from "./Icon"
 // API Reference: https://www.framer.com/api
 
 export function IconBtn(props) {
-    const [color, setColor] = React.useState("#000")
+    const [color, setColor] = React.useState("#F0F3F5")
     // console.log("props", JSON.stringify(props.hover, null, 2))
 
     const iconColor =
-        props.activeTab === props.icon && color === "#000" ? "#3899EC" : "#000"
+        props.activeTab === props.icon && color === "#F0F3F5"
+            ? "#fff"
+            : "#F0F3F5"
 
     const onTap = () => {
         if (props.activeTab != props.icon) {
@@ -19,10 +21,10 @@ export function IconBtn(props) {
         props.callback(props.icon)
     }
     return (
-        <Frame style={style} onTap={onTap}>
+        <Frame style={style} onTap={onTap} background={iconColor}>
             <Icon
                 icon={findIcon(props.icon)}
-                color={iconColor}
+                color={"#162D3D"}
                 set={props.set}
                 width={props.width}
                 height={props.height}
@@ -33,28 +35,8 @@ export function IconBtn(props) {
 
 export function findIcon(icon) {
     switch (icon) {
-        case "add panel": {
-            return "add_box"
-            break
-        }
-        case "media": {
-            return "cloud_upload"
-            break
-        }
-        case "app market": {
-            return "view_carousel"
-            break
-        }
         case "pages": {
-            return "description"
-            break
-        }
-        case "layers": {
-            return "layers"
-            break
-        }
-        case "data": {
-            return "storage"
+            return "file-minus"
             break
         }
         case "code": {
@@ -65,12 +47,13 @@ export function findIcon(icon) {
             return "database"
             break
         }
-        case "collection": {
-            return "credit-card"
-            break
-        }
+
         case "tools": {
             return "list"
+            break
+        }
+        case "search": {
+            return "search"
             break
         }
     }
@@ -80,8 +63,6 @@ const style: React.CSSProperties = {
     width: "56px",
     height: "47px",
     marginTop: "1px",
-
-    background: "white",
     display: "flex",
     alignItems: "center",
     justifyContent: "center",
@@ -94,9 +75,9 @@ addPropertyControls(IconBtn, {
 })
 
 IconBtn.defaultProps = {
-    color: "#000",
+    color: "#162D3D",
     set: "material",
-    width: 24,
-    height: 24,
+    width: 18,
+    height: 18,
     callback: () => {},
 }

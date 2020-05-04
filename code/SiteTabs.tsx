@@ -21,9 +21,32 @@ export function SiteTabs(props) {
 
     return (
         <div>
-            <Stack direction="vertical" padding={0} width={56} gap={-1}>
+            <Stack
+                direction="vertical"
+                padding={0}
+                width={56}
+                gap={-1}
+                background={"#F0F3F5"}
+                height={"100%"}
+            >
+                <IconBtn
+                    icon={"pages"}
+                    set={"feather"}
+                    width={props.iconSize}
+                    height={props.iconSize}
+                    callback={activate}
+                    activeTab={active}
+                />
                 <IconBtn
                     icon={"code"}
+                    set={"feather"}
+                    width={props.iconSize}
+                    height={props.iconSize}
+                    callback={activate}
+                    activeTab={active}
+                />
+                <IconBtn
+                    icon={"search"}
                     set={"feather"}
                     width={props.iconSize}
                     height={props.iconSize}
@@ -38,29 +61,13 @@ export function SiteTabs(props) {
                     callback={activate}
                     activeTab={active}
                 />
-                <IconBtn
-                    icon={"layers"}
-                    set={"feather"}
-                    width={props.iconSize}
-                    height={props.iconSize}
-                    callback={activate}
-                    activeTab={active}
-                />
-                <IconBtn
-                    icon={"tools"}
-                    set={"feather"}
-                    width={props.iconSize}
-                    height={props.iconSize}
-                    callback={activate}
-                    activeTab={active}
-                />
             </Stack>
         </div>
     )
 }
 
 SiteTabs.defaultProps = {
-    iconSize: 20,
+    iconSize: 18,
     callback: () => {},
 }
 
