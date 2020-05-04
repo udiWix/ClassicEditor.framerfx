@@ -10,6 +10,7 @@ export const Garbage = createDesignComponent<{parentSize?:{width:number|string,h
 export const Home = createDesignComponent<{parentSize?:{width:number|string,height:number|string},width?:number|string,height?:number|string}>(canvas, "id_Ixyetc5wu", {}, 1336,706);
 export const IDE = createDesignComponent<{parentSize?:{width:number|string,height:number|string},width?:number|string,height?:number|string}>(canvas, "id_IDjoR3U8v", {}, 440,492);
 export const Left_Menu = createDesignComponent<{parentSize?:{width:number|string,height:number|string},width?:number|string,height?:number|string}>(canvas, "id_qrPxQZopj", {}, 48,348);
+export const PropsEmpty = createDesignComponent<{parentSize?:{width:number|string,height:number|string},width?:number|string,height?:number|string}>(canvas, "id_R3U5uvV3B", {}, 258,180);
 export const StageContainer = createDesignComponent<{parentSize?:{width:number|string,height:number|string},width?:number|string,height?:number|string}>(canvas, "id_hYO3RPveh", {}, 1588,851);
 export const Triangle = createDesignComponent<{parentSize?:{width:number|string,height:number|string},width?:number|string,height?:number|string}>(canvas, "id_yuIcBTuOt", {}, 25,18);
 

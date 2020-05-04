@@ -7,7 +7,7 @@ const data = Data({
     layout: "bottom",
     page: "Home.js",
     previousLayout: "bottom",
-    selectedComp: "-",
+    selectedComp: "",
     propPosition: { x: null, y: null },
     activeIndex: 0,
     propsBtn: false,

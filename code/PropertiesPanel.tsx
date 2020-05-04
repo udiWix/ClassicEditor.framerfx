@@ -46,15 +46,7 @@ export function PropertiesPanel(props) {
     })
 
     return (
-        <Stack
-            height={"100%"}
-            width={258}
-            top={36}
-            right={0}
-            visible={props.focused}
-            background={"#EAEEF4"}
-            style={{ borderLeft: "1px solid #C2CAD5", padding: "0px 12px" }}
-        >
+        <Stack height={"100%"} width={"100%"}>
             <Stack
                 height={40}
                 width={"100%"}
@@ -121,7 +113,7 @@ PropertiesPanel.defaultProps = {
     comp: "#text1",
     height: "100%",
     width: 258,
-    focused: true,
+
     events: [
         "onClick",
         "onDbClick",

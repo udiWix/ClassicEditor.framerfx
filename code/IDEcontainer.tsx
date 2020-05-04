@@ -11,7 +11,7 @@ import { IDEswitch, IDEheader, propsBtn, propsPanel } from "./App"
 import { IDETabs2 } from "./IDETabs2"
 import { IDE } from "./canvas"
 import { Syntax } from "./Syntax"
-import { PropertiesPanel } from "./PropertiesPanel"
+import { PropertiesPanelContainer } from "./PropertiesPanelContainer"
 
 const mainWindow: React.CSSProperties = {
     background: "white",
@@ -198,7 +198,11 @@ export class IDEcontainer extends React.Component<Props> {
                             <Syntax />
                         </Frame>
                     </Scroll>
-                    <PropertiesPanel right={0} top={0} {...propsPanel()} />
+                    <PropertiesPanelContainer
+                        right={0}
+                        top={0}
+                        {...propsPanel()}
+                    />
                 </div>
                 <Frame style={header} top={0} left={0}>
                     <IDETabs2 {...IDEheader()} />

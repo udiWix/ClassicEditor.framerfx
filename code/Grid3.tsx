@@ -2,7 +2,7 @@ import * as React from "react"
 import { useState, useEffect, useCallback } from "react"
 import { Frame, Scroll, addPropertyControls, ControlType } from "framer"
 import { Stage } from "./Stage"
-import { currentPage, onUpdateTabs, propsBtn } from "./App"
+import { currentPage, onUpdateTabs, propsBtn, propsPanel } from "./App"
 import PanelGroup from "react-panelgroup"
 import { SiteTabs } from "./SiteTabs"
 import { IDETabs2 } from "./IDETabs2"
@@ -12,7 +12,7 @@ import { DataView } from "./DataView"
 import { Layers } from "./Layers"
 import { Tools } from "./Tools"
 import { Syntax } from "./Syntax"
-import { PropertiesPanel } from "./PropertiesPanel"
+import { PropertiesPanelContainer } from "./PropertiesPanelContainer"
 
 export function Grid3(props) {
     const [active, setActive] = React.useState("code")
@@ -86,10 +86,10 @@ export function Grid3(props) {
                                             <Syntax />
                                         </Frame>
                                     </Scroll>
-                                    <PropertiesPanel
+                                    <PropertiesPanelContainer
                                         right={0}
                                         top={0}
-                                        {...propsBtn(null)}
+                                        {...propsPanel(null)}
                                     />
                                 </div>
                                 <IDETabs2

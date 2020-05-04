@@ -8,13 +8,15 @@ import { compClick } from "./App"
 export function CompContainer(props) {
     const compStyle = { position: "relative" }
     const [active, setActive] = React.useState()
+
     const activate = v => {
         setActive(v)
+        console.log(v)
     }
 
     return (
         <Frame height={"100%"} width={"100%"} background={"transparent"}>
-            <ContainerBg {...compClick(null)} />
+            <ContainerBg callback={activate} {...compClick(null)} />
             {React.Children.map(
                 props.children,
                 (child: React.ReactElement<any>, i) => (
@@ -172,6 +174,7 @@ const idleComp: React.CSSProperties = {
 export function ContainerBg(props) {
     const onClick = () => {
         props.setComp("")
+        props.callback("")
     }
     return <div style={bgStyle} onClick={onClick} />
 }
