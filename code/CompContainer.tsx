@@ -1,5 +1,6 @@
 import * as React from "react"
 import { Frame, Stack, addPropertyControls, ControlType } from "framer"
+import { useEffect, useState, useRef } from "react"
 import { compClick } from "./App"
 // Open Preview: Command + P
 // Learn more: https://framer.com/api
@@ -13,11 +14,10 @@ export function CompContainer(props) {
 
     return (
         <Frame height={"100%"} width={"100%"} background={"transparent"}>
+            <ContainerBg {...compClick(null)} />
             {React.Children.map(
                 props.children,
                 (child: React.ReactElement<any>, i) => (
-                    // Overwrite the default "position: absolute"
-
                     <Stack
                         style={{
                             display: "inline-block",
@@ -165,4 +165,24 @@ const idleComp: React.CSSProperties = {
     position: "relative",
     width: "max-content",
     height: "max-content",
+}
+
+//////////////////////////////////////////////////////////
+
+export function ContainerBg(props) {
+    const onClick = () => {
+        props.setComp("")
+    }
+    return <div style={bgStyle} onClick={onClick} />
+}
+
+const bgStyle: React.CSSProperties = {
+    width: "100%",
+    height: "100%",
+    position: "absolute",
+    top: "0px",
+}
+
+ContainerBg.defaultProps = {
+    setComp: () => {},
 }

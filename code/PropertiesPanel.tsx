@@ -8,6 +8,7 @@ import { Handler } from "./Handler"
 // Learn more: https://framer.com/api
 
 export function PropertiesPanel(props) {
+    const [active, setActive] = React.useState()
     const v = props.comp
 
     const eventShort = event => {
@@ -121,7 +122,6 @@ PropertiesPanel.defaultProps = {
     height: "100%",
     width: 258,
     focused: true,
-    active: false,
     events: [
         "onClick",
         "onDbClick",
