@@ -60,7 +60,7 @@ export function Stage(props) {
                 flexDirection: "column-reverse",
             }}
         >
-            <Frame width={"100%"} height={"100%"}>
+            <Frame width={"100%"} height={"100%"} background={"white"}>
                 {selectPage()}
             </Frame>
             <div

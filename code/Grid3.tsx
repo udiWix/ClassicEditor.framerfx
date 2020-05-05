@@ -17,24 +17,26 @@ import { PropertiesPanelContainer } from "./PropertiesPanelContainer"
 export function Grid3(props) {
     const [active, setActive] = React.useState("pages")
 
-    const escFunction = useCallback(event => {
-        if (
-            (event.ctrlKey && event.keyCode === 67) ||
-            event.keyCode === "123"
-        ) {
-            props.setLayout()
-        }
-    }, [])
+    // const escFunction = useCallback(event => {
+    //     if (
+    //         (event.ctrlKey && event.keyCode === 67) ||
+    //         event.keyCode === "123"
+    //     ) {
+    //         props.setLayout()
+    //     }
+    // }, [])
 
-    useEffect(() => {
-        document.addEventListener("keydown", escFunction, false)
+    // useEffect(() => {
+    //     document.addEventListener("keydown", escFunction, false)
 
-        return () => {
-            document.removeEventListener("keydown", escFunction, false)
-        }
-    }, [])
+    //     return () => {
+    //         document.removeEventListener("keydown", escFunction, false)
+    //     }
+    // }, [])
 
     const setPanel = st => {
+        props.setTreeTab(st)
+
         if (st === "code") {
             return <CodeFiles style={menu} />
         } else if (st === "database") {
@@ -148,6 +150,8 @@ Grid3.defaultProps = {
     layout: "bottom",
     onTabFocusChange: x => {},
     setLayout: () => {},
+    treeTab: "pages",
+    setTreeTab: () => {},
 }
 const menu: React.CSSProperties = {
     width: "inherit",

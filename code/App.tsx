@@ -11,6 +11,7 @@ const data = Data({
     propPosition: { x: null, y: null },
     activeIndex: 0,
     propsBtn: true,
+    treeTab: "pages",
     IDEtabs: [
         {
             tab: "Home",
@@ -34,7 +35,10 @@ export function enableCorvid(props): Override {
     return {
         layout: data.layout,
         IDETabs: data.IDEtabs,
-
+        treeTab: data.treeTab,
+        setTreeTab: t => {
+            data.treeTab = t
+        },
         updateTabs(array, element) {
             data.IDEtabs = remove(array, element)
         },
@@ -98,11 +102,13 @@ export function pageSwitch(props): Override {
         current: data.page,
         switchPage(page) {
             data.page = page
-            if (page === "utils.js" || page == "routers.js") {
+
+            if (data.treeTab === "code") {
                 data.layout = "full"
             } else {
                 data.layout = data.previousLayout
             }
+
             data.activeIndex = getActive()
         },
     }
@@ -128,7 +134,6 @@ export function toggleFullIDE(props): Override {
 
         setLayout(ly) {
             data.layout = ly
-            console.log(data.layout)
         },
     }
 }
@@ -143,7 +148,6 @@ export function IDEheader(props): Override {
         data: data.IDEtabs,
         onTabFocusChange(x, y, z) {
             data.focusedTab = x
-            console.log(data.focusedTab)
         },
     }
 }
