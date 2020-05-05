@@ -1,10 +1,6 @@
 import * as React from "react"
 import { Stack, Frame, addPropertyControls, ControlType } from "framer"
 
-import { LeftTree } from "./LeftTree"
-import { DataView } from "./DataView"
-import { Layers } from "./Layers"
-import { Tools } from "./Tools"
 import { url } from "framer/resource"
 import { IconBtn } from "./IconBtn"
 
@@ -12,7 +8,7 @@ import { IconBtn } from "./IconBtn"
 // Learn more: https://framer.com/api
 
 export function SiteTabs(props) {
-    const [active, setActive] = React.useState("code")
+    const [active, setActive] = React.useState("pages")
 
     const activate = v => {
         setActive(v)

@@ -8,7 +8,7 @@ import { Folder } from "./Folder"
 // Open Preview (CMD + P)
 // API Reference: https://www.framer.com/api
 
-export function LeftTree(props) {
+export function CodeFiles(props) {
     let tree = props.tree
     const [focus, setFocus] = React.useState()
 
@@ -34,7 +34,7 @@ const treeStyle: React.CSSProperties = {
     background: bg,
 }
 
-LeftTree.defaultProps = {
+CodeFiles.defaultProps = {
     tree: [
         {
             section: "Public",

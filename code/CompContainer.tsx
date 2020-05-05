@@ -15,7 +15,13 @@ export function CompContainer(props) {
     }
 
     return (
-        <Frame height={"100%"} width={"100%"} background={"transparent"}>
+        <Stack
+            height={"100%"}
+            width={"100%"}
+            background={"transparent"}
+            paddingLeft={100}
+            alignment="start"
+        >
             <ContainerBg callback={activate} {...compClick(null)} />
             {React.Children.map(
                 props.children,
@@ -43,7 +49,7 @@ export function CompContainer(props) {
                     </Stack>
                 )
             )}
-        </Frame>
+        </Stack>
     )
 }
 

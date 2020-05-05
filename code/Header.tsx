@@ -7,7 +7,7 @@ import { Frame, addPropertyControls, ControlType } from "framer"
 export function Header(props) {
     return (
         <Frame width={"100%"} height={36} style={HeaderStyle}>
-            Code Files
+            {props.text}
         </Frame>
     )
 }

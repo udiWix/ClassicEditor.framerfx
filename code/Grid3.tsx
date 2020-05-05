@@ -7,15 +7,15 @@ import PanelGroup from "react-panelgroup"
 import { SiteTabs } from "./SiteTabs"
 import { IDETabs2 } from "./IDETabs2"
 import { IDE } from "./canvas"
-import { LeftTree } from "./LeftTree"
+import { CodeFiles } from "./CodeFiles"
 import { DataView } from "./DataView"
-import { Layers } from "./Layers"
+import { Pages } from "./Pages"
 import { Tools } from "./Tools"
 import { Syntax } from "./Syntax"
 import { PropertiesPanelContainer } from "./PropertiesPanelContainer"
 
 export function Grid3(props) {
-    const [active, setActive] = React.useState("code")
+    const [active, setActive] = React.useState("pages")
 
     const escFunction = useCallback(event => {
         if (
@@ -36,11 +36,11 @@ export function Grid3(props) {
 
     const setPanel = st => {
         if (st === "code") {
-            return <LeftTree style={menu} />
+            return <CodeFiles style={menu} />
         } else if (st === "database") {
             return <DataView />
-        } else if (st === "layers") {
-            return <Layers />
+        } else if (st === "pages") {
+            return <Pages />
         } else if (st === "tools") {
             return <Tools />
         }
@@ -55,7 +55,7 @@ export function Grid3(props) {
                         panelColor="white"
                         panelWidths={[
                             { size: 56, resize: "fixed" },
-                            { size: 180, minSize: 100, resize: "dynamic" },
+                            { size: 220, minSize: 100, resize: "dynamic" },
                             { minSize: 200, resize: "dynamic" },
                         ]}
                     >
@@ -109,7 +109,7 @@ export function Grid3(props) {
                         panelColor="white"
                         panelWidths={[
                             { size: 56, resize: "fixed" },
-                            { size: 180, minSize: 100, resize: "dynamic" },
+                            { size: 220, minSize: 100, resize: "dynamic" },
                             { size: 500, minSize: 200, resize: "dynamic" },
                             { minSize: 200, resize: "dynamic" },
                         ]}

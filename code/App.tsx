@@ -5,25 +5,25 @@ import { Data, Override, Frame } from "framer"
 const data = Data({
     iconTabsActive: "null",
     layout: "bottom",
-    page: "Home.js",
+    page: "Home",
     previousLayout: "bottom",
     selectedComp: "",
     propPosition: { x: null, y: null },
     activeIndex: 0,
-    propsBtn: false,
+    propsBtn: true,
     IDEtabs: [
         {
-            tab: "Home.js",
+            tab: "Home",
             id: 0,
             closeable: true,
         },
         {
-            tab: "Gallery.js",
+            tab: "Gallery",
             id: 1,
             closeable: true,
         },
         {
-            tab: "About.js",
+            tab: "About",
             id: 2,
             closeable: true,
         },

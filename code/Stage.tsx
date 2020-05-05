@@ -13,7 +13,7 @@ export function Stage(props) {
 
     const selectPage = () => {
         switch (page) {
-            case "Home.js": {
+            case "Home": {
                 return (
                     <Home
                         style={{
@@ -25,7 +25,7 @@ export function Stage(props) {
                 )
                 break
             }
-            case "About.js": {
+            case "About": {
                 return (
                     <About
                         style={{
@@ -37,7 +37,7 @@ export function Stage(props) {
                 )
                 break
             }
-            case "Gallery.js": {
+            case "Gallery": {
                 return (
                     <Gallery
                         style={{
