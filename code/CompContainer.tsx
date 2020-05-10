@@ -33,7 +33,7 @@ export function CompContainer(props) {
                             width: "auto",
                             height: "auto",
                         }}
-                        top={100}
+                        top={0}
                         drag
                         dragMomentum={false}
                     >
@@ -86,10 +86,12 @@ addPropertyControls(CompContainer, {
 
 export function CompRaper(props) {
     const isActive = props.id === props.active ? true : false
+    const isMaster = props.id === "#Menu1" ? true : false
 
     const onclick = () => {
         props.callback(props.id)
         props.setComp(props.id)
+        console.log(props.id)
     }
 
     return (
@@ -111,8 +113,8 @@ export function CompRaper(props) {
                     alignment="start"
                 >
                     <Frame
+                        background={isMaster ? "#FB7D33" : "#3899EC"}
                         style={{
-                            background: "#3899EC",
                             color: "white",
                             padding: "3px 5px",
                             borderRadius: "0px",
@@ -141,7 +143,15 @@ export function CompRaper(props) {
                         {props.id}
                     </Frame>
                 </Stack>
-                <div style={isActive ? activeComp : idleComp}>
+                <div
+                    style={
+                        isActive
+                            ? isMaster
+                                ? activeCompMaster
+                                : activeComp
+                            : idleComp
+                    }
+                >
                     {props.children}
                 </div>
             </Stack>
@@ -164,7 +174,16 @@ const raper: React.CSSProperties = {
 const activeComp: React.CSSProperties = {
     display: "inline-block",
     position: "relative",
-    border: "1px solid #09F",
+    border: "1px solid",
+    borderColor: "#09F",
+    width: "max-content",
+    height: "max-content",
+}
+const activeCompMaster: React.CSSProperties = {
+    display: "inline-block",
+    position: "relative",
+    border: "1px solid",
+    borderColor: "#FB7D33",
     width: "max-content",
     height: "max-content",
 }
