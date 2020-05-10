@@ -39,7 +39,6 @@ export interface Props {
     minWidth: number
     minHeight: number
     top: number
-    IDETabs: any
 }
 
 export class IDEcontainer extends React.Component<Props> {
@@ -201,11 +200,11 @@ export class IDEcontainer extends React.Component<Props> {
                     <PropertiesPanelContainer
                         right={0}
                         top={0}
-                        {...propsPanel()}
+                        {...propsPanel(null)}
                     />
                 </div>
                 <Frame style={header} top={0} left={0}>
-                    <IDETabs2 {...IDEheader()} />
+                    <IDETabs2 {...IDEheader(null)} />
                 </Frame>
             </Frame>
         )

@@ -12,6 +12,7 @@ const data = Data({
     activeIndex: 0,
     propsBtn: true,
     treeTab: "pages",
+    section: "pages",
     IDEtabs: [
         {
             tab: "Home",
@@ -102,7 +103,7 @@ export function pageSwitch(props): Override {
         current: data.page,
         switchPage(page) {
             data.page = page
-
+            data.section = data.treeTab
             if (data.treeTab === "code") {
                 data.layout = "full"
             } else {
@@ -208,12 +209,14 @@ export function propsBtn(props): Override {
             const pb = !data.propsBtn
             data.propsBtn = pb
         },
+        tab: data.section,
     }
 }
 export function propsPanel(props): Override {
     return {
         focused: data.propsBtn,
         comp: data.selectedComp,
+        tab: data.section,
     }
 }
 
@@ -223,4 +226,8 @@ export function compClick(props): Override {
             data.selectedComp = c
         },
     }
+}
+
+export function ideContainer(props): Override {
+    return {}
 }

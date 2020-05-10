@@ -14,13 +14,21 @@ export function PropertiesPanelContainer(props) {
         }
     }
 
+    const vis = () => {
+        if (props.tab === "code" || props.focused === false) {
+            return false
+        } else {
+            return true
+        }
+    }
+
     return (
         <Stack
             height={"100%"}
             width={258}
             top={36}
             right={0}
-            visible={props.focused}
+            visible={vis()}
             background={"#EAEEF4"}
             style={{ borderLeft: "1px solid #C2CAD5", padding: "0px 12px" }}
         >
@@ -34,4 +42,5 @@ PropertiesPanelContainer.defaultProps = {
     width: 258,
     focused: null,
     comp: null,
+    tab: "pages",
 }

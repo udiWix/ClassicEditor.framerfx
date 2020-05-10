@@ -19,6 +19,7 @@ export function PropertiesBtn(props) {
             width={36}
             height={36}
             background={"transparent"}
+            visible={props.tab === "code" ? false : true}
             style={{
                 position: "relative",
                 float: "right",
@@ -45,6 +46,7 @@ export function PropertiesBtn(props) {
 PropertiesBtn.defaultProps = {
     focused: false,
     toggleFocus: () => {},
+    tab: "pages",
 }
 
 // Learn more: https://framer.com/api/property-controls/

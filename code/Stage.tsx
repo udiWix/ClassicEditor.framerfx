@@ -4,7 +4,7 @@ import { Home } from "./canvas"
 import { About } from "./canvas"
 import { Gallery, Left_Menu } from "./canvas"
 import { IDEcontainer } from "./IDEcontainer"
-
+import { ideContainer } from "./App"
 // Open Preview: Command + P
 // Learn more: https://framer.com/api
 
@@ -81,7 +81,7 @@ export function Stage(props) {
                 }}
             >
                 <div />
-                <IDEcontainer height={400} />
+                <IDEcontainer height={400} {...ideContainer(null)} />
             </div>
         </div>
     )
