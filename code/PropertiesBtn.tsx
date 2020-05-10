@@ -1,7 +1,7 @@
 import * as React from "react"
 import { Frame, addPropertyControls, ControlType } from "framer"
 import { Icon } from "./Icon"
-
+import { PropsIcon } from "./PropsIcon"
 // Open Preview: Command + P
 // Learn more: https://framer.com/api
 
@@ -18,22 +18,25 @@ export function PropertiesBtn(props) {
             onClick={props.toggleFocus}
             width={36}
             height={36}
-            background={props.focused ? "#3899EC" : "transparent"}
+            background={"transparent"}
             style={{
                 position: "relative",
                 float: "right",
                 cursor: "pointer",
                 padding: "11px",
-                top: "-36px",
+                top: "-38px",
                 marginRight: "5px",
             }}
         >
-            <Icon
-                set={"feather"}
-                icon={"hash"}
-                width={16}
-                height={16}
-                color={props.focused ? "white" : "#4D4D4D"}
+            <Frame background="transparent" width={23} height={18} center>
+                <PropsIcon tint={props.focused ? "#3899EC" : "#1F3344"} />
+            </Frame>
+            <Frame
+                width={36}
+                height={3}
+                top={34}
+                left={0}
+                background={props.focused ? "#3899EC" : "white"}
             />
         </Frame>
     )

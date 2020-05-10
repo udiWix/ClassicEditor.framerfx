@@ -33,9 +33,10 @@ const Tab = styled.div`
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis; 
-    font-family: HelveticaNeueW01-55Roma, HelveticaNeueW02-55Roma, HelveticaNeueW10-55Roma, 'Helvetica Neue', Helvetica,   Arial, メイリオ, meiryo, sans-serif;
+    font-family: HelveticaNeueW01-65Medium, HelveticaNeueW02-65Medium, HelveticaNeueW10-65Medium, 'Helvetica Neue', Helvetica,   Arial, メイリオ, meiryo, sans-serif;
   font-size: 12px;
-  color:#50585E;
+  font-smooth: antialiased;
+  color:#2B5672;
   line-height:24px;
   height:36px;
   .closeTab {

@@ -108,6 +108,7 @@ export class Input extends React.Component<Partial<Props>, State> {
                 style={{
                     ...style,
                     backgroundColor,
+                    width,
                     boxShadow: `inset 0 0 0 ${borderWidth}px ${border}`,
                 }}
                 type={password ? "password" : "text"}

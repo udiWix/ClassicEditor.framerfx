@@ -82,7 +82,7 @@ export class IDETabs2 extends React.Component<Props> {
                 >
                     <Icon
                         set={"feather"}
-                        icon={"more-horizontal"}
+                        icon={"more-vertical"}
                         width={18}
                         height={18}
                         color={"#4D4D4D"}
@@ -106,8 +106,8 @@ export class IDETabs2 extends React.Component<Props> {
                     <Icon
                         set={"feather"}
                         icon={"minus"}
-                        width={"18px"}
-                        height={"18px"}
+                        width={18}
+                        height={18}
                         color={"#4D4D4D"}
                     />
                 </Frame>

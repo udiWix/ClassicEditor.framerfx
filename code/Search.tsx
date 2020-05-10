@@ -4,22 +4,17 @@ import { Icon } from "./Icon"
 import styled from "styled-components"
 import { pageSwitch } from "./App"
 import { Header } from "./Header"
-import { Folder } from "./Folder"
+
 // Open Preview (CMD + P)
 // API Reference: https://www.framer.com/api
 
-export function DataView(props) {
+export function Search(props) {
     let tree = props.tree
     const [focus, setFocus] = React.useState()
 
     return (
         <div style={treeStyle}>
-            <Header text={"Database"} />
-            {tree.map((item, i) => {
-                return (
-                    <Folder section={item.section} files={item.items} key={i} />
-                )
-            })}
+            <Header text={"Search"} />
         </div>
     )
 }
@@ -34,21 +29,6 @@ const treeStyle: React.CSSProperties = {
     background: bg,
 }
 
-DataView.defaultProps = {
-    tree: [
-        {
-            section: "Members",
-            items: ["Badges", "PrivateMembersData"],
-        },
-        {
-            section: "Users",
-            items: ["PublicMemberProfiles"],
-        },
-        {
-            section: "Bookings",
-            items: ["Schedule", "Services", "Staff"],
-        },
-    ],
-}
+Search.defaultProps = {}
 
 //////////////////////////////////////////////////////////////////////

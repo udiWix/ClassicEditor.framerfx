@@ -12,6 +12,7 @@ import { DataView } from "./DataView"
 import { Pages } from "./Pages"
 import { Tools } from "./Tools"
 import { Syntax } from "./Syntax"
+import { Search } from "./Search"
 import { PropertiesPanelContainer } from "./PropertiesPanelContainer"
 
 export function Grid3(props) {
@@ -45,6 +46,8 @@ export function Grid3(props) {
             return <Pages />
         } else if (st === "tools") {
             return <Tools />
+        } else if (st === "search") {
+            return <Search />
         }
     }
 

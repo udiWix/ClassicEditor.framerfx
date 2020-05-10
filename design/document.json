@@ -13150,26 +13150,6 @@
                         {
                           "length" : 60,
                           "offset" : 0,
-                          "style" : "LETTERSPACING:0.0"
-                        },
-                        {
-                          "length" : 60,
-                          "offset" : 0,
-                          "style" : "LINEHEIGHT:1.5"
-                        },
-                        {
-                          "length" : 60,
-                          "offset" : 0,
-                          "style" : "SIZE:12"
-                        },
-                        {
-                          "length" : 60,
-                          "offset" : 0,
-                          "style" : "ALIGN:left"
-                        },
-                        {
-                          "length" : 60,
-                          "offset" : 0,
                           "style" : "FONT:Menlo-Regular"
                         },
                         {
@@ -13221,6 +13201,26 @@
                           "length" : 4,
                           "offset" : 52,
                           "style" : "COLOR:#22CCDD"
+                        },
+                        {
+                          "length" : 60,
+                          "offset" : 0,
+                          "style" : "LETTERSPACING:0.0"
+                        },
+                        {
+                          "length" : 60,
+                          "offset" : 0,
+                          "style" : "LINEHEIGHT:1.5"
+                        },
+                        {
+                          "length" : 60,
+                          "offset" : 0,
+                          "style" : "SIZE:12"
+                        },
+                        {
+                          "length" : 60,
+                          "offset" : 0,
+                          "style" : "ALIGN:left"
                         }
                       ],
                       "key" : "erusk",
@@ -13315,36 +13315,6 @@
                       ],
                       "inlineStyleRanges" : [
                         {
-                          "length" : 50,
-                          "offset" : 0,
-                          "style" : "FONT:Menlo-Regular"
-                        },
-                        {
-                          "length" : 5,
-                          "offset" : 4,
-                          "style" : "COLOR:var(--token-25677501-55f2-4899-91ce-bbeef5f68193, rgb(31, 119, 255)) \/* {\"name\":\"blue\"} *\/"
-                        },
-                        {
-                          "length" : 3,
-                          "offset" : 18,
-                          "style" : "COLOR:var(--token-25677501-55f2-4899-91ce-bbeef5f68193, rgb(31, 119, 255)) \/* {\"name\":\"blue\"} *\/"
-                        },
-                        {
-                          "length" : 9,
-                          "offset" : 9,
-                          "style" : "COLOR:hsl(0, 0%, 0%)"
-                        },
-                        {
-                          "length" : 23,
-                          "offset" : 21,
-                          "style" : "COLOR:hsl(0, 0%, 0%)"
-                        },
-                        {
-                          "length" : 2,
-                          "offset" : 48,
-                          "style" : "COLOR:hsl(0, 0%, 0%)"
-                        },
-                        {
                           "length" : 4,
                           "offset" : 44,
                           "style" : "COLOR:#22CCDD"
@@ -13373,6 +13343,36 @@
                           "length" : 50,
                           "offset" : 0,
                           "style" : "ALIGN:left"
+                        },
+                        {
+                          "length" : 50,
+                          "offset" : 0,
+                          "style" : "FONT:Menlo-Regular"
+                        },
+                        {
+                          "length" : 5,
+                          "offset" : 4,
+                          "style" : "COLOR:var(--token-25677501-55f2-4899-91ce-bbeef5f68193, rgb(31, 119, 255)) \/* {\"name\":\"blue\"} *\/"
+                        },
+                        {
+                          "length" : 3,
+                          "offset" : 18,
+                          "style" : "COLOR:var(--token-25677501-55f2-4899-91ce-bbeef5f68193, rgb(31, 119, 255)) \/* {\"name\":\"blue\"} *\/"
+                        },
+                        {
+                          "length" : 9,
+                          "offset" : 9,
+                          "style" : "COLOR:hsl(0, 0%, 0%)"
+                        },
+                        {
+                          "length" : 23,
+                          "offset" : 21,
+                          "style" : "COLOR:hsl(0, 0%, 0%)"
+                        },
+                        {
+                          "length" : 2,
+                          "offset" : 48,
+                          "style" : "COLOR:hsl(0, 0%, 0%)"
                         }
                       ],
                       "key" : "c31ur",
@@ -19197,9 +19197,9 @@
                     "emptyStyle" : [
                       "LETTERSPACING:0",
                       "LINEHEIGHT:1.2",
-                      "FONT:__SF-UI-Text-Bold__",
                       "SIZE:73",
-                      "COLOR:hsl(0, 0%, 100%)"
+                      "COLOR:hsl(0, 0%, 100%)",
+                      "FONT:HelveticaNeueW01-65Medium"
                     ]
                   },
                   "depth" : 0,
@@ -19220,17 +19220,17 @@
                     {
                       "length" : 18,
                       "offset" : 0,
-                      "style" : "FONT:__SF-UI-Text-Bold__"
-                    },
-                    {
-                      "length" : 18,
-                      "offset" : 0,
                       "style" : "SIZE:73"
                     },
                     {
                       "length" : 18,
                       "offset" : 0,
                       "style" : "COLOR:hsl(0, 0%, 100%)"
+                    },
+                    {
+                      "length" : 18,
+                      "offset" : 0,
+                      "style" : "FONT:HelveticaNeueW01-65Medium"
                     }
                   ],
                   "key" : "1tset",
@@ -19239,11 +19239,11 @@
                 }
               ],
               "cached" : {
-                "html" : "<div data-offset-key=\"1tset-0-0\" class=\"public-DraftStyleDefault-block public-DraftStyleDefault-ltr\"><span data-offset-key=\"1tset-0-0\" style=\"tab-size:4;font-family:&quot;.SFNSText-Bold&quot;, &quot;SFProText-Bold&quot;, &quot;SFUIText-Bold&quot;, &quot;.SFUIText-Bold&quot;, &quot;SF Pro Text&quot;, &quot;-apple-system&quot;, &quot;BlinkMacSystemFont&quot;, sans-serif;-webkit-text-fill-color:hsl(0, 0%, 100%);font-size:73px;letter-spacing:0px;line-height:1.2;font-weight:699\"><span data-text=\"true\">Welcome to my site<\/span><\/span><\/div>",
+                "html" : "<div data-offset-key=\"1tset-0-0\" class=\"public-DraftStyleDefault-block public-DraftStyleDefault-ltr\"><span data-offset-key=\"1tset-0-0\" style=\"tab-size:4;font-family:&quot;HelveticaNeueW01-65Medium&quot;, &quot;Helvetica Neue W01 65 Medium&quot;, sans-serif;-webkit-text-fill-color:hsl(0, 0%, 100%);font-size:73px;letter-spacing:0px;line-height:1.2;font-weight:400\"><span data-text=\"true\">Welcome to my site<\/span><\/span><\/div>",
                 "os" : "macos 10_15 framerx",
                 "size" : {
                   "height" : 87,
-                  "width" : 646
+                  "width" : 666
                 },
                 "width" : 0
               },
@@ -19253,7 +19253,7 @@
             },
             "top" : null,
             "visible" : true,
-            "width" : 646,
+            "width" : 666,
             "widthType" : 0
           }
         ],
@@ -19953,9 +19953,9 @@
                     "emptyStyle" : [
                       "LETTERSPACING:0",
                       "LINEHEIGHT:1.2",
-                      "FONT:__SF-UI-Text-Bold__",
                       "SIZE:73",
-                      "COLOR:hsl(0, 0%, 22%)"
+                      "COLOR:hsl(0, 0%, 22%)",
+                      "FONT:HelveticaNeueW01-65Medium"
                     ]
                   },
                   "depth" : 0,
@@ -19976,17 +19976,17 @@
                     {
                       "length" : 8,
                       "offset" : 0,
-                      "style" : "FONT:__SF-UI-Text-Bold__"
-                    },
-                    {
-                      "length" : 8,
-                      "offset" : 0,
                       "style" : "SIZE:73"
                     },
                     {
                       "length" : 8,
                       "offset" : 0,
                       "style" : "COLOR:hsl(0, 0%, 22%)"
+                    },
+                    {
+                      "length" : 8,
+                      "offset" : 0,
+                      "style" : "FONT:HelveticaNeueW01-65Medium"
                     }
                   ],
                   "key" : "1tset",
@@ -19995,11 +19995,11 @@
                 }
               ],
               "cached" : {
-                "html" : "<div data-offset-key=\"1tset-0-0\" class=\"public-DraftStyleDefault-block public-DraftStyleDefault-ltr\"><span data-offset-key=\"1tset-0-0\" style=\"tab-size:4;font-family:&quot;.SFNSText-Bold&quot;, &quot;SFProText-Bold&quot;, &quot;SFUIText-Bold&quot;, &quot;.SFUIText-Bold&quot;, &quot;SF Pro Text&quot;, &quot;-apple-system&quot;, &quot;BlinkMacSystemFont&quot;, sans-serif;-webkit-text-fill-color:hsl(0, 0%, 22%);font-size:73px;letter-spacing:0px;line-height:1.2;font-weight:699\"><span data-text=\"true\">About us<\/span><\/span><\/div>",
+                "html" : "<div data-offset-key=\"1tset-0-0\" class=\"public-DraftStyleDefault-block public-DraftStyleDefault-ltr\"><span data-offset-key=\"1tset-0-0\" style=\"tab-size:4;font-family:&quot;HelveticaNeueW01-65Medium&quot;, &quot;Helvetica Neue W01 65 Medium&quot;, sans-serif;-webkit-text-fill-color:hsl(0, 0%, 22%);font-size:73px;letter-spacing:0px;line-height:1.2;font-weight:400\"><span data-text=\"true\">About us<\/span><\/span><\/div>",
                 "os" : "macos 10_15 framerx",
                 "size" : {
                   "height" : 87,
-                  "width" : 300
+                  "width" : 304
                 },
                 "width" : 0
               },
@@ -20009,7 +20009,7 @@
             },
             "top" : null,
             "visible" : true,
-            "width" : 300,
+            "width" : 304,
             "widthType" : 0
           }
         ],
@@ -20341,9 +20341,9 @@
                     "emptyStyle" : [
                       "LETTERSPACING:0",
                       "LINEHEIGHT:1.2",
-                      "FONT:__SF-UI-Text-Bold__",
                       "SIZE:73",
-                      "COLOR:hsl(0, 0%, 22%)"
+                      "COLOR:hsl(0, 0%, 22%)",
+                      "FONT:HelveticaNeueW01-65Medium"
                     ]
                   },
                   "depth" : 0,
@@ -20364,17 +20364,17 @@
                     {
                       "length" : 7,
                       "offset" : 0,
-                      "style" : "FONT:__SF-UI-Text-Bold__"
-                    },
-                    {
-                      "length" : 7,
-                      "offset" : 0,
                       "style" : "SIZE:73"
                     },
                     {
                       "length" : 7,
                       "offset" : 0,
                       "style" : "COLOR:hsl(0, 0%, 22%)"
+                    },
+                    {
+                      "length" : 7,
+                      "offset" : 0,
+                      "style" : "FONT:HelveticaNeueW01-65Medium"
                     }
                   ],
                   "key" : "1tset",
@@ -20383,7 +20383,7 @@
                 }
               ],
               "cached" : {
-                "html" : "<div data-offset-key=\"1tset-0-0\" class=\"public-DraftStyleDefault-block public-DraftStyleDefault-ltr\"><span data-offset-key=\"1tset-0-0\" style=\"tab-size:4;font-family:&quot;.SFNSText-Bold&quot;, &quot;SFProText-Bold&quot;, &quot;SFUIText-Bold&quot;, &quot;.SFUIText-Bold&quot;, &quot;SF Pro Text&quot;, &quot;-apple-system&quot;, &quot;BlinkMacSystemFont&quot;, sans-serif;-webkit-text-fill-color:hsl(0, 0%, 22%);font-size:73px;letter-spacing:0px;line-height:1.2;font-weight:699\"><span data-text=\"true\">Gallery<\/span><\/span><\/div>",
+                "html" : "<div data-offset-key=\"1tset-0-0\" class=\"public-DraftStyleDefault-block public-DraftStyleDefault-ltr\"><span data-offset-key=\"1tset-0-0\" style=\"tab-size:4;font-family:&quot;HelveticaNeueW01-65Medium&quot;, &quot;Helvetica Neue W01 65 Medium&quot;, sans-serif;-webkit-text-fill-color:hsl(0, 0%, 22%);font-size:73px;letter-spacing:0px;line-height:1.2;font-weight:400\"><span data-text=\"true\">Gallery<\/span><\/span><\/div>",
                 "os" : "macos 10_15 framerx",
                 "size" : {
                   "height" : 87,
@@ -23534,6 +23534,487 @@
         "top" : -571,
         "visible" : true,
         "width" : 258,
+        "widthType" : 0
+      },
+      {
+        "__class" : "ShapeContainerNode",
+        "autoSize" : true,
+        "bottom" : null,
+        "centerAnchorX" : 0,
+        "centerAnchorY" : 0,
+        "children" : [
+          {
+            "__class" : "BooleanShapeNode",
+            "aspectRatio" : null,
+            "children" : [
+              {
+                "__class" : "PathNode",
+                "aspectRatio" : null,
+                "exportOptions" : [
+
+                ],
+                "fillColor" : "rgba(31,51,68,1)",
+                "fillEnabled" : true,
+                "fillImage" : null,
+                "fillImageOriginalName" : null,
+                "fillImagePixelHeight" : null,
+                "fillImagePixelWidth" : null,
+                "fillImageResize" : "fill",
+                "fillType" : "color",
+                "height" : 13.199999999999932,
+                "id" : "JjUpDPvod",
+                "locked" : false,
+                "name" : "Path",
+                "opacity" : 1,
+                "originalid" : null,
+                "parentid" : "Q11b6xOEk",
+                "pathClosed" : true,
+                "pathSegments" : [
+                  {
+                    "__class" : "PathSegment",
+                    "handleInX" : 0,
+                    "handleInY" : 0,
+                    "handleMirroring" : "disconnected",
+                    "handleOutX" : 1.8680219479570894,
+                    "handleOutY" : 0,
+                    "radius" : 0,
+                    "x" : 14.20588235294116,
+                    "y" : 0
+                  },
+                  {
+                    "__class" : "PathSegment",
+                    "handleInX" : 0,
+                    "handleInY" : -1.8225396744416003,
+                    "handleMirroring" : "disconnected",
+                    "handleOutX" : 0,
+                    "handleOutY" : 0,
+                    "radius" : 0,
+                    "x" : 17.588235294117652,
+                    "y" : 3.2999999999999545
+                  },
+                  {
+                    "__class" : "PathSegment",
+                    "handleInX" : 0,
+                    "handleInY" : 0,
+                    "handleMirroring" : "disconnected",
+                    "handleOutX" : 0,
+                    "handleOutY" : 1.8225396744416003,
+                    "radius" : 0,
+                    "x" : 17.588235294117652,
+                    "y" : 9.8999999999999773
+                  },
+                  {
+                    "__class" : "PathSegment",
+                    "handleInX" : 1.8680219479570894,
+                    "handleInY" : 0,
+                    "handleMirroring" : "disconnected",
+                    "handleOutX" : 0,
+                    "handleOutY" : 0,
+                    "radius" : 0,
+                    "x" : 14.20588235294116,
+                    "y" : 13.199999999999932
+                  },
+                  {
+                    "__class" : "PathSegment",
+                    "handleInX" : 0,
+                    "handleInY" : 0,
+                    "handleMirroring" : "disconnected",
+                    "handleOutX" : -1.868021947957061,
+                    "handleOutY" : 0,
+                    "radius" : 0,
+                    "x" : 3.3823529411764639,
+                    "y" : 13.199999999999932
+                  },
+                  {
+                    "__class" : "PathSegment",
+                    "handleInX" : 0,
+                    "handleInY" : 1.8225396744416003,
+                    "handleMirroring" : "disconnected",
+                    "handleOutX" : 0,
+                    "handleOutY" : 0,
+                    "radius" : 0,
+                    "x" : 0,
+                    "y" : 9.8999999999999773
+                  },
+                  {
+                    "__class" : "PathSegment",
+                    "handleInX" : 0,
+                    "handleInY" : 0,
+                    "handleMirroring" : "straight",
+                    "handleOutX" : 0,
+                    "handleOutY" : 0,
+                    "radius" : 0,
+                    "x" : 0,
+                    "y" : 9.2400000000000091
+                  },
+                  {
+                    "__class" : "PathSegment",
+                    "handleInX" : 0,
+                    "handleInY" : 0,
+                    "handleMirroring" : "straight",
+                    "handleOutX" : 0,
+                    "handleOutY" : 0,
+                    "radius" : 0,
+                    "x" : 1.3529411764705799,
+                    "y" : 9.2400000000000091
+                  },
+                  {
+                    "__class" : "PathSegment",
+                    "handleInX" : 0,
+                    "handleInY" : 0,
+                    "handleMirroring" : "disconnected",
+                    "handleOutX" : 0,
+                    "handleOutY" : 1.0935238046649829,
+                    "radius" : 0,
+                    "x" : 1.3529411764705799,
+                    "y" : 9.8999999999999773
+                  },
+                  {
+                    "__class" : "PathSegment",
+                    "handleInX" : -1.120813168774248,
+                    "handleInY" : 0,
+                    "handleMirroring" : "disconnected",
+                    "handleOutX" : 0,
+                    "handleOutY" : 0,
+                    "radius" : 0,
+                    "x" : 3.3823529411764639,
+                    "y" : 11.879999999999882
+                  },
+                  {
+                    "__class" : "PathSegment",
+                    "handleInX" : 0,
+                    "handleInY" : 0,
+                    "handleMirroring" : "disconnected",
+                    "handleOutX" : 1.120813168774248,
+                    "handleOutY" : 0,
+                    "radius" : 0,
+                    "x" : 14.20588235294116,
+                    "y" : 11.879999999999882
+                  },
+                  {
+                    "__class" : "PathSegment",
+                    "handleInX" : 0,
+                    "handleInY" : 1.0935238046649829,
+                    "handleMirroring" : "disconnected",
+                    "handleOutX" : 0,
+                    "handleOutY" : 0,
+                    "radius" : 0,
+                    "x" : 16.235294117647044,
+                    "y" : 9.8999999999999773
+                  },
+                  {
+                    "__class" : "PathSegment",
+                    "handleInX" : 0,
+                    "handleInY" : 0,
+                    "handleMirroring" : "disconnected",
+                    "handleOutX" : 0,
+                    "handleOutY" : -1.0935238046649829,
+                    "radius" : 0,
+                    "x" : 16.235294117647044,
+                    "y" : 3.2999999999999545
+                  },
+                  {
+                    "__class" : "PathSegment",
+                    "handleInX" : 1.120813168774248,
+                    "handleInY" : 0,
+                    "handleMirroring" : "disconnected",
+                    "handleOutX" : 0,
+                    "handleOutY" : 0,
+                    "radius" : 0,
+                    "x" : 14.20588235294116,
+                    "y" : 1.32000000000005
+                  },
+                  {
+                    "__class" : "PathSegment",
+                    "handleInX" : 0,
+                    "handleInY" : 0,
+                    "handleMirroring" : "straight",
+                    "handleOutX" : 0,
+                    "handleOutY" : 0,
+                    "radius" : 0,
+                    "x" : 13.529411764705884,
+                    "y" : 1.32000000000005
+                  },
+                  {
+                    "__class" : "PathSegment",
+                    "handleInX" : 0,
+                    "handleInY" : 0,
+                    "handleMirroring" : "straight",
+                    "handleOutX" : 0,
+                    "handleOutY" : 0,
+                    "radius" : 0,
+                    "x" : 13.529411764705884,
+                    "y" : 0
+                  }
+                ],
+                "rotation" : 0,
+                "strokeEnabled" : 0,
+                "visible" : true,
+                "width" : 17.588235294117652,
+                "x" : 1.7352941176471735,
+                "y" : 0.54760000000006226
+              },
+              {
+                "__class" : "PathNode",
+                "aspectRatio" : null,
+                "exportOptions" : [
+
+                ],
+                "fillColor" : "rgba(31,51,68,1)",
+                "fillEnabled" : true,
+                "fillImage" : null,
+                "fillImageOriginalName" : null,
+                "fillImagePixelHeight" : null,
+                "fillImagePixelWidth" : null,
+                "fillImageResize" : "fill",
+                "fillType" : "color",
+                "height" : 7.1411999999999125,
+                "id" : "C7DeuoYWy",
+                "locked" : false,
+                "name" : "Path",
+                "opacity" : 1,
+                "originalid" : null,
+                "parentid" : "Q11b6xOEk",
+                "pathClosed" : true,
+                "pathSegments" : [
+                  {
+                    "__class" : "PathSegment",
+                    "handleInX" : 0,
+                    "handleInY" : 0,
+                    "handleMirroring" : "straight",
+                    "handleOutX" : 0,
+                    "handleOutY" : 0,
+                    "radius" : 0,
+                    "x" : 0.94705882352940307,
+                    "y" : 0
+                  },
+                  {
+                    "__class" : "PathSegment",
+                    "handleInX" : 0,
+                    "handleInY" : 0,
+                    "handleMirroring" : "straight",
+                    "handleOutX" : 0,
+                    "handleOutY" : 0,
+                    "radius" : 0,
+                    "x" : 4.6135294117646879,
+                    "y" : 3.577199999999948
+                  },
+                  {
+                    "__class" : "PathSegment",
+                    "handleInX" : 0,
+                    "handleInY" : 0,
+                    "handleMirroring" : "straight",
+                    "handleOutX" : 0,
+                    "handleOutY" : 0,
+                    "radius" : 0,
+                    "x" : 0.94705882352940307,
+                    "y" : 7.1411999999999125
+                  },
+                  {
+                    "__class" : "PathSegment",
+                    "handleInX" : 0,
+                    "handleInY" : 0,
+                    "handleMirroring" : "straight",
+                    "handleOutX" : 0,
+                    "handleOutY" : 0,
+                    "radius" : 0,
+                    "x" : 0,
+                    "y" : 6.217200000000048
+                  },
+                  {
+                    "__class" : "PathSegment",
+                    "handleInX" : 0,
+                    "handleInY" : 0,
+                    "handleMirroring" : "straight",
+                    "handleOutX" : 0,
+                    "handleOutY" : 0,
+                    "radius" : 0,
+                    "x" : 2.6923529411764662,
+                    "y" : 3.577199999999948
+                  },
+                  {
+                    "__class" : "PathSegment",
+                    "handleInX" : 0,
+                    "handleInY" : 0,
+                    "handleMirroring" : "straight",
+                    "handleOutX" : 0,
+                    "handleOutY" : 0,
+                    "radius" : 0,
+                    "x" : 0,
+                    "y" : 0.93720000000007531
+                  }
+                ],
+                "rotation" : 0,
+                "strokeEnabled" : 0,
+                "visible" : true,
+                "width" : 4.6135294117646879,
+                "x" : 8.0941176470585958,
+                "y" : 0
+              },
+              {
+                "__class" : "PathNode",
+                "aspectRatio" : null,
+                "exportOptions" : [
+
+                ],
+                "fillColor" : "rgba(31,51,68,1)",
+                "fillEnabled" : true,
+                "fillImage" : null,
+                "fillImageOriginalName" : null,
+                "fillImagePixelHeight" : null,
+                "fillImagePixelWidth" : null,
+                "fillImageResize" : "fill",
+                "fillType" : "color",
+                "height" : 7.1411999999999125,
+                "id" : "RNduaGsjm",
+                "locked" : false,
+                "name" : "Path",
+                "opacity" : 1,
+                "originalid" : null,
+                "parentid" : "Q11b6xOEk",
+                "pathClosed" : true,
+                "pathSegments" : [
+                  {
+                    "__class" : "PathSegment",
+                    "handleInX" : 0,
+                    "handleInY" : 0,
+                    "handleMirroring" : "straight",
+                    "handleOutX" : 0,
+                    "handleOutY" : 0,
+                    "radius" : 0,
+                    "x" : 3.6664705882353132,
+                    "y" : 0
+                  },
+                  {
+                    "__class" : "PathSegment",
+                    "handleInX" : 0,
+                    "handleInY" : 0,
+                    "handleMirroring" : "straight",
+                    "handleOutX" : 0,
+                    "handleOutY" : 0,
+                    "radius" : 0,
+                    "x" : 4.6135294117646879,
+                    "y" : 0.93720000000007531
+                  },
+                  {
+                    "__class" : "PathSegment",
+                    "handleInX" : 0,
+                    "handleInY" : 0,
+                    "handleMirroring" : "straight",
+                    "handleOutX" : 0,
+                    "handleOutY" : 0,
+                    "radius" : 0,
+                    "x" : 1.9211764705882217,
+                    "y" : 3.577199999999948
+                  },
+                  {
+                    "__class" : "PathSegment",
+                    "handleInX" : 0,
+                    "handleInY" : 0,
+                    "handleMirroring" : "straight",
+                    "handleOutX" : 0,
+                    "handleOutY" : 0,
+                    "radius" : 0,
+                    "x" : 4.6135294117646879,
+                    "y" : 6.217200000000048
+                  },
+                  {
+                    "__class" : "PathSegment",
+                    "handleInX" : 0,
+                    "handleInY" : 0,
+                    "handleMirroring" : "straight",
+                    "handleOutX" : 0,
+                    "handleOutY" : 0,
+                    "radius" : 0,
+                    "x" : 3.6664705882353132,
+                    "y" : 7.1411999999999125
+                  },
+                  {
+                    "__class" : "PathSegment",
+                    "handleInX" : 0,
+                    "handleInY" : 0,
+                    "handleMirroring" : "straight",
+                    "handleOutX" : 0,
+                    "handleOutY" : 0,
+                    "radius" : 0,
+                    "x" : 0,
+                    "y" : 3.577199999999948
+                  }
+                ],
+                "rotation" : 0,
+                "strokeEnabled" : 0,
+                "visible" : true,
+                "width" : 4.6135294117646879,
+                "x" : 0,
+                "y" : 0
+              }
+            ],
+            "exportOptions" : [
+
+            ],
+            "fillColor" : "rgba(31,51,68,1)",
+            "fillEnabled" : true,
+            "fillImage" : null,
+            "fillImageOriginalName" : null,
+            "fillImagePixelHeight" : null,
+            "fillImagePixelWidth" : null,
+            "fillImageResize" : "fill",
+            "fillType" : "color",
+            "height" : 13.747599999999995,
+            "id" : "Q11b6xOEk",
+            "locked" : false,
+            "name" : "Shape",
+            "opacity" : 1,
+            "originalid" : null,
+            "parentid" : "pMSmVmtNc",
+            "pathBoolean" : 4,
+            "rotation" : 0,
+            "strokeEnabled" : 0,
+            "visible" : true,
+            "width" : 19.323529411764824,
+            "x" : 0.6764705882345865,
+            "y" : 0.83240000000020586
+          }
+        ],
+        "constraintsLocked" : false,
+        "deviceType" : null,
+        "exportIncludesBackground" : false,
+        "exportOptions" : [
+
+        ],
+        "fillColor" : "#FFF",
+        "fillEnabled" : false,
+        "fillImage" : null,
+        "fillImageOriginalName" : null,
+        "fillImagePixelHeight" : null,
+        "fillImagePixelWidth" : null,
+        "fillImageResize" : "fill",
+        "fillType" : "color",
+        "height" : 15,
+        "heightType" : 0,
+        "id" : "pMSmVmtNc",
+        "left" : -244,
+        "locked" : false,
+        "name" : null,
+        "navigationTarget" : null,
+        "navigationTransition" : "push",
+        "navigationTransitionBackdropColor" : "rgba(4,4,15,.4)",
+        "navigationTransitionDirection" : "left",
+        "opacity" : 1,
+        "originalid" : null,
+        "parentid" : "ZGFttPofN",
+        "previewSettings" : null,
+        "radius" : 0,
+        "radiusBottomLeft" : 0,
+        "radiusBottomRight" : 0,
+        "radiusPerCorner" : false,
+        "radiusTopLeft" : 0,
+        "radiusTopRight" : 0,
+        "right" : null,
+        "sizeToFit" : true,
+        "top" : 536,
+        "visible" : true,
+        "width" : 20,
         "widthType" : 0
       }
     ],

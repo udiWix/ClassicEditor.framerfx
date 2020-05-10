@@ -72,6 +72,7 @@ export function Handler(props) {
                     top={2}
                     background="transparent"
                     visible={addDisplay}
+                    style={{ marginLeft: "8px" }}
                 >
                     <AddBtn
                         onClick={onAddClick}
@@ -121,7 +122,7 @@ export function FuncName(props) {
     const [isInput, setInput] = React.useState(props.isActive)
 
     const item = props.isActive ? (
-        <Input value={props.value} />
+        <Input value={props.value} width={110} />
     ) : (
         <Frame
             height={20}
