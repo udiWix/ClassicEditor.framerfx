@@ -2,7 +2,7 @@ import * as React from "react"
 import { Frame, Stack, addPropertyControls, ControlType } from "framer"
 import styled, { ThemeProvider } from "styled-components"
 import { Input } from "./Input"
-import { AddBtn, Flashlight, Garbage } from "./canvas"
+import { AddBtn, Flashlight, Garbage, PopOver } from "./canvas"
 // Open Preview: Command + P
 // Learn more: https://framer.com/api
 const Link = styled.div`
@@ -36,6 +36,7 @@ export function Handler(props) {
     const [inputField, showInputField] = React.useState(false)
     const [addDisplay, setDisplay] = React.useState(false)
     const [del, showDel] = React.useState(false)
+    const [pop, showPop] = React.useState(false)
 
     const onClickLink = () => {
         setDisplay(!addDisplay)
@@ -45,6 +46,8 @@ export function Handler(props) {
         setActive(false)
         setDisplay(false)
         showDel(true)
+        showPop(true)
+        props.callback()
     }
     return (
         <div style={{ width: "265px" }}>
@@ -100,6 +103,7 @@ Handler.defaultProps = {
     eventName: "_click",
     component: "text1",
     active: true,
+    callback: () => {},
 }
 
 // Learn more: https://framer.com/api/property-controls/

@@ -2,6 +2,7 @@ import * as React from "react"
 import { Frame, addPropertyControls, ControlType, Stack } from "framer"
 import { PropertiesPanel } from "./PropertiesPanel"
 import { PropertiesPanelEmpty } from "./PropertiesPanelEmpty"
+import { PopOverContainer } from "./PopOverContainer"
 // Open Preview: Command + P
 // Learn more: https://framer.com/api
 
