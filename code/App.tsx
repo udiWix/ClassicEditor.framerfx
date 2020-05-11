@@ -13,7 +13,7 @@ const data = Data({
     propsBtn: true,
     treeTab: "pages",
     section: "pages",
-    propPop: true,
+    propPop: false,
     IDEtabs: [
         {
             tab: "Home",
@@ -235,9 +235,10 @@ export function ideContainer(props): Override {
 
 export function popOver(props): Override {
     return {
-        visible: data.propPop,
+        isVisible: data.propPop,
         callback() {
             data.propPop = false
+            console.log("callback")
         },
     }
 }
@@ -246,6 +247,7 @@ export function handlerClick(props): Override {
     return {
         callback() {
             data.propPop = true
+            console.log("click")
         },
     }
 }

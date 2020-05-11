@@ -4,14 +4,15 @@ import { Input } from "./Input"
 import { Checkbox } from "../../../wix-base-ui"
 import "../../../wix-base-ui/dist/style.css"
 import { Handler } from "./Handler"
-
+import { handlerClick } from "./App"
 // Open Preview: Command + P
 // Learn more: https://framer.com/api
 
 export function PropertiesPanel(props) {
     const [pop, setPop] = React.useState(false)
     const [active, setActive] = React.useState()
-    const v = props.comp
+
+    const v = props.comp.substr(1)
 
     const eventShort = event => {
         switch (event) {
@@ -43,6 +44,7 @@ export function PropertiesPanel(props) {
                 component={v}
                 eventName={eventShort(event)}
                 label={event + "( )"}
+                {...handlerClick()}
             />
         )
     })
@@ -140,6 +142,8 @@ const label: React.CSSProperties = {
     fontSize: "12px",
     color: "#7A92A5",
     textAlign: "left",
+    width: "max-content",
+    whiteSpace: "nowrap",
 }
 const link: React.CSSProperties = {
     fontFamily:
