@@ -14,6 +14,7 @@ import {
     propsPanel,
     onEditorClick,
     contextualMenu,
+    syntax,
 } from "./App"
 import { IDETabs2 } from "./IDETabs2"
 import { IDE } from "./canvas"
@@ -203,7 +204,7 @@ export class IDEcontainer extends React.Component<Props> {
                             height={1000}
                             background={"#EAEEF4"}
                         >
-                            <Syntax />
+                            <Syntax {...syntax()} />
                         </Frame>
                     </Scroll>
                     <PropertiesPanelContainer
@@ -216,7 +217,6 @@ export class IDEcontainer extends React.Component<Props> {
                 <Frame style={header} top={0} left={0}>
                     <IDETabs2 {...IDEheader(null)} />
                 </Frame>
-                  <EditorMenu {...contextualMenu(null)} />
             </Frame>
         )
     }

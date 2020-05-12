@@ -34,7 +34,35 @@ const data = Data({
     focusedTab: null,
     contextualMenu: false,
     contextualMenuP: { x: null, y: null },
+    codeString: `import wixData from 'wix-data';
+
+const filter = wixData.filter().eq("year", 2010);
+const having = wixData.filter().gt("maxPopulation", 1000000);
+
+wixData.aggregate("PopulationData")
+  .filter(filter)
+  .group("state")
+  .max("population", "maxPopulation")
+  .having(having)
+  .descending("maxPopulation")
+  .skip(5)
+  .limit(3)
+  .run()
+  .then( (results) => {
+    if (results.items.length > 0) {
+      let items = results.items;
+      let numItems = results.length;
+      let hasNext = results.hasNext();
+    } else {
+      // handle case where no matching items found
+    }
+  } )
+  .catch( (error) => {
+    let errorMsg = error.message;
+    let code = error.code;
+  } );`,
 })
+
 export function enableCorvid(props): Override {
     return {
         layout: data.layout,
@@ -247,8 +275,19 @@ export function popOver(props): Override {
 
 export function handlerClick(props): Override {
     return {
-        callback() {
-            data.propPop = true
+        callback(id:string, eventName:string) {
+            data.propPop = id === "Menu1" ? true : false
+            let funName = id + eventName
+            let snippet = data.codeString
+            let code =
+                `
+            
+export function ` +
+                funName+
+                `(event) {
+	//Add your code for this event here: 
+}`
+            data.codeString = snippet + code
         },
     }
 }
@@ -280,5 +319,11 @@ export function onEditorClick(props): Override {
             data.contextualMenu = false
             console.log("click")
         },
+    }
+}
+
+export function syntax(props): Override {
+    return {
+        codeString: data.codeString,
     }
 }

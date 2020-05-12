@@ -11,8 +11,8 @@ export function EditorMenu(props) {
             width={200}
             height={164}
             visible={props.visible}
-            left={props.left - 300}
-            top={props.top - 500}
+            left={props.left}
+            top={props.top}
         >
             <EditorCMenu />
         </Frame>

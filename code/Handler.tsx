@@ -43,14 +43,13 @@ export function Handler(props) {
         showInputField(!inputField)
     }
     const onAddClick = () => {
-        if (props.component === "Menu1") {
-            props.callback()
-        } else {
+        if (props.component != "Menu1") {
             setActive(false)
             setDisplay(false)
             showDel(true)
             showPop(true)
         }
+        props.callback(props.component, props.eventName)
     }
     return (
         <div style={{ width: "265px" }}>
