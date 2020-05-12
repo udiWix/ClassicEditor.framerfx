@@ -7,11 +7,19 @@ import {
     ControlType,
     Draggable,
 } from "framer"
-import { IDEswitch, IDEheader, propsBtn, propsPanel } from "./App"
+import {
+    IDEswitch,
+    IDEheader,
+    propsBtn,
+    propsPanel,
+    onEditorClick,
+    contextualMenu,
+} from "./App"
 import { IDETabs2 } from "./IDETabs2"
 import { IDE } from "./canvas"
 import { Syntax } from "./Syntax"
 import { PropertiesPanelContainer } from "./PropertiesPanelContainer"
+import { EditorMenu } from "./EditorMenu"
 
 const mainWindow: React.CSSProperties = {
     background: "white",
@@ -182,6 +190,7 @@ export class IDEcontainer extends React.Component<Props> {
                     )}
                     onMouseLeave={this.mouseLeaveHandler}
                 />
+
                 <div>
                     <Scroll
                         background={"transparent"}
@@ -203,9 +212,11 @@ export class IDEcontainer extends React.Component<Props> {
                         {...propsPanel(null)}
                     />
                 </div>
+
                 <Frame style={header} top={0} left={0}>
                     <IDETabs2 {...IDEheader(null)} />
                 </Frame>
+                  <EditorMenu {...contextualMenu(null)} />
             </Frame>
         )
     }

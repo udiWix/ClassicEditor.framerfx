@@ -32,6 +32,8 @@ const data = Data({
         },
     ],
     focusedTab: null,
+    contextualMenu: false,
+    contextualMenuP: { x: null, y: null },
 })
 export function enableCorvid(props): Override {
     return {
@@ -247,6 +249,35 @@ export function handlerClick(props): Override {
     return {
         callback() {
             data.propPop = true
+        },
+    }
+}
+
+export function contextualMenu(props): Override {
+    return {
+        visible: data.contextualMenu,
+        left: data.contextualMenuP.x,
+        top: data.contextualMenuP.y,
+    }
+}
+
+export function onEditorClick(props): Override {
+    return {
+        onContextMenu(e) {
+            e.preventDefault()
+            let x = e.clientX // Get the horizontal coordinate
+            let y = e.clientY // Get the vertical coordinate
+
+            console.log(x + " " + y)
+
+            data.contextualMenuP.x = x
+            data.contextualMenuP.y = y
+
+            let pp = data.contextualMenu
+            data.contextualMenu = !pp
+        },
+        onClick() {
+            data.contextualMenu = false
             console.log("click")
         },
     }
