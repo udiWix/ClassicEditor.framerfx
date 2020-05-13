@@ -12,6 +12,18 @@ export function PropertiesBtn(props) {
     //     props.onClick()
     //     setFocus(!focus)
     // }
+    const color = props.disabled
+        ? "#D5D5D5"
+        : props.focused
+        ? "#3899EC"
+        : "#1F3344"
+    
+    const lineColor = props.disabled
+    ? "white"
+    :props.focused
+    ?"#3899EC"
+    :"white"
+
 
     return (
         <Frame
@@ -30,14 +42,14 @@ export function PropertiesBtn(props) {
             }}
         >
             <Frame background="transparent" width={23} height={18} center>
-                <PropsIcon tint={props.focused ? "#3899EC" : "#1F3344"} />
+                <PropsIcon tint={color} />
             </Frame>
             <Frame
                 width={36}
                 height={3}
                 top={34}
                 left={0}
-                background={props.focused ? "#3899EC" : "white"}
+                background={lineColor}
             />
         </Frame>
     )
@@ -47,6 +59,7 @@ PropertiesBtn.defaultProps = {
     focused: false,
     toggleFocus: () => {},
     tab: "pages",
+    disabled: false,
 }
 
 // Learn more: https://framer.com/api/property-controls/

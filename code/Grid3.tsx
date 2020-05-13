@@ -2,7 +2,7 @@ import * as React from "react"
 import { useState, useEffect, useCallback } from "react"
 import { Frame, Scroll, addPropertyControls, ControlType } from "framer"
 import { Stage } from "./Stage"
-import { currentPage, onUpdateTabs, propsBtn, propsPanel } from "./App"
+import { currentPage, onUpdateTabs, propsBtn, propsPanel, syntax } from "./App"
 import PanelGroup from "react-panelgroup"
 import { SiteTabs } from "./SiteTabs"
 import { IDETabs2 } from "./IDETabs2"
@@ -88,14 +88,9 @@ export function Grid3(props) {
                                             height={1000}
                                             background={"#EAEEF4"}
                                         >
-                                            <Syntax />
+                                            <Syntax {...syntax(null)} />
                                         </Frame>
                                     </Scroll>
-                                    <PropertiesPanelContainer
-                                        right={0}
-                                        top={0}
-                                        {...propsPanel(null)}
-                                    />
                                 </div>
                                 <IDETabs2
                                     data={props.IDETabs}

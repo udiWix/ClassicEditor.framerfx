@@ -1,4 +1,4 @@
-import { Data, Override, Frame } from "framer"
+import { Data, Override, Frame, useAnimation } from "framer"
 
 // import { Unsplash } from "@framer/unsplash.unsplash/code/Unsplash";
 // Override Docs: https://framer.com/docs/overrides
@@ -60,7 +60,12 @@ wixData.aggregate("PopulationData")
   .catch( (error) => {
     let errorMsg = error.message;
     let code = error.code;
-  } );`,
+  } 
+  
+  
+  );`,
+
+    contentOffsetY: 0,
 })
 
 export function enableCorvid(props): Override {
@@ -236,6 +241,7 @@ export function calPos(comp) {
 export function propsBtn(props): Override {
     return {
         focused: data.propsBtn,
+        disabled: data.layout === "bottom" ? false : true,
         toggleFocus() {
             const pb = !data.propsBtn
             data.propsBtn = pb
@@ -275,7 +281,7 @@ export function popOver(props): Override {
 
 export function handlerClick(props): Override {
     return {
-        callback(id:string, eventName:string) {
+        callback(id: string, eventName: string) {
             data.propPop = id === "Menu1" ? true : false
             let funName = id + eventName
             let snippet = data.codeString
@@ -283,11 +289,12 @@ export function handlerClick(props): Override {
                 `
             
 export function ` +
-                funName+
+                funName +
                 `(event) {
 	//Add your code for this event here: 
 }`
             data.codeString = snippet + code
+            data.contentOffsetY = 500
         },
     }
 }
@@ -325,5 +332,11 @@ export function onEditorClick(props): Override {
 export function syntax(props): Override {
     return {
         codeString: data.codeString,
+    }
+}
+
+export function scrollSyntax(): Override {
+    return {
+        contentOffsetY: 0,
     }
 }

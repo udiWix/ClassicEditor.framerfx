@@ -13303,26 +13303,6 @@
                         {
                           "length" : 33,
                           "offset" : 0,
-                          "style" : "LETTERSPACING:0.0"
-                        },
-                        {
-                          "length" : 33,
-                          "offset" : 0,
-                          "style" : "LINEHEIGHT:1.5"
-                        },
-                        {
-                          "length" : 33,
-                          "offset" : 0,
-                          "style" : "SIZE:12"
-                        },
-                        {
-                          "length" : 33,
-                          "offset" : 0,
-                          "style" : "ALIGN:left"
-                        },
-                        {
-                          "length" : 33,
-                          "offset" : 0,
                           "style" : "FONT:Menlo-Regular"
                         },
                         {
@@ -13349,6 +13329,26 @@
                           "length" : 3,
                           "offset" : 0,
                           "style" : "COLOR:rgb(122, 146, 165)"
+                        },
+                        {
+                          "length" : 33,
+                          "offset" : 0,
+                          "style" : "LETTERSPACING:0.0"
+                        },
+                        {
+                          "length" : 33,
+                          "offset" : 0,
+                          "style" : "LINEHEIGHT:1.5"
+                        },
+                        {
+                          "length" : 33,
+                          "offset" : 0,
+                          "style" : "SIZE:12"
+                        },
+                        {
+                          "length" : 33,
+                          "offset" : 0,
+                          "style" : "ALIGN:left"
                         }
                       ],
                       "key" : "3mp88",
@@ -13371,36 +13371,6 @@
 
                       ],
                       "inlineStyleRanges" : [
-                        {
-                          "length" : 50,
-                          "offset" : 0,
-                          "style" : "FONT:Menlo-Regular"
-                        },
-                        {
-                          "length" : 5,
-                          "offset" : 4,
-                          "style" : "COLOR:var(--token-25677501-55f2-4899-91ce-bbeef5f68193, rgb(31, 119, 255)) \/* {\"name\":\"blue\"} *\/"
-                        },
-                        {
-                          "length" : 3,
-                          "offset" : 18,
-                          "style" : "COLOR:var(--token-25677501-55f2-4899-91ce-bbeef5f68193, rgb(31, 119, 255)) \/* {\"name\":\"blue\"} *\/"
-                        },
-                        {
-                          "length" : 9,
-                          "offset" : 9,
-                          "style" : "COLOR:hsl(0, 0%, 0%)"
-                        },
-                        {
-                          "length" : 23,
-                          "offset" : 21,
-                          "style" : "COLOR:hsl(0, 0%, 0%)"
-                        },
-                        {
-                          "length" : 2,
-                          "offset" : 48,
-                          "style" : "COLOR:hsl(0, 0%, 0%)"
-                        },
                         {
                           "length" : 4,
                           "offset" : 44,
@@ -13430,6 +13400,36 @@
                           "length" : 50,
                           "offset" : 0,
                           "style" : "ALIGN:left"
+                        },
+                        {
+                          "length" : 50,
+                          "offset" : 0,
+                          "style" : "FONT:Menlo-Regular"
+                        },
+                        {
+                          "length" : 5,
+                          "offset" : 4,
+                          "style" : "COLOR:var(--token-25677501-55f2-4899-91ce-bbeef5f68193, rgb(31, 119, 255)) \/* {\"name\":\"blue\"} *\/"
+                        },
+                        {
+                          "length" : 3,
+                          "offset" : 18,
+                          "style" : "COLOR:var(--token-25677501-55f2-4899-91ce-bbeef5f68193, rgb(31, 119, 255)) \/* {\"name\":\"blue\"} *\/"
+                        },
+                        {
+                          "length" : 9,
+                          "offset" : 9,
+                          "style" : "COLOR:hsl(0, 0%, 0%)"
+                        },
+                        {
+                          "length" : 23,
+                          "offset" : 21,
+                          "style" : "COLOR:hsl(0, 0%, 0%)"
+                        },
+                        {
+                          "length" : 2,
+                          "offset" : 48,
+                          "style" : "COLOR:hsl(0, 0%, 0%)"
                         }
                       ],
                       "key" : "c31ur",
@@ -17397,12 +17397,12 @@
                 {
                   "enabled" : true,
                   "type" : "string",
-                  "value" : "Button1"
+                  "value" : "Text1"
                 },
                 {
                   "enabled" : true,
                   "type" : "string",
-                  "value" : "Text1"
+                  "value" : "Button1"
                 }
               ],
               "_label" : [
@@ -17414,12 +17414,12 @@
                 {
                   "enabled" : true,
                   "type" : "string",
-                  "value" : "Button"
+                  "value" : "Text"
                 },
                 {
                   "enabled" : true,
                   "type" : "string",
-                  "value" : "Text"
+                  "value" : "Button"
                 }
               ],
               "children" : [
@@ -19795,7 +19795,7 @@
         "exportOptions" : [
 
         ],
-        "fillColor" : "hsl(0, 0%, 88%)",
+        "fillColor" : "rgba(234, 238, 243, 1.00)",
         "fillEnabled" : true,
         "fillImage" : null,
         "fillImageOriginalName" : null,
@@ -19817,7 +19817,7 @@
         "isExternalMaster" : null,
         "isMaster" : false,
         "isTarget" : false,
-        "left" : -310,
+        "left" : 129,
         "locked" : false,
         "name" : null,
         "navigationTarget" : null,
@@ -19838,7 +19838,7 @@
         "replicaInfo" : null,
         "right" : null,
         "rotation" : 0,
-        "top" : 949,
+        "top" : 944,
         "visible" : true,
         "width" : 28,
         "widthType" : 0
@@ -23570,9 +23570,9 @@
                 "os" : "macos 10_15 framerx",
                 "size" : {
                   "height" : 45,
-                  "width" : 177
+                  "width" : 201
                 },
-                "width" : 176
+                "width" : 200
               },
               "entityMap" : {
 
@@ -26454,9 +26454,9 @@
                                 "os" : "macos 10_15 framerx",
                                 "size" : {
                                   "height" : 18,
-                                  "width" : 76
+                                  "width" : 201
                                 },
-                                "width" : 75
+                                "width" : 200
                               },
                               "entityMap" : {
 

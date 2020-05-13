@@ -15,6 +15,7 @@ import {
     onEditorClick,
     contextualMenu,
     syntax,
+    scrollSyntax,
 } from "./App"
 import { IDETabs2 } from "./IDETabs2"
 import { IDE } from "./canvas"
@@ -23,7 +24,7 @@ import { PropertiesPanelContainer } from "./PropertiesPanelContainer"
 import { EditorMenu } from "./EditorMenu"
 
 const mainWindow: React.CSSProperties = {
-    background: "white",
+    background: "#EAEEF3",
     overflow: "hidden",
     borderRadius: "0px",
     width: "100%",
@@ -172,6 +173,7 @@ export class IDEcontainer extends React.Component<Props> {
                 height={this.state.newHeight}
                 style={mainWindow}
                 width={400}
+                background={"#EAEEF4"}
                 {...IDEswitch(null)}
             >
                 <Frame
@@ -192,19 +194,20 @@ export class IDEcontainer extends React.Component<Props> {
                     onMouseLeave={this.mouseLeaveHandler}
                 />
 
-                <div>
+                <div style={{ background: "#EAEEF3" }}>
                     <Scroll
-                        background={"transparent"}
+                        background={"#EAEEF3"}
                         y={10}
                         width={"100%"}
                         height={"100%"}
+                        {...scrollSyntax()}
                     >
                         <Frame
                             width={"100%"}
-                            height={1000}
+                            height={"max-contnet"}
                             background={"#EAEEF4"}
                         >
-                            <Syntax {...syntax()} />
+                            <Syntax {...syntax(null)} />
                         </Frame>
                     </Scroll>
                     <PropertiesPanelContainer
