@@ -13372,36 +13372,6 @@
                       ],
                       "inlineStyleRanges" : [
                         {
-                          "length" : 4,
-                          "offset" : 44,
-                          "style" : "COLOR:#22CCDD"
-                        },
-                        {
-                          "length" : 4,
-                          "offset" : 0,
-                          "style" : "COLOR:rgb(122, 146, 165)"
-                        },
-                        {
-                          "length" : 50,
-                          "offset" : 0,
-                          "style" : "LETTERSPACING:0.0"
-                        },
-                        {
-                          "length" : 50,
-                          "offset" : 0,
-                          "style" : "LINEHEIGHT:1.5"
-                        },
-                        {
-                          "length" : 50,
-                          "offset" : 0,
-                          "style" : "SIZE:12"
-                        },
-                        {
-                          "length" : 50,
-                          "offset" : 0,
-                          "style" : "ALIGN:left"
-                        },
-                        {
                           "length" : 50,
                           "offset" : 0,
                           "style" : "FONT:Menlo-Regular"
@@ -13430,6 +13400,36 @@
                           "length" : 2,
                           "offset" : 48,
                           "style" : "COLOR:hsl(0, 0%, 0%)"
+                        },
+                        {
+                          "length" : 4,
+                          "offset" : 44,
+                          "style" : "COLOR:#22CCDD"
+                        },
+                        {
+                          "length" : 4,
+                          "offset" : 0,
+                          "style" : "COLOR:rgb(122, 146, 165)"
+                        },
+                        {
+                          "length" : 50,
+                          "offset" : 0,
+                          "style" : "LETTERSPACING:0.0"
+                        },
+                        {
+                          "length" : 50,
+                          "offset" : 0,
+                          "style" : "LINEHEIGHT:1.5"
+                        },
+                        {
+                          "length" : 50,
+                          "offset" : 0,
+                          "style" : "SIZE:12"
+                        },
+                        {
+                          "length" : 50,
+                          "offset" : 0,
+                          "style" : "ALIGN:left"
                         }
                       ],
                       "key" : "c31ur",
@@ -23570,9 +23570,9 @@
                 "os" : "macos 10_15 framerx",
                 "size" : {
                   "height" : 45,
-                  "width" : 201
+                  "width" : 177
                 },
-                "width" : 200
+                "width" : 176
               },
               "entityMap" : {
 
@@ -26454,9 +26454,9 @@
                                 "os" : "macos 10_15 framerx",
                                 "size" : {
                                   "height" : 18,
-                                  "width" : 201
+                                  "width" : 76
                                 },
-                                "width" : 200
+                                "width" : 75
                               },
                               "entityMap" : {
 

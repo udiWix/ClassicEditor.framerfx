@@ -17,13 +17,12 @@ export function PropertiesBtn(props) {
         : props.focused
         ? "#3899EC"
         : "#1F3344"
-    
-    const lineColor = props.disabled
-    ? "white"
-    :props.focused
-    ?"#3899EC"
-    :"white"
 
+    const lineColor = props.disabled
+        ? "white"
+        : props.focused
+        ? "#3899EC"
+        : "white"
 
     return (
         <Frame
