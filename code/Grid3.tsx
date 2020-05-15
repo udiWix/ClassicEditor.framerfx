@@ -6,7 +6,7 @@ import { currentPage, onUpdateTabs, propsBtn, propsPanel, syntax } from "./App"
 import PanelGroup from "react-panelgroup"
 import { SiteTabs } from "./SiteTabs"
 import { IDETabs2 } from "./IDETabs2"
-import { IDE } from "./canvas"
+import { IDE, ToolBar } from "./canvas"
 import { CodeFiles } from "./CodeFiles"
 import { DataView } from "./DataView"
 import { Pages } from "./Pages"
@@ -53,6 +53,28 @@ export function Grid3(props) {
 
     const applyLayout = ly => {
         switch (ly) {
+            case "stage": {
+                return (
+                    <PanelGroup
+                        borderColor="#E4E4E4"
+                        panelColor="white"
+                        panelWidths={[
+                            { size: 62, resize: "fixed" },
+                            { minSize: 200, resize: "dynamic" },
+                        ]}
+                    >
+                        <div>
+                            <Frame background={"transparent"} height={"100%"}>
+                                <ToolBar height={"100%"} />
+                            </Frame>
+                        </div>
+                        <div style={{ width: "100%", height: "100%" }}>
+                            <Stage {...currentPage()} />
+                        </div>
+                    </PanelGroup>
+                )
+                break
+            }
             case "full": {
                 return (
                     <PanelGroup
@@ -145,7 +167,7 @@ export function Grid3(props) {
 }
 
 Grid3.defaultProps = {
-    layout: "bottom",
+    layout: "stage",
     onTabFocusChange: x => {},
     setLayout: () => {},
     treeTab: "pages",

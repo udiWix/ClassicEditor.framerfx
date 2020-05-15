@@ -63,32 +63,26 @@ export function Stage(props) {
             <Frame width={"100%"} height={"100%"} background={"white"}>
                 {selectPage()}
             </Frame>
-            <div
-                style={{
-                    position: "absolute",
-                    top: "30px",
-                    left: "15px",
-                }}
-            >
-                <Left_Menu />
-            </div>
-            <div
-                style={{
-                    width: "100%",
-                    height: "400px",
-                    alignSelf: "flex-end",
-                    position: "relative",
-                }}
-            >
-                <div />
-                <IDEcontainer height={400} {...ideContainer(null)} />
-            </div>
+
+            {props.ideVisibility ? (
+                <div
+                    style={{
+                        width: "100%",
+                        height: "400px",
+                        alignSelf: "flex-end",
+                        position: "relative",
+                    }}
+                >
+                    <IDEcontainer height={400} />
+                </div>
+            ) : null}
         </div>
     )
 }
 
 Stage.defaultProps = {
     page: "Home.js",
+    ideVisibility: false,
 }
 
 //

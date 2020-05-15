@@ -4,7 +4,7 @@ import { Data, Override, Frame, useAnimation } from "framer"
 // Override Docs: https://framer.com/docs/overrides
 const data = Data({
     iconTabsActive: "null",
-    layout: "bottom",
+    layout: "stage",
     page: "Home",
     previousLayout: "bottom",
     selectedComp: "",
@@ -154,6 +154,7 @@ export function pageSwitch(props): Override {
 export function currentPage(): Override {
     return {
         page: setPage(data.page),
+        ideVisibility: data.layout === "bottom" ? true : false,
     }
 }
 
@@ -175,11 +176,17 @@ export function toggleFullIDE(props): Override {
     }
 }
 
-export function IDEswitch(props): Override {
-    return {
-        visible: data.layout === "bottom" ? true : false,
-    }
-}
+// export function IDEswitch(props): Override {
+//     return {
+//         visible: data.layout === "bottom" ? true : false,
+//     }
+// }
+// export function ideContainer(props): Override {
+//     return {
+//         visible: data.layout === "bottom" ? true : false,
+//     }
+// }
+
 export function IDEheader(props): Override {
     return {
         data: data.IDEtabs,
@@ -265,10 +272,6 @@ export function compClick(props): Override {
     }
 }
 
-export function ideContainer(props): Override {
-    return {}
-}
-
 export function popOver(props): Override {
     return {
         isVisible: data.propPop,
@@ -339,4 +342,10 @@ export function scrollSyntax(): Override {
     return {
         contentOffsetY: 0,
     }
+}
+
+//////////////////////////////Topbar///////////////////////////////////
+
+export function ChangeTextColor(): Override {
+    return { color: "red" }
 }

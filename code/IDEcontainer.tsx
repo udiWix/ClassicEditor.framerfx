@@ -8,7 +8,6 @@ import {
     Draggable,
 } from "framer"
 import {
-    IDEswitch,
     IDEheader,
     propsBtn,
     propsPanel,
@@ -174,7 +173,6 @@ export class IDEcontainer extends React.Component<Props> {
                 style={mainWindow}
                 width={400}
                 background={"#EAEEF4"}
-                {...IDEswitch(null)}
             >
                 <Frame
                     style={corner}
