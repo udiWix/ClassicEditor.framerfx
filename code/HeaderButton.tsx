@@ -9,6 +9,8 @@ interface Props {
     type: string
     borderRadius: number
     onClick: () => void
+    onMouseEnter: () => void
+    onMouseLeave: () => void
     theme: any
 }
 
@@ -73,6 +75,8 @@ export class HeaderButton extends React.Component<Props> {
                 <Stack alignment="start">
                     <ButtonContainer
                         onClick={this.props.onClick}
+                        onMouseEnter={this.props.onMouseEnter}
+                        onMouseLeave={this.props.onMouseLeave}
                         borderRadius={this.props.borderRadius}
                     >
                         {this.props.text}

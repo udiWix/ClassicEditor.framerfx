@@ -66,6 +66,7 @@ wixData.aggregate("PopulationData")
   );`,
 
     contentOffsetY: 0,
+    devmodePopover: false,
 })
 
 export function enableCorvid(props): Override {
@@ -202,11 +203,6 @@ export function setPanelView(props): Override {
     }
 }
 
-export function adjustStageHeight(props): Override {
-    return {
-        height: data.layout == "stage" ? "95%" : "105%",
-    }
-}
 export function listenToIconTabs(props): Override {
     return {
         setActive(v) {
@@ -346,6 +342,50 @@ export function scrollSyntax(): Override {
 
 //////////////////////////////Topbar///////////////////////////////////
 
-export function ChangeTextColor(): Override {
-    return { color: "red" }
+export function onUpdate({ opacity }) {
+    console.log("opacity")
+}
+
+export function devmodePopover(): Override {
+    return {
+        visible: data.devmodePopover,
+        animate: {
+            opacity: data.devmodePopover ? 1 : 0,
+        },
+        transition: { ease: "easeOut" },
+
+        onMouseLeave() {
+            setTimeout(function() {
+                data.devmodePopover = false
+            }, 1000)
+        },
+        onClick() {
+            data.layout = "bottom"
+            data.devmodePopover = false
+        },
+    }
+}
+
+export function devmodeBtn(): Override {
+    return {
+        onMouseEnter() {
+            if (data.layout === "stage") {
+                data.devmodePopover = true
+            }
+        },
+
+        onClick() {},
+    }
+}
+
+export function connectDomain(): Override {
+    return {
+        visible: data.layout === "stage" ? true : false,
+    }
+}
+
+export function CorvidToggle(): Override {
+    return {
+        visible: data.layout === "stage" ? false : true,
+    }
 }
