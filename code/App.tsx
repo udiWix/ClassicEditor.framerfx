@@ -67,6 +67,7 @@ wixData.aggregate("PopulationData")
 
     contentOffsetY: 0,
     devmodePopover: false,
+    isCorvid: false,
 })
 
 export function enableCorvid(props): Override {
@@ -362,6 +363,7 @@ export function devmodePopover(): Override {
         onClick() {
             data.layout = "bottom"
             data.devmodePopover = false
+            data.isCorvid = true
         },
     }
 }
@@ -380,12 +382,21 @@ export function devmodeBtn(): Override {
 
 export function connectDomain(): Override {
     return {
-        visible: data.layout === "stage" ? true : false,
+        visible: !data.isCorvid,
     }
 }
 
 export function CorvidToggle(): Override {
     return {
-        visible: data.layout === "stage" ? false : true,
+        visible: data.isCorvid,
+        isCorvid: data.layout === "stage" ? false : true,
+        onClick() {
+            if (data.layout === "stage") {
+                data.layout = data.previousLayout
+            } else {
+                data.layout = "stage"
+                data.previousLayout = data.layout
+            }
+        },
     }
 }
