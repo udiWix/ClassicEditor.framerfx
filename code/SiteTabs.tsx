@@ -1,6 +1,6 @@
 import * as React from "react"
 import { Stack, Frame, addPropertyControls, ControlType } from "framer"
-
+import { IconsBelow_ } from "./canvas"
 import { url } from "framer/resource"
 import { IconBtn } from "./IconBtn"
 
@@ -58,6 +58,7 @@ export function SiteTabs(props) {
                     activeTab={active}
                 />
             </Stack>
+            <IconsBelow_ bottom={18} left={7} />
         </div>
     )
 }

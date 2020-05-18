@@ -8,7 +8,7 @@ export function IDEbutton(props) {
     let lastLayout
 
     const onTap = () => {
-        let ly = full ? props.layout : "full"
+        let ly = full ? "bottom" : "full"
         props.setLayout(ly)
         setFull(!full)
     }

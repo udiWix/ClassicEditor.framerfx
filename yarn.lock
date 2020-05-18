@@ -136,6 +136,11 @@
   dependencies:
     styled-components "^4.0.3"
 
+"@framer/jordanrobertdobson.text-color-tool@^1.0.0":
+  version "1.0.0"
+  resolved "https://registry.framer.com/@framer/jordanrobertdobson.text-color-tool/-/@framer/jordanrobertdobson.text-color-tool-1.0.0.tgz#a8fb8bb871937fbd6067642825126f85ea4e3969"
+  integrity sha512-0sg7cSr+FUpi+YK6jDSlmh89tLvv6CyQQCKg4mFAVjRfyio9P2jz20W6KYoKZ4W7PT0m6NXgAcIKReHV1xzbLQ==
+
 "@framer/wix.baseui-poc@^1.0.0":
   version "1.0.0"
   resolved "https://registry.framer.com/@framer/wix.baseui-poc/-/@framer/wix.baseui-poc-1.0.0.tgz#6fdd9681821fc188474b1caaa17e29b6652f7168"

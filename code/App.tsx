@@ -83,11 +83,14 @@ export function enableCorvid(props): Override {
         },
         setLayout() {
             let layout = data.layout
-            if (layout === "stage") {
-                data.layout = data.previousLayout
-                data.iconTabsActive = null
-            } else {
-                data.layout = "stage"
+            if (data.isCorvid) {
+                if (layout === "stage") {
+                    data.layout = data.previousLayout
+                    data.iconTabsActive = null
+                } else {
+                    data.previousLayout = data.layout
+                    data.layout = "stage"
+                }
             }
         },
     }
@@ -394,9 +397,33 @@ export function CorvidToggle(): Override {
             if (data.layout === "stage") {
                 data.layout = data.previousLayout
             } else {
-                data.layout = "stage"
                 data.previousLayout = data.layout
+                data.layout = "stage"
             }
         },
+    }
+}
+
+export function isCorvidSelector(props): Override {
+    return {
+        animate: { left: data.layout != "stage" ? 89 : 1 },
+        transition: { duration: 0.12, type: "tween", ease: "easeOut" },
+    }
+}
+
+export function toggleColorDesign(props): Override {
+    return {
+        style:
+            data.layout === "stage"
+                ? { color: "#3899EC" }
+                : { color: "#162D3D" },
+    }
+}
+export function toggleColorCode(props): Override {
+    return {
+        style:
+            data.layout === "stage"
+                ? { color: "#162D3D" }
+                : { color: "#3899EC" },
     }
 }
