@@ -2,7 +2,14 @@ import * as React from "react"
 import { useState, useEffect, useCallback } from "react"
 import { Frame, Scroll, addPropertyControls, ControlType } from "framer"
 import { Stage } from "./Stage"
-import { currentPage, onUpdateTabs, propsBtn, propsPanel, syntax } from "./App"
+import {
+    currentPage,
+    onUpdateTabs,
+    propsBtn,
+    propsPanel,
+    syntax,
+    IDEtabs,
+} from "./App"
 import PanelGroup from "react-panelgroup"
 import { SiteTabs } from "./SiteTabs"
 import { IDETabs2 } from "./IDETabs2"
@@ -96,6 +103,7 @@ export function Grid3(props) {
                                     data={props.IDETabs}
                                     full={true}
                                     onTabFocusChange={props.onTabFocusChange}
+                                    {...IDEtabs(null)}
                                 />
                             </div>
                         </div>

@@ -14,6 +14,7 @@ interface Props {
     isDropdown: (d) => void
     full: boolean
     activeIndex: any
+    tab: string
 }
 
 export class IDETabs2 extends React.Component<Props> {
@@ -36,6 +37,7 @@ export class IDETabs2 extends React.Component<Props> {
             },
         ],
         full: false,
+        tab: "pages",
     }
 
     state = {
@@ -88,30 +90,36 @@ export class IDETabs2 extends React.Component<Props> {
                         color={"#4D4D4D"}
                     />
                 </Frame>
-
-                <IDEbutton full={this.props.full} {...toggleFullIDE(null)} />
-                <Frame
-                    width={36}
-                    height={36}
-                    style={{
-                        position: "relative",
-                        float: "right",
-                        cursor: "pointer",
-                        background: "transparent",
-                        padding: "9px 9px",
-                        top: "-36px",
-                        marginRight: "5px",
-                    }}
-                >
-                    <Icon
-                        set={"feather"}
-                        icon={"minus"}
-                        width={18}
-                        height={18}
-                        color={"#4D4D4D"}
-                    />
-                </Frame>
-                <PropertiesBtn {...propsBtn()} />
+                {this.props.tab === "pages" ? (
+                    <div>
+                        <IDEbutton
+                            full={this.props.full}
+                            {...toggleFullIDE(null)}
+                        />
+                        <Frame
+                            width={36}
+                            height={36}
+                            style={{
+                                position: "relative",
+                                float: "right",
+                                cursor: "pointer",
+                                background: "transparent",
+                                padding: "9px 9px",
+                                top: "-36px",
+                                marginRight: "5px",
+                            }}
+                        >
+                            <Icon
+                                set={"feather"}
+                                icon={"minus"}
+                                width={18}
+                                height={18}
+                                color={"#4D4D4D"}
+                            />
+                        </Frame>
+                        <PropertiesBtn {...propsBtn()} />
+                    </div>
+                ) : null}
             </div>
         )
     }

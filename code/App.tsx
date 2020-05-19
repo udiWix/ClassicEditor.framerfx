@@ -246,9 +246,15 @@ export function propsBtn(props): Override {
             const pb = !data.propsBtn
             data.propsBtn = pb
         },
+    }
+}
+
+export function IDEtabs(props): Override {
+    return {
         tab: data.section,
     }
 }
+
 export function propsPanel(props): Override {
     return {
         focused: data.propsBtn,

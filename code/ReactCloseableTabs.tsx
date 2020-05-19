@@ -84,6 +84,8 @@ interface Props {
     mainClassName: string
     tabPanelClass: string
     data: any
+    activeIndex: number
+    identifier: string
     onCloseTab: (x, y) => void
     onTabClick: (x, y, z) => void
     onBeforeTabClick: (x, y, z) => void
@@ -126,6 +128,7 @@ class ReactCloseableTabs extends React.Component<Props> {
         if (nextProps.data) {
             const newState = {
                 data: nextProps.data,
+                activeIndex: null,
             }
             if (Number.isInteger(nextProps.activeIndex)) {
                 newState.activeIndex = nextProps.activeIndex
