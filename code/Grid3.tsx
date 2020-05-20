@@ -9,6 +9,7 @@ import {
     propsPanel,
     syntax,
     IDEtabs,
+    siteTabs,
 } from "./App"
 import PanelGroup from "react-panelgroup"
 import { SiteTabs } from "./SiteTabs"
@@ -43,8 +44,6 @@ export function Grid3(props) {
     // }, [])
 
     const setPanel = st => {
-        props.setTreeTab(st)
-
         if (st === "code") {
             return <CodeFiles style={menu} />
         } else if (st === "database") {
@@ -72,7 +71,7 @@ export function Grid3(props) {
                         ]}
                     >
                         <div>
-                            <SiteTabs callback={setActive} />
+                            <SiteTabs callback={setActive} {...siteTabs()} />
                         </div>
                         <div style={menu}>{setPanel(active)}</div>
                         <div>
@@ -99,12 +98,7 @@ export function Grid3(props) {
                                         </Frame>
                                     </Scroll>
                                 </div>
-                                <IDETabs2
-                                    data={props.IDETabs}
-                                    full={true}
-                                    onTabFocusChange={props.onTabFocusChange}
-                                    {...IDEtabs(null)}
-                                />
+                                <IDETabs2 />
                             </div>
                         </div>
                     </PanelGroup>
@@ -123,7 +117,7 @@ export function Grid3(props) {
                         ]}
                     >
                         <div>
-                            <SiteTabs callback={setActive} />
+                            <SiteTabs callback={setActive} {...siteTabs()} />
                         </div>
                         <div style={menu}>{setPanel(active)}</div>
                         <div
@@ -156,8 +150,6 @@ Grid3.defaultProps = {
     layout: "bottom",
     onTabFocusChange: x => {},
     setLayout: () => {},
-    treeTab: "pages",
-    setTreeTab: () => {},
 }
 const menu: React.CSSProperties = {
     width: "inherit",

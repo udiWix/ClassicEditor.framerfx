@@ -11,24 +11,13 @@ const data = Data({
     propPosition: { x: null, y: null },
     activeIndex: 0,
     propsBtn: true,
-    treeTab: "pages",
     section: "pages",
     propPop: false,
     IDEtabs: [
         {
             tab: "Home",
             id: 0,
-            closeable: true,
-        },
-        {
-            tab: "Gallery",
-            id: 1,
-            closeable: true,
-        },
-        {
-            tab: "About",
-            id: 2,
-            closeable: true,
+            closeable: false,
         },
     ],
     focusedTab: null,
@@ -72,10 +61,7 @@ export function enableCorvid(props): Override {
     return {
         layout: data.layout,
         IDETabs: data.IDEtabs,
-        treeTab: data.treeTab,
-        setTreeTab: t => {
-            data.treeTab = t
-        },
+
         updateTabs(array, element) {
             data.IDEtabs = remove(array, element)
         },
@@ -95,24 +81,13 @@ export function onUpdateTabs(props): Override {
     return {
         data: data.IDEtabs,
         activeIndex: data.activeIndex,
+        tab: data.section,
         onTabFocusChange(x) {
             data.activeIndex = x
             let page = data.IDEtabs[x].tab
             data.page = page
         },
     }
-}
-
-const getActive = () => {
-    let page = data.page
-    let tabs = data.IDEtabs
-    let active
-    tabs.forEach(tab => {
-        if (tab.tab === page) {
-            active = tab.id
-        }
-    })
-    return active
 }
 
 const remove = (array, element) => {
@@ -134,19 +109,54 @@ export function toggleDevBtn(props): Override {
     }
 }
 
+function addTab(page) {
+    const tabs = getTabs(data.IDEtabs)
+    let isTab = tabs.includes(page)
+
+    if (data.section === "code") {
+        if (!isTab) {
+            let index = data.IDEtabs.length
+            let newTab = {
+                tab: page,
+                id: index,
+                closeable: true,
+            }
+            data.IDEtabs.push(newTab)
+            data.activeIndex = index
+        } else {
+            let i = tabs.indexOf(page)
+            data.activeIndex = i
+        }
+    }
+}
+
+function getTabs(tabs) {
+    const tabsArray = []
+    tabs.forEach(function(tab) {
+        tabsArray.push(tab.tab)
+    })
+    return tabsArray
+}
+
 export function pageSwitch(props): Override {
     return {
         current: data.page,
         switchPage(page) {
-            data.page = page
-            data.section = data.treeTab
-            if (data.treeTab === "code") {
-                data.layout = "full"
-            } else {
-                data.layout = data.previousLayout
+            if (data.section === "pages") {
+                data.page = page
+                data.IDEtabs[0].tab = page
+                data.activeIndex = 0
+            } else if (data.section === "code") {
+                addTab(page)
             }
+        },
+    }
+}
 
-            data.activeIndex = getActive()
+export function siteTabs(): Override {
+    return {
+        updateTab(t) {
+            data.section = t
         },
     }
 }
@@ -195,11 +205,6 @@ export function setPanelView(props): Override {
     }
 }
 
-export function adjustStageHeight(props): Override {
-    return {
-        height: data.layout == "stage" ? "95%" : "105%",
-    }
-}
 export function listenToIconTabs(props): Override {
     return {
         setActive(v) {
@@ -249,11 +254,12 @@ export function propsBtn(props): Override {
     }
 }
 
-export function IDEtabs(props): Override {
-    return {
-        tab: data.section,
-    }
-}
+// export function IDEtabs(props): Override {
+//     return {
+//         tab: data.section,
+//         activeIndex: data.activeIndex,
+//     }
+// }
 
 export function propsPanel(props): Override {
     return {

@@ -23,10 +23,11 @@ const TabPanel = styled.div`
 `
 const Tab = styled.div`
     border: none;
+    box-sizing: border-box;
     background: none;
     display: inline-flex;
     vertical-align: middle;
-    padding: 4px 4px 4px 15px;
+    padding: 4px 4px 4px 20px;
     width: auto;
     align-items: center;
     cursor: pointer;
@@ -39,15 +40,33 @@ const Tab = styled.div`
   color:#2B5672;
   line-height:24px;
   height:36px;
-  .closeTab {
+
+  .pageTab{
       width: 20px;
-      background: none;
+      background: null;
       height: 20px;
       margin-top: 3px;
       margin-left:8px;
       display: block;
       vertical-align: middle;
       position:relative;
+      right:0px;
+      font-size: 0;
+      opacity: 0;
+    }
+
+
+
+  .closeTab {
+      width: 20px;
+      background: null;
+      height: 20px;
+      margin-top: 3px;
+      margin-left:8px;
+      display: block;
+      vertical-align: middle;
+      position:relative;
+      right:0px;
       font-size: 0;
       border-radius: 30px;
       opacity: .0;
@@ -72,6 +91,8 @@ const Tab = styled.div`
       color:#162D3D;
     }
     &:hover {
+        border-right: 1px solid #EAEEF4;
+        
     .closeTab{
         opacity:.8
     }
@@ -92,6 +113,7 @@ interface Props {
     renderClose: () => void
     tabContentClass: () => void
     closeTitle: () => void
+    setActive: () => void
 }
 
 class ReactCloseableTabs extends React.Component<Props> {
@@ -184,7 +206,7 @@ class ReactCloseableTabs extends React.Component<Props> {
                                 key={i}
                             >
                                 {item.tab}
-                                {item.closeable && (
+                                {item.closeable ? (
                                     <a
                                         className="closeTab"
                                         onClick={e =>
@@ -193,6 +215,8 @@ class ReactCloseableTabs extends React.Component<Props> {
                                                 : null
                                         }
                                     />
+                                ) : (
+                                    <span className={"pageTab"} />
                                 )}
                             </Tab>
                         )

@@ -13,6 +13,7 @@ export function SiteTabs(props) {
     const activate = v => {
         setActive(v)
         props.callback(v)
+        props.updateTab(v)
     }
 
     return (
@@ -65,6 +66,7 @@ export function SiteTabs(props) {
 SiteTabs.defaultProps = {
     iconSize: 18,
     callback: () => {},
+    updateTab: () => {},
 }
 
 // Learn more: https://framer.com/api/property-controls/

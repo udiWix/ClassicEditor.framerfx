@@ -2,7 +2,7 @@ import * as React from "react"
 import { Frame, useCycle } from "framer"
 import CloseableTabs from "./ReactCloseableTabs"
 import { Icon } from "./Icon"
-import { toggleFullIDE } from "./App"
+import { toggleFullIDE, onUpdateTabs } from "./App"
 import { IDEbutton } from "./IDEbutton"
 import { PropertiesBtn } from "./PropertiesBtn"
 import { propsBtn } from "./App"
@@ -63,11 +63,7 @@ export class IDETabs2 extends React.Component<Props> {
     render() {
         return (
             <div>
-                <CloseableTabs
-                    data={this.state.data}
-                    onTabClick={this.tabClick}
-                    activeIndex={this.props.activeIndex}
-                ></CloseableTabs>
+                <CloseableTabs {...onUpdateTabs(null)} />
                 <Frame
                     onTap={this.onTap}
                     width={36}
