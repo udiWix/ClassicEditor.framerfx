@@ -10,6 +10,7 @@ const data = Data({
     selectedComp: "",
     propPosition: { x: null, y: null },
     activeIndex: 0,
+    tabIndex: 0,
     propsBtn: true,
     section: "pages",
     propPop: false,
@@ -18,6 +19,7 @@ const data = Data({
             tab: "Home",
             id: 0,
             closeable: false,
+            pinned: true,
         },
     ],
     focusedTab: null,
@@ -109,21 +111,42 @@ export function toggleDevBtn(props): Override {
     }
 }
 
-function addTab(page) {
+function addTab(page, single) {
     const tabs = getTabs(data.IDEtabs)
     let isTab = tabs.includes(page)
+    let index = data.IDEtabs.length
+
+    let id = data.tabIndex++
+    let newTab = {
+        tab: page,
+        id: id,
+        closeable: true,
+        pinned: false,
+    }
+    let pinned = data.IDEtabs[index - 1].pinned
 
     if (data.section === "code") {
-        if (!isTab) {
-            let index = data.IDEtabs.length
-            let newTab = {
-                tab: page,
-                id: index,
-                closeable: true,
+        if (!isTab && !single) {
+            if (pinned) {
+                data.IDEtabs.push(newTab)
+                data.activeIndex = index
+                data.IDEtabs[index].pinned = true
+            } else {
+                let t = data.IDEtabs.length - 1
+                data.IDEtabs[t] = newTab
+                data.activeIndex = t
+                data.IDEtabs[t].pinned = true
             }
-            data.IDEtabs.push(newTab)
-            data.activeIndex = index
-        } else {
+        } else if (!isTab && single) {
+            if (pinned) {
+                data.IDEtabs.push(newTab)
+                data.activeIndex = index
+            } else {
+                let t = data.IDEtabs.length - 1
+                data.IDEtabs[t] = newTab
+                data.activeIndex = t
+            }
+        } else if (isTab) {
             let i = tabs.indexOf(page)
             data.activeIndex = i
         }
@@ -138,6 +161,16 @@ function getTabs(tabs) {
     return tabsArray
 }
 
+function removeUnpinned() {
+    let tabs = data.IDEtabs
+    let newTabs = tabs.map(tab => {
+        if (tab.pinned) {
+            return tab
+        }
+    })
+    data.IDEtabs = newTabs
+}
+
 export function pageSwitch(props): Override {
     return {
         current: data.page,
@@ -147,7 +180,12 @@ export function pageSwitch(props): Override {
                 data.IDEtabs[0].tab = page
                 data.activeIndex = 0
             } else if (data.section === "code") {
-                addTab(page)
+                addTab(page, true)
+            }
+        },
+        doubleSwitchPage(page) {
+            if (data.section === "code") {
+                addTab(page, false)
             }
         },
     }

@@ -28,7 +28,8 @@
 		"react-panelgroup": "^1.0.10",
 		"react-syntax-highlighter": "^12.2.1",
 		"styled-components": "^4.3.2",
-		"three": "^0.111.0"
+		"three": "^0.111.0",
+		"use-double-click": "^1.0.5"
 	},
 	"name": "",
 	"version": "1.0.0"

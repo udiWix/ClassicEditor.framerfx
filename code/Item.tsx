@@ -1,6 +1,8 @@
 import * as React from "react"
-import { Frame, addPropertyControls, ControlType } from "framer"
+import { Frame, Stack, addPropertyControls, ControlType } from "framer"
 import styled from "styled-components"
+import { useEffect, useRef } from "react"
+import useDoubleClick from "use-double-click"
 // Open Preview: Command + P
 // Learn more: https://framer.com/api
 
@@ -8,14 +10,23 @@ export function Item(props) {
     let label = props.label
     let current = props.current
 
-    const onClick = e => {
-        props.switchPage(label)
-    }
+    const buttonRef = useRef()
+
+    useDoubleClick({
+        onSingleClick: e => {
+            props.switchPage(label)
+        },
+        onDoubleClick: e => {
+            props.doubleSwitchPage(label)
+        },
+        ref: buttonRef,
+        latency: 250,
+    })
     const render = () => {
         if (current === label) {
-            return <FileFocus onClick={onClick}>{label}</FileFocus>
+            return <FileFocus ref={buttonRef}>{label}</FileFocus>
         } else {
-            return <File onClick={onClick}>{label}</File>
+            return <File ref={buttonRef}>{label}</File>
         }
     }
 
@@ -25,6 +36,7 @@ export function Item(props) {
 Item.defaultProps = {
     label: "item",
     switchPage: () => {},
+    doubleSwitchPage: () => {},
     current: null,
 }
 
