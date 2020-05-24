@@ -112,8 +112,6 @@ interface Props {
     onBeforeTabClick: (x, y, z) => void
     renderClose: () => void
     tabContentClass: () => void
-    closeTitle: () => void
-    setActive: () => void
 }
 
 class ReactCloseableTabs extends React.Component<Props> {
@@ -179,10 +177,10 @@ class ReactCloseableTabs extends React.Component<Props> {
                 ? this.state.activeIndex - 1
                 : this.state.activeIndex
         this.props.onCloseTab && this.props.onCloseTab(id, newIndex)
-        this.setState({
-            data: this.state.data.filter(item => item.id !== id),
-            activeIndex: newIndex,
-        })
+        // this.setState({
+        //     data: this.state.data.filter(item => item.id !== id),
+        //     activeIndex: newIndex,
+        // })
     }
 
     render() {

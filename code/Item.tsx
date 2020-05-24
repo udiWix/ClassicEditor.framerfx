@@ -20,7 +20,7 @@ export function Item(props) {
             props.doubleSwitchPage(label)
         },
         ref: buttonRef,
-        latency: 250,
+        latency: 300,
     })
     const render = () => {
         if (current === label) {

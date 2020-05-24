@@ -89,6 +89,13 @@ export function onUpdateTabs(props): Override {
             let page = data.IDEtabs[x].tab
             data.page = page
         },
+        onCloseTab(x, y) {
+            console.log(x, y)
+            let tabs = data.IDEtabs
+            let newTabs = tabs.filter(tab => tab.id !== x)
+            data.IDEtabs = newTabs
+            data.activeIndex = y
+        },
     }
 }
 
@@ -111,7 +118,9 @@ export function toggleDevBtn(props): Override {
     }
 }
 
-function addTab(page, single) {
+async function addTab(page, single) {
+    await removeUnpinned()
+
     const tabs = getTabs(data.IDEtabs)
     let isTab = tabs.includes(page)
     let index = data.IDEtabs.length
@@ -123,33 +132,14 @@ function addTab(page, single) {
         closeable: true,
         pinned: false,
     }
-    let pinned = data.IDEtabs[index - 1].pinned
 
-    if (data.section === "code") {
-        if (!isTab && !single) {
-            if (pinned) {
-                data.IDEtabs.push(newTab)
-                data.activeIndex = index
-                data.IDEtabs[index].pinned = true
-            } else {
-                let t = data.IDEtabs.length - 1
-                data.IDEtabs[t] = newTab
-                data.activeIndex = t
-                data.IDEtabs[t].pinned = true
-            }
-        } else if (!isTab && single) {
-            if (pinned) {
-                data.IDEtabs.push(newTab)
-                data.activeIndex = index
-            } else {
-                let t = data.IDEtabs.length - 1
-                data.IDEtabs[t] = newTab
-                data.activeIndex = t
-            }
-        } else if (isTab) {
-            let i = tabs.indexOf(page)
-            data.activeIndex = i
-        }
+    if (!isTab) {
+        data.IDEtabs.push(newTab)
+        data.activeIndex = index
+        data.IDEtabs[index].pinned = single ? false : true
+    } else if (isTab) {
+        let i = tabs.indexOf(page)
+        data.activeIndex = i
     }
 }
 
@@ -161,14 +151,13 @@ function getTabs(tabs) {
     return tabsArray
 }
 
-function removeUnpinned() {
+async function removeUnpinned() {
     let tabs = data.IDEtabs
-    let newTabs = tabs.map(tab => {
-        if (tab.pinned) {
-            return tab
-        }
+    let newTabs = tabs.filter(function(tab) {
+        return tab.pinned == true
     })
     data.IDEtabs = newTabs
+    return
 }
 
 export function pageSwitch(props): Override {
