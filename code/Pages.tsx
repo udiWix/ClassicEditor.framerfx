@@ -38,19 +38,23 @@ Pages.defaultProps = {
     tree: [
         {
             section: "Pages",
-            items: ["Home", "About", "Gallery"],
+            items: [
+                { fileName: "Home", fileType: "page" },
+                { fileName: "About", fileType: "page" },
+                { fileName: "Gallery", fileType: "page" },
+            ],
         },
         {
             section: "Content Manager Pages",
-            items: ["Team"],
+            items: [{ fileName: "Team", fileType: "page" }],
         },
         {
             section: "Lightboxes",
-            items: ["Login"],
+            items: [{ fileName: "Login", fileType: "page" }],
         },
         {
             section: "Master",
-            items: ["Site"],
+            items: [{ fileName: "Site", fileType: "page" }],
         },
     ],
 }

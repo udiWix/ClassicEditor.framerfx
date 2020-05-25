@@ -13078,16 +13078,6 @@
                       ],
                       "inlineStyleRanges" : [
                         {
-                          "length" : 45,
-                          "offset" : 0,
-                          "style" : "FONT:Menlo-Regular"
-                        },
-                        {
-                          "length" : 15,
-                          "offset" : 0,
-                          "style" : "COLOR:var(--token-25677501-55f2-4899-91ce-bbeef5f68193, rgb(31, 119, 255)) \/* {\"name\":\"blue\"} *\/"
-                        },
-                        {
                           "length" : 1,
                           "offset" : 15,
                           "style" : "COLOR:hsl(0, 0%, 0%)"
@@ -13131,6 +13121,16 @@
                           "length" : 45,
                           "offset" : 0,
                           "style" : "ALIGN:left"
+                        },
+                        {
+                          "length" : 45,
+                          "offset" : 0,
+                          "style" : "FONT:Menlo-Regular"
+                        },
+                        {
+                          "length" : 15,
+                          "offset" : 0,
+                          "style" : "COLOR:var(--token-25677501-55f2-4899-91ce-bbeef5f68193, rgb(31, 119, 255)) \/* {\"name\":\"blue\"} *\/"
                         }
                       ],
                       "key" : "ab7uk",
@@ -13374,6 +13374,16 @@
                         {
                           "length" : 50,
                           "offset" : 0,
+                          "style" : "SIZE:12"
+                        },
+                        {
+                          "length" : 50,
+                          "offset" : 0,
+                          "style" : "ALIGN:left"
+                        },
+                        {
+                          "length" : 50,
+                          "offset" : 0,
                           "style" : "FONT:Menlo-Regular"
                         },
                         {
@@ -13420,16 +13430,6 @@
                           "length" : 50,
                           "offset" : 0,
                           "style" : "LINEHEIGHT:1.5"
-                        },
-                        {
-                          "length" : 50,
-                          "offset" : 0,
-                          "style" : "SIZE:12"
-                        },
-                        {
-                          "length" : 50,
-                          "offset" : 0,
-                          "style" : "ALIGN:left"
                         }
                       ],
                       "key" : "c31ur",

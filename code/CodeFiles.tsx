@@ -38,21 +38,27 @@ CodeFiles.defaultProps = {
     tree: [
         {
             section: "Public",
-            items: ["stripAPI.js"],
+            items: [{ fileName: "stripAPI.js", fileType: "js" }],
         },
         {
             section: "Backend",
             items: [
-                "home.jsw",
-                "settings.jsw",
-                "signin.jsw",
-                "user.jsw",
-                "print.jsw",
+                { fileName: "home.jsw", fileType: "jsw" },
+                { fileName: "settings.jsw", fileType: "jsw" },
+                { fileName: "list.json", fileType: "json" },
+                { fileName: "signin.jsw", fileType: "jsw" },
+                { fileName: "router.js", fileType: "js" },
+                { fileName: "print.jsw", fileType: "jsw" },
             ],
         },
         {
             section: "Packages",
-            items: ["momentjs", "twillio", "lodash", "googleMap"],
+            items: [
+                { fileName: "momentjs", fileType: "npm" },
+                { fileName: "twillio", fileType: "npm" },
+                { fileName: "lodash", fileType: "npm" },
+                { fileName: "googleMap", fileType: "npm" },
+            ],
         },
     ],
 }

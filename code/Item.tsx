@@ -3,6 +3,7 @@ import { Frame, Stack, addPropertyControls, ControlType } from "framer"
 import styled from "styled-components"
 import { useEffect, useRef } from "react"
 import useDoubleClick from "use-double-click"
+import { IDEicon } from "./IDEicon"
 // Open Preview: Command + P
 // Learn more: https://framer.com/api
 
@@ -24,9 +25,19 @@ export function Item(props) {
     })
     const render = () => {
         if (current === label) {
-            return <FileFocus ref={buttonRef}>{label}</FileFocus>
+            return (
+                <FileFocus ref={buttonRef}>
+                    <IDEicon name={props.type} />
+                    <div>{label}</div>
+                </FileFocus>
+            )
         } else {
-            return <File ref={buttonRef}>{label}</File>
+            return (
+                <File ref={buttonRef}>
+                    <IDEicon name={props.type} />
+                    <div>{label}</div>
+                </File>
+            )
         }
     }
 
@@ -35,6 +46,7 @@ export function Item(props) {
 
 Item.defaultProps = {
     label: "item",
+    type: "jsw",
     switchPage: () => {},
     doubleSwitchPage: () => {},
     current: null,

@@ -30,7 +30,12 @@ export function Folder(props) {
             </Section>
             {open
                 ? files.map((file, index) => (
-                      <Item label={file} key={index} {...pageSwitch(null)} />
+                      <Item
+                          label={file.fileName}
+                          type={file.fileType}
+                          key={index}
+                          {...pageSwitch(null)}
+                      />
                   ))
                 : null}
         </div>
@@ -38,7 +43,7 @@ export function Folder(props) {
 }
 
 Folder.defaultProps = {
-    files: ["file1", "file2", "file3"],
+    files: [{ fileName: "file1", fileType: "page" }],
     section: "Folder",
     switchPage: () => {},
 }

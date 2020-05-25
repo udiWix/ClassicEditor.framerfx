@@ -38,15 +38,27 @@ DataView.defaultProps = {
     tree: [
         {
             section: "Members",
-            items: ["Badges", "PrivateMembersData"],
+            items: [
+                { fileName: "Badges", fileType: "data" },
+                { fileName: "PrivateMembersData", fileType: "data" },
+            ],
         },
         {
             section: "Users",
-            items: ["PublicMemberProfiles"],
+            items: [
+                {
+                    fileName: "PublicMemberProfiles",
+                    fileType: "data",
+                },
+            ],
         },
         {
             section: "Bookings",
-            items: ["Schedule", "Services", "Staff"],
+            items: [
+                { fileName: "Schedule", fileType: "data" },
+                { fileName: "Services", fileType: "data" },
+                { fileName: "Staff", fileType: "data" },
+            ],
         },
     ],
 }
