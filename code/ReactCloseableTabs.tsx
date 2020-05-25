@@ -34,12 +34,15 @@ const Tab = styled.div`
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis; 
-    font-family: HelveticaNeueW01-65Medium, HelveticaNeueW02-65Medium, HelveticaNeueW10-65Medium, 'Helvetica Neue', Helvetica,   Arial, メイリオ, meiryo, sans-serif;
+    font-family:  Arial, メイリオ, meiryo, sans-serif;
   font-size: 12px;
   font-smooth: antialiased;
-  color:#2B5672;
+  color:${props => (props.pinned ? "#2B5672" : "#7A92A5")};
+  font-style: ${props => (props.pinned ? "normal" : "italic")};
   line-height:24px;
+  font-weight:700;
   height:36px;
+   
 
   .pageTab{
       width: 20px;
@@ -88,7 +91,7 @@ const Tab = styled.div`
         }
     &.active {
       background:#EAEEF4;
-      color:#162D3D;
+     
     }
     &:hover {
         border-right: 1px solid #EAEEF4;
@@ -122,18 +125,21 @@ class ReactCloseableTabs extends React.Component<Props> {
                 component: <div>Item details for 1</div>,
                 id: 1,
                 closeable: true,
+                pinned: false,
             },
             {
                 tab: "Gallery.js",
                 component: <div>Item details for 2</div>,
                 id: 2,
                 closeable: true,
+                pinned: false,
             },
             {
                 tab: "Item.js",
                 component: <div>Item details for 3</div>,
                 id: 3,
                 closeable: true,
+                pinned: false,
             },
         ],
     }
@@ -197,6 +203,7 @@ class ReactCloseableTabs extends React.Component<Props> {
                     {data.map((item, i) => {
                         return (
                             <Tab
+                                pinned={item.pinned}
                                 className={`tab ${
                                     i === activeIndex ? "active" : ""
                                 }`}

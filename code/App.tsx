@@ -273,7 +273,7 @@ export function calPos(comp) {
 export function propsBtn(props): Override {
     return {
         focused: data.propsBtn,
-        disabled: data.layout === "bottom" ? false : true,
+        disabled: data.layout === ("bottom" || "code") ? false : true,
         toggleFocus() {
             const pb = !data.propsBtn
             data.propsBtn = pb

@@ -20,7 +20,7 @@ export function PropertiesPanelContainer(props) {
     }
 
     const vis = () => {
-        if (props.tab === "code" || props.focused === false) {
+        if (props.focused === false) {
             return false
         } else {
             return true

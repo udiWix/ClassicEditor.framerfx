@@ -9,7 +9,6 @@ import { useEffect, useRef } from "react"
 export function PopOverContainer(props) {
     const onClick = () => {
         props.callback()
-        console.log("vis")
     }
 
     return (
