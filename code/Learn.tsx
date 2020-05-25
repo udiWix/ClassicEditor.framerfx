@@ -1,16 +1,16 @@
 import * as React from "react"
 import { Frame, useCycle, Stack } from "framer"
-import { _Tools } from "./canvas"
+import { _Learn } from "./canvas"
 import { Header } from "./Header"
 
 // Open Preview (CMD + P)
 // API Reference: https://www.framer.com/api
 
-export function Tools(props) {
+export function Learn(props) {
     return (
         <div style={treeStyle}>
             <Header text={"Tools"} />
-            <_Tools width={"100%"} />
+            <_Learn width={"100%"} />
         </div>
     )
 }
@@ -25,6 +25,6 @@ const treeStyle: React.CSSProperties = {
     background: bg,
 }
 
-Tools.defaultProps = {}
+Learn.defaultProps = {}
 
 //////////////////////////////////////////////////////////////////////

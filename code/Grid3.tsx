@@ -21,6 +21,7 @@ import { Pages } from "./Pages"
 import { Tools } from "./Tools"
 import { Syntax } from "./Syntax"
 import { Search } from "./Search"
+import { Learn } from "./Learn"
 import { PropertiesPanelContainer } from "./PropertiesPanelContainer"
 
 export function Grid3(props) {
@@ -54,6 +55,10 @@ export function Grid3(props) {
             return <Tools />
         } else if (st === "search") {
             return <Search />
+        } else if (st === "tools") {
+            return <Tools />
+        } else if (st === "learn") {
+            return <Learn />
         }
     }
 

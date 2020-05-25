@@ -56,6 +56,14 @@ export function findIcon(icon) {
             return "search"
             break
         }
+        case "tools": {
+            return "tools"
+            break
+        }
+        case "learn": {
+            return "globe"
+            break
+        }
     }
 }
 
