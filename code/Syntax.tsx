@@ -1,13 +1,8 @@
 import * as React from "react"
 import { Frame, addPropertyControls, ControlType } from "framer"
 import SyntaxHighlighter from "react-syntax-highlighter"
-import {
-    vs,
-    monoBlue,
-    corvid,
-} from "react-syntax-highlighter/dist/esm/styles/hljs"
-import { EditorMenu } from "./EditorMenu"
-import { onEditorClick, contextualMenu } from "./App"
+import { corvid } from "./styles/hljs"
+import { onEditorClick } from "./App"
 
 // Open Preview: Command + P
 // Learn more: https://framer.com/api

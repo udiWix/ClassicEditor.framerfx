@@ -10,15 +10,13 @@ export function ToolsBtn(props) {
     // console.log("props", JSON.stringify(props.hover, null, 2))
 
     const iconColor =
-        props.activeTab === props.icon && color === "#F0F3F5"
-            ? "#fff"
-            : "#F0F3F5"
+        props.activeTab === "tools" && color === "#F0F3F5" ? "#fff" : "#F0F3F5"
 
     const onTap = () => {
-        if (props.activeTab != props.icon) {
+        if (props.activeTab != "tools") {
             setColor(iconColor)
         }
-        props.callback(props.icon)
+        props.callback("tools")
     }
     return (
         <Frame style={style} onTap={onTap} background={iconColor}>

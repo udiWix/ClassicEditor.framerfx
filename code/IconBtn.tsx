@@ -61,7 +61,7 @@ export function findIcon(icon) {
             break
         }
         case "learn": {
-            return "help-circle"
+            return "book"
             break
         }
     }
