@@ -2,6 +2,7 @@ import * as React from "react"
 import { PropertyControls, ControlType } from "framer"
 import FeatherIcon from "feather-icons-react"
 import MaterialIcon from "material-icons-react"
+import ai from "react-icons/ai"
 
 // Define type of property
 interface Props {

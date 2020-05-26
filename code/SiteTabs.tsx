@@ -3,6 +3,7 @@ import { Stack, Frame, addPropertyControls, ControlType } from "framer"
 
 import { url } from "framer/resource"
 import { IconBtn } from "./IconBtn"
+import { ToolsBtn } from "./ToolsBtn"
 
 // Open Preview: Command + P
 // Learn more: https://framer.com/api
@@ -69,21 +70,14 @@ export function SiteTabs(props) {
                 height={94}
             >
                 <IconBtn
-                    icon={"tools"}
-                    set={"feather"}
-                    width={props.iconSize}
-                    height={props.iconSize}
-                    callback={activate}
-                    activeTab={active}
-                />
-                <IconBtn
                     icon={"learn"}
                     set={"feather"}
-                    width={props.iconSize}
-                    height={props.iconSize}
+                    width={20}
+                    height={20}
                     callback={activate}
                     activeTab={active}
                 />
+                <ToolsBtn callback={activate} activeTab={active} />
             </Stack>
         </div>
     )

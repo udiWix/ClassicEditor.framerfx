@@ -97,7 +97,7 @@ export function Grid3(props) {
                                         <Frame
                                             width={"100%"}
                                             height={1000}
-                                            background={"#EAEEF4"}
+                                            background={"#F0F3F5"}
                                         >
                                             <Syntax {...syntax(null)} />
                                         </Frame>

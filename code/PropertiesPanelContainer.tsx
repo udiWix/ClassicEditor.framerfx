@@ -35,7 +35,7 @@ export function PropertiesPanelContainer(props) {
                 top={36}
                 right={0}
                 visible={vis()}
-                background={"#EAEEF4"}
+                background={"#F0F3F5"}
                 style={{ borderLeft: "1px solid #C2CAD5", padding: "0px 12px" }}
             >
                 {content()}

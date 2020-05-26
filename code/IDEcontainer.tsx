@@ -173,7 +173,7 @@ export class IDEcontainer extends React.Component<Props> {
                 height={this.state.newHeight}
                 style={mainWindow}
                 width={400}
-                background={"#EAEEF4"}
+                background={"#F0F3F5"}
                 {...IDEswitch(null)}
             >
                 <Frame
@@ -181,7 +181,7 @@ export class IDEcontainer extends React.Component<Props> {
                     width={"100%"}
                     height={20}
                     left={0}
-                    background={"#EAEEF4"}
+                    background={"#F0F3F5"}
                     top={-this.margin / 2}
                     onPan={this.cornerPanHandler.bind(this, "top")}
                     onPanStart={this.cornerPanStartHandler.bind(this, "top")}
@@ -205,7 +205,7 @@ export class IDEcontainer extends React.Component<Props> {
                         <Frame
                             width={"100%"}
                             height={"max-contnet"}
-                            background={"#EAEEF4"}
+                            background={"#F0F3F5"}
                         >
                             <Syntax {...syntax(null)} />
                         </Frame>

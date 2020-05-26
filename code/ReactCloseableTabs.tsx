@@ -90,11 +90,11 @@ const Tab = styled.div`
             }
         }
     &.active {
-      background:#EAEEF4;
+      background:#F0F3F5;
      
     }
     &:hover {
-        border-right: 1px solid #EAEEF4;
+        border-right: 1px solid #F0F3F5;
         
     .closeTab{
         opacity:.8

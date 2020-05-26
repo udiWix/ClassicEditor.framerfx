@@ -61,7 +61,7 @@ export function findIcon(icon) {
             break
         }
         case "learn": {
-            return "globe"
+            return "help-circle"
             break
         }
     }
@@ -88,4 +88,5 @@ IconBtn.defaultProps = {
     width: 18,
     height: 18,
     callback: () => {},
+    reactIcon: false,
 }

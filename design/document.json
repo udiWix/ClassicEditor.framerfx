@@ -13205,6 +13205,11 @@
                       ],
                       "inlineStyleRanges" : [
                         {
+                          "length" : 60,
+                          "offset" : 0,
+                          "style" : "FONT:Menlo-Regular"
+                        },
+                        {
                           "length" : 5,
                           "offset" : 0,
                           "style" : "COLOR:var(--token-25677501-55f2-4899-91ce-bbeef5f68193, rgb(31, 119, 255)) \/* {\"name\":\"blue\"} *\/"
@@ -13273,11 +13278,6 @@
                           "length" : 60,
                           "offset" : 0,
                           "style" : "ALIGN:left"
-                        },
-                        {
-                          "length" : 60,
-                          "offset" : 0,
-                          "style" : "FONT:Menlo-Regular"
                         }
                       ],
                       "key" : "erusk",
@@ -28105,7 +28105,6 @@
       },
       {
         "__class" : "ShapeContainerNode",
-        "aspectRatio" : 1,
         "autoSize" : true,
         "bottom" : null,
         "centerAnchorX" : 0,
@@ -28977,7 +28976,6 @@
         "radiusTopLeft" : 0,
         "radiusTopRight" : 0,
         "right" : null,
-        "rotation" : 0,
         "sizeToFit" : false,
         "top" : 561,
         "visible" : true,
@@ -28986,7 +28984,6 @@
       },
       {
         "__class" : "ShapeContainerNode",
-        "aspectRatio" : 1,
         "autoSize" : true,
         "bottom" : null,
         "centerAnchorX" : 0,
@@ -30075,7 +30072,6 @@
         "radiusTopLeft" : 0,
         "radiusTopRight" : 0,
         "right" : null,
-        "rotation" : 0,
         "sizeToFit" : false,
         "top" : 471,
         "visible" : true,
@@ -30084,7 +30080,6 @@
       },
       {
         "__class" : "ShapeContainerNode",
-        "aspectRatio" : 1,
         "autoSize" : true,
         "bottom" : null,
         "centerAnchorX" : 0,
@@ -31101,7 +31096,6 @@
         "radiusTopLeft" : 0,
         "radiusTopRight" : 0,
         "right" : null,
-        "rotation" : 0,
         "sizeToFit" : false,
         "top" : 531,
         "visible" : true,
@@ -31110,7 +31104,6 @@
       },
       {
         "__class" : "ShapeContainerNode",
-        "aspectRatio" : 1,
         "autoSize" : true,
         "bottom" : null,
         "centerAnchorX" : 0,
@@ -32683,7 +32676,6 @@
         "radiusTopLeft" : 0,
         "radiusTopRight" : 0,
         "right" : null,
-        "rotation" : 0,
         "sizeToFit" : false,
         "top" : 501,
         "visible" : true,
@@ -32692,7 +32684,6 @@
       },
       {
         "__class" : "ShapeContainerNode",
-        "aspectRatio" : 1,
         "autoSize" : true,
         "bottom" : null,
         "centerAnchorX" : 0,
@@ -32927,7 +32918,6 @@
         "radiusTopLeft" : 0,
         "radiusTopRight" : 0,
         "right" : null,
-        "rotation" : 0,
         "sizeToFit" : false,
         "top" : 213,
         "visible" : true,
