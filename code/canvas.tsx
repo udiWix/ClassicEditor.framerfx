@@ -17,6 +17,7 @@ export const PropsEmpty = createDesignComponent<{parentSize?:{width:number|strin
 export const StageContainer = createDesignComponent<{parentSize?:{width:number|string,height:number|string},width?:number|string,height?:number|string}>(canvas, "id_hYO3RPveh", {}, 1588,851);
 export const Triangle = createDesignComponent<{parentSize?:{width:number|string,height:number|string},width?:number|string,height?:number|string}>(canvas, "id_yuIcBTuOt", {}, 25,18);
 export const _Learn = createDesignComponent<{parentSize?:{width:number|string,height:number|string},width?:number|string,height?:number|string}>(canvas, "id_hQeu0wdLH", {}, 240,387);
+export const _Search = createDesignComponent<{parentSize?:{width:number|string,height:number|string},width?:number|string,height?:number|string}>(canvas, "id_cRe9XQjKS", {}, 263,67);
 export const _Tools = createDesignComponent<{parentSize?:{width:number|string,height:number|string},width?:number|string,height?:number|string}>(canvas, "id_FRzORgLGy", {}, 247,320);
 
 export const colors = Object.freeze({

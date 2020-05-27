@@ -4,6 +4,7 @@ import { Icon } from "./Icon"
 import styled from "styled-components"
 import { pageSwitch } from "./App"
 import { Header } from "./Header"
+import { _Search } from "./canvas"
 
 // Open Preview (CMD + P)
 // API Reference: https://www.framer.com/api
@@ -15,6 +16,7 @@ export function Search(props) {
     return (
         <div style={treeStyle}>
             <Header text={"Search"} />
+            <_Search width={"100%"} />
         </div>
     )
 }

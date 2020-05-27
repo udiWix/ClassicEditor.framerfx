@@ -1,5 +1,6 @@
 import * as React from "react"
 import styled, { ThemeProvider } from "styled-components"
+import { IDEicon } from "./IDEicon"
 
 const CloseableTabs = styled.div`
   margin: 0px;
@@ -210,6 +211,7 @@ class ReactCloseableTabs extends React.Component<Props> {
                                 onClick={() => this.handleTabClick(item.id, i)}
                                 key={i}
                             >
+                                {item.pinned ? <IDEicon name={"page"} /> : null}
                                 {item.tab}
                                 {item.closeable ? (
                                     <a
