@@ -211,7 +211,9 @@ class ReactCloseableTabs extends React.Component<Props> {
                                 onClick={() => this.handleTabClick(item.id, i)}
                                 key={i}
                             >
-                                {item.pinned ? <IDEicon name={"page"} /> : null}
+                                {item.pinned ? (
+                                    <IDEicon name={getFileType(item.tab)} />
+                                ) : null}
                                 {item.tab}
                                 {item.closeable ? (
                                     <a
@@ -252,3 +254,93 @@ class ReactCloseableTabs extends React.Component<Props> {
 }
 
 export default ReactCloseableTabs
+
+function getFileType(item) {
+    switch (item) {
+        case "Home":
+            return "page"
+            break
+        case "About":
+            return "page"
+            break
+        case "Gallery":
+            return "page"
+            break
+        case "Team":
+            return "page"
+            break
+        case "Login":
+            return "page"
+            break
+        case "Site":
+            return "page"
+            break
+        case "stripAPI.js":
+            return "js"
+            break
+
+        case "home.jsw":
+            return "jsw"
+            break
+
+        case "settings.jsw.js":
+            return "jsw"
+            break
+        case "list.json":
+            return "json"
+            break
+        case "signin.jsw":
+            return "jsw"
+            break
+        case "router.js":
+            return "js"
+            break
+        case "print.jsw":
+            return "js"
+            break
+        case "momentjs":
+            return "npm"
+            break
+        case "twillio":
+            return "npm"
+            break
+
+        case "lodash":
+            return "npm"
+            break
+        case "googleMap":
+            return "npm"
+            break
+        case "settings.jsw.js":
+            return "jsw"
+            break
+        case "list.json":
+            return "json"
+            break
+        case "signin.jsw":
+            return "jsw"
+            break
+        case "router.js":
+            return "js"
+            break
+        case "print.jsw":
+            return "js"
+            break
+        case "momentjs":
+            return "npm"
+            break
+        case "twillio":
+            return "npm"
+            break
+
+        case "lodash":
+            return "npm"
+            break
+        case "googleMap":
+            return "npm"
+            break
+        case "jobs.config":
+            return "config"
+            break
+    }
+}

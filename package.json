@@ -28,6 +28,7 @@
 		"react-keyboard-event-handler": "^1.5.3",
 		"react-panelgroup": "^1.0.10",
 		"react-syntax-highlighter": "^12.2.1",
+		"react-tooltip": "^4.2.6",
 		"styled-components": "^4.3.2",
 		"three": "^0.111.0",
 		"use-double-click": "^1.0.5"

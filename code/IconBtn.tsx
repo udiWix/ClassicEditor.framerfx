@@ -1,6 +1,7 @@
 import * as React from "react"
 import { Frame, Stack, ControlType, addPropertyControls } from "framer"
 import { Icon } from "./Icon"
+import ReactTooltip from "react-tooltip"
 
 // Open Preview (CMD + P)
 // API Reference: https://www.framer.com/api
@@ -21,7 +22,19 @@ export function IconBtn(props) {
         props.callback(props.icon)
     }
     return (
-        <Frame style={style} onTap={onTap} background={iconColor}>
+        <Frame
+            style={style}
+            onTap={onTap}
+            background={iconColor}
+            data-tip={props.icon}
+            data-type="light"
+            data-border={true}
+            data-border-color={"#D8E0E3"}
+            data-effect={"float"}
+            data-offset="{ 'left': -10}"
+            data-place="right"
+        >
+            <ReactTooltip />
             <Icon
                 icon={findIcon(props.icon)}
                 color={"#162D3D"}
@@ -76,6 +89,7 @@ const style: React.CSSProperties = {
     justifyContent: "center",
     flexDirection: "column",
     cursor: "pointer",
+    textTransform: "capitalize",
 }
 
 addPropertyControls(IconBtn, {
@@ -89,4 +103,5 @@ IconBtn.defaultProps = {
     height: 18,
     callback: () => {},
     reactIcon: false,
+    icon: "code",
 }

@@ -52,6 +52,15 @@ CodeFiles.defaultProps = {
             ],
         },
         {
+            section: "Configuration Files",
+            items: [
+                { fileName: "data.js", fileType: "js" },
+                { fileName: "events.js", fileType: "js" },
+                { fileName: "http-functions.js", fileType: "js" },
+                { fileName: "jobs.config", fileType: "config" },
+            ],
+        },
+        {
             section: "Packages",
             items: [
                 { fileName: "momentjs", fileType: "npm" },

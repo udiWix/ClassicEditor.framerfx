@@ -822,6 +822,14 @@ react-syntax-highlighter@^12.2.1:
     prismjs "^1.8.4"
     refractor "^2.4.1"
 
+react-tooltip@^4.2.6:
+  version "4.2.6"
+  resolved "https://repo.dev.wixpress.com/artifactory/api/npm/npm-repos/react-tooltip/-/react-tooltip-4.2.6.tgz#a3d5f0d1b0c597c0852ba09c5e2af0019b7cfc70"
+  integrity sha1-o9Xw0bDFl8CFK6CcXirwAZt8/HA=
+  dependencies:
+    prop-types "^15.7.2"
+    uuid "^7.0.3"
+
 react-transition-group@^4.3.0:
   version "4.3.0"
   resolved "https://registry.yarnpkg.com/react-transition-group/-/react-transition-group-4.3.0.tgz#fea832e386cf8796c58b61874a3319704f5ce683"
@@ -964,6 +972,11 @@ use-double-click@^1.0.5:
   version "1.0.5"
   resolved "https://repo.dev.wixpress.com/artifactory/api/npm/npm-repos/use-double-click/-/use-double-click-1.0.5.tgz#656a3c3c528b5cd3ff40ee548bac0d50b714dfc6"
   integrity sha1-ZWo8PFKLXNP/QO5Ui6wNULcU38Y=
+
+uuid@^7.0.3:
+  version "7.0.3"
+  resolved "https://repo.dev.wixpress.com/artifactory/api/npm/npm-repos/uuid/-/uuid-7.0.3.tgz#c5c9f2c8cf25dc0a372c4df1441c41f5bd0c680b"
+  integrity sha1-xcnyyM8l3Ao3LE3xRBxB9b0MaAs=
 
 webfontloader@^1.6.28:
   version "1.6.28"

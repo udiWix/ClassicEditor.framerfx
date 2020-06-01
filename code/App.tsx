@@ -205,7 +205,7 @@ function setPage(v) {
 export function toggleFullIDE(props): Override {
     return {
         layout: data.previousLayout,
-
+        full: data.layout === "bottom" ? false : true,
         setLayout(ly) {
             data.layout = ly
         },

@@ -9,7 +9,7 @@ import { Header } from "./Header"
 export function Learn(props) {
     return (
         <div style={treeStyle}>
-            <Header text={"Tools"} />
+            <Header text={"Learn"} />
             <_Learn width={"100%"} />
         </div>
     )

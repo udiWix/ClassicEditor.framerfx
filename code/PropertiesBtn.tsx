@@ -39,7 +39,7 @@ export function PropertiesBtn(props) {
                 marginRight: "5px",
             }}
         >
-            <Frame background="transparent" width={23} height={18} center>
+            <Frame background="transparent" width={17} height={17} center>
                 <PropsIcon tint={color} />
             </Frame>
             <Frame
