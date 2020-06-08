@@ -44,7 +44,7 @@ export function PropertiesPanel(props) {
                 component={v}
                 eventName={eventShort(event)}
                 label={event + "( )"}
-                {...handlerClick()}
+                {...handlerClick(null)}
             />
         )
     })

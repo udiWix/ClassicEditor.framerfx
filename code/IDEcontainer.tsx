@@ -24,8 +24,8 @@ import { PropertiesPanelContainer } from "./PropertiesPanelContainer"
 import { EditorMenu } from "./EditorMenu"
 
 const mainWindow: React.CSSProperties = {
-    background: "#EAEEF3",
-    overflow: "hidden",
+    background: "#F0F3F5",
+
     borderRadius: "0px",
     width: "100%",
 }
@@ -34,7 +34,7 @@ const header: React.CSSProperties = {
     position: "absolute",
     width: "100%",
     height: 36,
-    borderTop: "1px solid #c2cad5",
+    boxShadow: "0px -5px 13px -10px rgba(0,0,0,0.19)",
 }
 
 const corner: React.CSSProperties = {
@@ -181,8 +181,7 @@ export class IDEcontainer extends React.Component<Props> {
                     width={"100%"}
                     height={20}
                     left={0}
-                    background={"#F0F3F5"}
-                    top={-this.margin / 2}
+                    top={-10}
                     onPan={this.cornerPanHandler.bind(this, "top")}
                     onPanStart={this.cornerPanStartHandler.bind(this, "top")}
                     onPanEnd={this.panEndHandler}
@@ -194,9 +193,9 @@ export class IDEcontainer extends React.Component<Props> {
                     onMouseLeave={this.mouseLeaveHandler}
                 />
 
-                <div style={{ background: "#EAEEF3" }}>
+                <div style={{ background: "#F0F3F5" }}>
                     <Scroll
-                        background={"#EAEEF3"}
+                        background={"#F0F3F5"}
                         y={10}
                         width={"100%"}
                         height={"100%"}

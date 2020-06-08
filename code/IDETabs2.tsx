@@ -113,7 +113,7 @@ export class IDETabs2 extends React.Component<Props> {
                                 color={"#4D4D4D"}
                             />
                         </Frame>
-                        <PropertiesBtn {...propsBtn()} />
+                        <PropertiesBtn {...propsBtn(null)} />
                     </div>
                 ) : null}
             </div>

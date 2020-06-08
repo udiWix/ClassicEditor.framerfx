@@ -3,6 +3,7 @@ import { createDesignComponent, CanvasStore } from "framer"
 const canvas = CanvasStore.shared(); // CANVAS_DATA;
 export const About = createDesignComponent<{parentSize?:{width:number|string,height:number|string},width?:number|string,height?:number|string}>(canvas, "id_MgcH2yo0F", {}, 1336,706);
 export const AddBtn = createDesignComponent<{parentSize?:{width:number|string,height:number|string},width?:number|string,height?:number|string}>(canvas, "id_ZPylIWeAS", {}, 15,15);
+export const Component = createDesignComponent<{parentSize?:{width:number|string,height:number|string},width?:number|string,height?:number|string}>(canvas, "id_ZMwAG4fyK", {}, 450,501);
 export const Editor = createDesignComponent<{parentSize?:{width:number|string,height:number|string},width?:number|string,height?:number|string}>(canvas, "id_GfUin_tcv", {}, 1336,802);
 export const EditorCMenu = createDesignComponent<{parentSize?:{width:number|string,height:number|string},width?:number|string,height?:number|string}>(canvas, "id_Qwj9Na5Iy", {}, 200,164);
 export const Flashlight = createDesignComponent<{parentSize?:{width:number|string,height:number|string},width?:number|string,height?:number|string}>(canvas, "id_Xm_1PeQNp", {}, 17,16);

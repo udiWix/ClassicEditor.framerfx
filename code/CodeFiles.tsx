@@ -38,7 +38,11 @@ CodeFiles.defaultProps = {
     tree: [
         {
             section: "Public",
-            items: [{ fileName: "stripAPI.js", fileType: "js" }],
+            items: [
+                { fileName: "helpers.js", fileType: "js" },
+                { fileName: "quary.js", fileType: "js" },
+                { fileName: "calls.js", fileType: "js" },
+            ],
         },
         {
             section: "Backend",
