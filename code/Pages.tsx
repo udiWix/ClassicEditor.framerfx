@@ -41,15 +41,27 @@ Pages.defaultProps = {
                 { fileName: "Home", fileType: "page" },
                 { fileName: "About", fileType: "page" },
                 { fileName: "Gallery", fileType: "page" },
+                { fileName: "FAQ", fileType: "page" },
             ],
         },
         {
             section: "Content Manager Pages",
-            items: [{ fileName: "Team", fileType: "page" }],
+            items: [
+                { fileName: "My Account Page", fileType: "member" },
+                { fileName: "My Orders", fileType: "member" },
+                { fileName: "My Adresses", fileType: "member" },
+                { fileName: "My Wallet", fileType: "member" },
+            ],
         },
         {
             section: "Lightboxes",
-            items: [{ fileName: "Login", fileType: "page" }],
+            items: [
+                { fileName: "login", fileType: "lightbox" },
+                { fileName: "add credits popup", fileType: "lightbox" },
+                { fileName: "idea", fileType: "lightbox" },
+                { fileName: "register completed", fileType: "lightbox" },
+                { fileName: "before rent", fileType: "lightbox" },
+            ],
         },
         {
             section: "Master",
