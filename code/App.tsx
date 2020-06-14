@@ -207,6 +207,7 @@ const data = Data({
     propsBtn: true,
     propsBtnDisabled: false,
     section: "pages",
+    treeFocus: "Home",
     propPop: false,
     IDEtabs: [
         {
@@ -337,8 +338,10 @@ async function removeUnpinned() {
 
 export function pageSwitch(props): Override {
     return {
-        current: data.page,
+        current: data.treeFocus,
+        page: data.page,
         switchPage(page) {
+            data.treeFocus = page
             if (data.section === "pages") {
                 data.page = page
                 data.IDEtabs[0].tab = page
@@ -350,6 +353,7 @@ export function pageSwitch(props): Override {
         },
         doubleSwitchPage(page) {
             if (data.section === "code") {
+                data.treeFocus = page
                 addTab(page, false)
             }
         },

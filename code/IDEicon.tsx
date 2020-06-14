@@ -17,11 +17,16 @@ export function IDEicon(props) {
         return icon
     }
 
-    return <div style={style}>{itemIcon()}</div>
+    return (
+        <Frame visible={props.visible} style={style}>
+            {itemIcon()}
+        </Frame>
+    )
 }
 
 IDEicon.defaultProps = {
     name: "js",
+    visible: true,
 }
 
 const style: React.CSSProperties = {
@@ -31,6 +36,8 @@ const style: React.CSSProperties = {
     display: "grid",
     alignItems: "center",
     justifyItems: "start",
+    background: "transparent",
+    position: "relative",
 }
 
 const icons = [

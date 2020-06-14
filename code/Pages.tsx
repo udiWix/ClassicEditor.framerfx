@@ -10,7 +10,6 @@ import { Folder } from "./Folder"
 
 export function Pages(props) {
     let tree = props.tree
-    const [focus, setFocus] = React.useState()
 
     return (
         <div style={treeStyle}>

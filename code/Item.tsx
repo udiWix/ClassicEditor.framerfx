@@ -10,7 +10,9 @@ import { IDEicon } from "./IDEicon"
 export function Item(props) {
     let label = props.label
     let current = props.current
-
+    let icon = props.type === "page" ? false : true
+    let pageIcon =
+        props.type === "page" && props.page === props.label ? true : false
     const buttonRef = useRef()
 
     useDoubleClick({
@@ -27,21 +29,32 @@ export function Item(props) {
         if (current === label) {
             return (
                 <FileFocus ref={buttonRef}>
-                    <IDEicon name={props.type} />
+                    <IDEicon name={props.type} visible={icon} />
                     <div>{label}</div>
                 </FileFocus>
             )
         } else {
             return (
                 <File ref={buttonRef}>
-                    <IDEicon name={props.type} />
+                    <IDEicon name={props.type} visible={icon} />
                     <div>{label}</div>
                 </File>
             )
         }
     }
 
-    return render()
+    return (
+        <div style={{ height: "30px", width: "100%", background: "green" }}>
+            <div
+                style={{ width: "100%", height: "30px", position: "absolute" }}
+            >
+                {render()}
+                <Frame style={style} visible={pageIcon}>
+                    <IDEicon name={"page"} />
+                </Frame>
+            </div>
+        </div>
+    )
 }
 
 Item.defaultProps = {
@@ -50,8 +63,16 @@ Item.defaultProps = {
     switchPage: () => {},
     doubleSwitchPage: () => {},
     current: null,
+    page: null,
 }
-
+const style: React.CSSProperties = {
+    position: "absolute",
+    top: "5px",
+    left: "4px",
+    width: "18px",
+    height: "20px",
+    background: "transparent",
+}
 const File = styled.div`
     position: relative;
     width:100%;

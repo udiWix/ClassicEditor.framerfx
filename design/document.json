@@ -13301,11 +13301,6 @@
                       ],
                       "inlineStyleRanges" : [
                         {
-                          "length" : 3,
-                          "offset" : 0,
-                          "style" : "COLOR:rgb(122, 146, 165)"
-                        },
-                        {
                           "length" : 33,
                           "offset" : 0,
                           "style" : "LETTERSPACING:0.0"
@@ -13349,6 +13344,11 @@
                           "length" : 4,
                           "offset" : 27,
                           "style" : "COLOR:#22CCDD"
+                        },
+                        {
+                          "length" : 3,
+                          "offset" : 0,
+                          "style" : "COLOR:rgb(122, 146, 165)"
                         }
                       ],
                       "key" : "3mp88",
@@ -23555,9 +23555,9 @@
                 "os" : "macos 10_15 framerx",
                 "size" : {
                   "height" : 45,
-                  "width" : 201
+                  "width" : 177
                 },
-                "width" : 200
+                "width" : 176
               },
               "entityMap" : {
 
@@ -26439,9 +26439,9 @@
                                 "os" : "macos 10_15 framerx",
                                 "size" : {
                                   "height" : 18,
-                                  "width" : 201
+                                  "width" : 76
                                 },
-                                "width" : 200
+                                "width" : 75
                               },
                               "entityMap" : {
 
