@@ -275,14 +275,41 @@ function getFileType(item) {
         case "Site":
             return "page"
             break
+
+        case "FAQ":
+            return "page"
+            break
+        case "My Account Page":
+            return "page"
+            break
+        case "My Orders":
+            return "page"
+            break
+        case "My Adresses":
+            return "page"
+            break
+        case "My Wallet":
+            return "page"
+            break
+        case "add credits popup":
+            return "page"
+            break
+        case "idea":
+            return "page"
+            break
+        case "register completed":
+            return "page"
+            break
+        case "before rent":
+            return "page"
+            break
+
         case "stripAPI.js":
             return "js"
             break
-
         case "home.jsw":
             return "jsw"
             break
-
         case "settings.jsw":
             return "jsw"
             break
