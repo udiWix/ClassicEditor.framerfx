@@ -42,6 +42,7 @@ CodeFiles.defaultProps = {
                 { fileName: "helpers.js", fileType: "js" },
                 { fileName: "quary.js", fileType: "js" },
                 { fileName: "calls.js", fileType: "js" },
+                { fileName: "styles.css", fileType: "css" },
             ],
         },
         {
