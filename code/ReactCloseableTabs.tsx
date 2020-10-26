@@ -266,11 +266,33 @@ function getFileType(item) {
         case "Gallery":
             return "page"
             break
-        case "Team":
-            return "page"
+        case "My Account Page":
+            return "member"
             break
+        case "My Orders":
+            return "member"
+            break
+        case "My Adresses":
+            return "member"
+            break
+        case "My Wallet":
+            return "member"
+            break
+
         case "Login":
-            return "page"
+            return "lightbox"
+            break
+        case "add credits popup":
+            return "lightbox"
+            break
+        case "idea":
+            return "lightbox"
+            break
+        case "register completed":
+            return "lightbox"
+            break
+        case "before rent":
+            return "lightbox"
             break
         case "Site":
             return "page"
@@ -337,6 +359,9 @@ function getFileType(item) {
             break
         case "googleMap":
             return "npm"
+            break
+        case "FAQ":
+            return "page"
             break
     }
 }

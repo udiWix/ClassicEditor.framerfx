@@ -10,10 +10,30 @@ import { IDEicon } from "./IDEicon"
 export function Item(props) {
     let label = props.label
     let current = props.current
-    let icon = props.type === "page" ? false : true
-    let pageIcon =
-        props.type === "page" && props.page === props.label ? true : false
+    // let pageIcon =
+    //     props.type === ("page" || "member" || "lightbox") &&
+    //     props.page === props.label
+    //         ? true
+    //         : false
+
     const buttonRef = useRef()
+
+    const getIcon = () => {
+        if (
+            props.type === "page" ||
+            props.type === "member" ||
+            props.type === "lightbox"
+        ) {
+            if (props.page === props.label) {
+                return true
+            } else {
+                return false
+            }
+        } else {
+            return true
+        }
+    }
+    let pageIcon = getIcon()
 
     useDoubleClick({
         onSingleClick: e => {
@@ -29,14 +49,14 @@ export function Item(props) {
         if (current === label) {
             return (
                 <FileFocus ref={buttonRef}>
-                    <IDEicon name={props.type} visible={icon} />
+                    <IDEicon name={props.type} visible={pageIcon} />
                     <div>{label}</div>
                 </FileFocus>
             )
         } else {
             return (
                 <File ref={buttonRef}>
-                    <IDEicon name={props.type} visible={icon} />
+                    <IDEicon name={props.type} visible={pageIcon} />
                     <div>{label}</div>
                 </File>
             )
@@ -49,9 +69,6 @@ export function Item(props) {
                 style={{ width: "100%", height: "30px", position: "absolute" }}
             >
                 {render()}
-                <Frame style={style} visible={pageIcon}>
-                    <IDEicon name={"page"} />
-                </Frame>
             </div>
         </div>
     )
