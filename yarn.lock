@@ -136,6 +136,18 @@
   dependencies:
     styled-components "^4.0.3"
 
+"@framer/framer.default@^1.77.0":
+  version "1.77.0"
+  resolved "https://registry.framer.com/@framer/framer.default/-/@framer/framer.default-1.77.0.tgz#9fd09ec8355feec518fcd4435c43601ebcc2a8b8"
+  integrity sha512-gQb2sNvlVqGTivgh8/6sZP0c9YTncIMEBvFs+XgDRFy4fAEisgNGb+Uqd4Z2+PKAImfDSOFCrvcTnKJDB8Pq4w==
+  dependencies:
+    react-feather "^2.0.3"
+
+"@framer/jordanrobertdobson.text-color-tool@^1.0.0":
+  version "1.0.0"
+  resolved "https://registry.framer.com/@framer/jordanrobertdobson.text-color-tool/-/@framer/jordanrobertdobson.text-color-tool-1.0.0.tgz#a8fb8bb871937fbd6067642825126f85ea4e3969"
+  integrity sha512-0sg7cSr+FUpi+YK6jDSlmh89tLvv6CyQQCKg4mFAVjRfyio9P2jz20W6KYoKZ4W7PT0m6NXgAcIKReHV1xzbLQ==
+
 "@framer/wix.baseui-poc@^1.0.0":
   version "1.0.0"
   resolved "https://registry.framer.com/@framer/wix.baseui-poc/-/@framer/wix.baseui-poc-1.0.0.tgz#6fdd9681821fc188474b1caaa17e29b6652f7168"
@@ -781,6 +793,13 @@ react-dom@^15.0.0:
     loose-envify "^1.1.0"
     object-assign "^4.1.0"
     prop-types "^15.5.10"
+
+react-feather@^2.0.3:
+  version "2.0.8"
+  resolved "https://repo.dev.wixpress.com/artifactory/api/npm/npm-repos/react-feather/-/react-feather-2.0.8.tgz#455baf1470f756a57e2ad6c72545444ce5925781"
+  integrity sha1-RVuvFHD3VqV+KtbHJUVETOWSV4E=
+  dependencies:
+    prop-types "^15.7.2"
 
 react-icons@^3.10.0:
   version "3.10.0"

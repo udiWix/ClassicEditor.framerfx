@@ -11,7 +11,7 @@ import { ToolsBtn } from "./ToolsBtn"
 export function SiteTabs(props) {
     const [active, setActive] = React.useState("pages")
 
-    const activate = v => {
+    const activate = (v) => {
         setActive(v)
         props.callback(v)
         props.updateTab(v)
@@ -59,6 +59,14 @@ export function SiteTabs(props) {
                     callback={activate}
                     activeTab={active}
                 />
+                <IconBtn
+                    icon={"help"}
+                    set={"feather"}
+                    width={props.iconSize}
+                    height={props.iconSize}
+                    callback={activate}
+                    activeTab={active}
+                />
             </Stack>
             <Stack
                 left={0}
@@ -70,14 +78,13 @@ export function SiteTabs(props) {
                 height={94}
             >
                 <IconBtn
-                    icon={"learn"}
+                    icon={"layers"}
                     set={"feather"}
-                    width={20}
-                    height={20}
+                    width={props.iconSize}
+                    height={props.iconSize}
                     callback={activate}
                     activeTab={active}
                 />
-                <ToolsBtn callback={activate} activeTab={active} />
             </Stack>
         </div>
     )

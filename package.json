@@ -15,6 +15,8 @@
 	"author": "Udi Gindi",
 	"dependencies": {
 		"@framer/benjamin.input": "^1.5.0",
+		"@framer/framer.default": "^1.77.0",
+		"@framer/jordanrobertdobson.text-color-tool": "^1.0.0",
 		"@framer/wix.baseui-poc": "^1.0.0",
 		"@material-ui/core": "^4.8.2",
 		"@types/react-syntax-highlighter": "^11.0.4",

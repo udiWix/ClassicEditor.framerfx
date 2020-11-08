@@ -14,7 +14,7 @@ import {
 import PanelGroup from "react-panelgroup"
 import { SiteTabs } from "./SiteTabs"
 import { IDETabs2 } from "./IDETabs2"
-import { IDE } from "./canvas"
+import { IDE, Left_Bar_Main } from "./canvas"
 import { CodeFiles } from "./CodeFiles"
 import { DataView } from "./DataView"
 import { Pages } from "./Pages"
@@ -44,7 +44,7 @@ export function Grid3(props) {
     //     }
     // }, [])
 
-    const setPanel = st => {
+    const setPanel = (st) => {
         if (st === "code") {
             return <CodeFiles style={menu} />
         } else if (st === "database") {
@@ -62,7 +62,7 @@ export function Grid3(props) {
         }
     }
 
-    const applyLayout = ly => {
+    const applyLayout = (ly) => {
         switch (ly) {
             case "full": {
                 return (
@@ -122,9 +122,41 @@ export function Grid3(props) {
                         ]}
                     >
                         <div>
-                            <SiteTabs callback={setActive} {...siteTabs()} />
+                            <SiteTabs
+                                callback={setActive}
+                                {...siteTabs(null)}
+                            />
                         </div>
                         <div style={menu}>{setPanel(active)}</div>
+                        <div
+                            style={{
+                                height: "100%",
+                                width: "100%",
+                                position: "absolute",
+                            }}
+                        >
+                            <Stage
+                                height={"100%"}
+                                width={"100%"}
+                                {...currentPage()}
+                            />
+                        </div>
+                    </PanelGroup>
+                )
+            }
+            case "stage": {
+                return (
+                    <PanelGroup
+                        borderColor="#E4E4E4"
+                        panelColor="white"
+                        panelWidths={[
+                            { size: 60, resize: "fixed" },
+                            { minSize: 200, resize: "dynamic" },
+                        ]}
+                    >
+                        <div>
+                            <Left_Bar_Main style={{ height: "100%" }} />
+                        </div>
                         <div
                             style={{
                                 height: "100%",
@@ -153,7 +185,7 @@ export function Grid3(props) {
 
 Grid3.defaultProps = {
     layout: "bottom",
-    onTabFocusChange: x => {},
+    onTabFocusChange: (x) => {},
     setLayout: () => {},
 }
 const menu: React.CSSProperties = {

@@ -197,7 +197,7 @@ $w.onReady(function () {
 
 const data = Data({
     iconTabsActive: "null",
-    layout: "bottom",
+    layout: "stage",
     page: "Home",
     previousLayout: "bottom",
     selectedComp: "",
@@ -208,6 +208,7 @@ const data = Data({
     propsBtnDisabled: false,
     section: "pages",
     treeFocus: "Home",
+    devMode: false,
     propPop: false,
     IDEtabs: [
         {
@@ -222,6 +223,7 @@ const data = Data({
     contextualMenuP: { x: null, y: null },
     codeString: defaultCode,
     contentOffsetY: 0,
+    corvidDropDown: false,
 })
 
 export function enableCorvid(props): Override {
@@ -268,7 +270,7 @@ export function onUpdateTabs(props): Override {
         onCloseTab(x, y) {
             console.log(x, y)
             let tabs = data.IDEtabs
-            let newTabs = tabs.filter(tab => tab.id !== x)
+            let newTabs = tabs.filter((tab) => tab.id !== x)
             data.IDEtabs = newTabs
             data.activeIndex = y
         },
@@ -276,7 +278,7 @@ export function onUpdateTabs(props): Override {
 }
 
 const remove = (array, element) => {
-    return array.filter(el => el !== element)
+    return array.filter((el) => el !== element)
 }
 
 export function toggleHeaderBtns(props): Override {
@@ -321,7 +323,7 @@ async function addTab(page, single) {
 
 function getTabs(tabs) {
     const tabsArray = []
-    tabs.forEach(function(tab) {
+    tabs.forEach(function (tab) {
         tabsArray.push(tab.tab)
     })
     return tabsArray
@@ -329,7 +331,7 @@ function getTabs(tabs) {
 
 async function removeUnpinned() {
     let tabs = data.IDEtabs
-    let newTabs = tabs.filter(function(tab) {
+    let newTabs = tabs.filter(function (tab) {
         return tab.pinned == true
     })
     data.IDEtabs = newTabs
@@ -386,6 +388,74 @@ function setPage(v) {
         return "Home.js"
     } else {
         return v
+    }
+}
+
+export function corvidDropDown(props): Override {
+    return {
+        visible: data.corvidDropDown,
+    }
+}
+
+export function corvidOnContent(props): Override {
+    return {
+        visible: !data.devMode,
+    }
+}
+export function corvidOffContent(props): Override {
+    return {
+        visible: data.devMode,
+    }
+}
+
+export function turnOn(props): Override {
+    return {
+        onClick() {
+            data.layout = "bottom"
+            data.corvidDropDown = false
+            data.devMode = true
+        },
+    }
+}
+export function turnOff(props): Override {
+    return {
+        onClick() {
+            data.layout = "stage"
+            data.corvidDropDown = false
+            data.devMode = false
+        },
+    }
+}
+export function devModeButton(props): Override {
+    return {
+        onClick() {
+            let v = data.corvidDropDown
+            data.corvidDropDown = !v
+        },
+    }
+}
+export function corvidToggle(props): Override {
+    return {
+        visible: data.devMode,
+        onClick() {
+            let m = data.layout
+            data.layout = m == "stage" ? "bottom" : "stage"
+        },
+    }
+}
+export function modeLine(props): Override {
+    return {
+        left: data.layout == "stage" ? 26 : 84,
+    }
+}
+export function codeLabel(props): Override {
+    return {
+        style: { color: data.layout == "stage" ? "#000000" : "#116DFF" },
+    }
+}
+export function designLabel(props): Override {
+    return {
+        style: { color: data.layout == "stage" ? "#116DFF" : "#000000" },
     }
 }
 

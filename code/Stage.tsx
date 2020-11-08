@@ -63,15 +63,7 @@ export function Stage(props) {
             <Frame width={"100%"} height={"100%"} background={"white"}>
                 {selectPage()}
             </Frame>
-            <div
-                style={{
-                    position: "absolute",
-                    top: "30px",
-                    left: "15px",
-                }}
-            >
-                <Left_Menu />
-            </div>
+
             <div
                 style={{
                     width: "100%",

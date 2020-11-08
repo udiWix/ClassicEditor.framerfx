@@ -1,6 +1,7 @@
 import * as React from "react"
 import { Frame, Stack, ControlType, addPropertyControls } from "framer"
 import { Icon } from "./Icon"
+import { TabIcon } from "./TabIcon"
 import ReactTooltip from "react-tooltip"
 
 // Open Preview (CMD + P)
@@ -35,13 +36,7 @@ export function IconBtn(props) {
             data-place="right"
         >
             <ReactTooltip />
-            <Icon
-                icon={findIcon(props.icon)}
-                color={"#162D3D"}
-                set={props.set}
-                width={props.width}
-                height={props.height}
-            />
+            <TabIcon name={props.icon} />
         </Frame>
     )
 }
@@ -73,8 +68,8 @@ export function findIcon(icon) {
             return "tools"
             break
         }
-        case "learn": {
-            return "book"
+        case "layers": {
+            return "layers"
             break
         }
     }
