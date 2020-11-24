@@ -16,6 +16,7 @@ export const Gallery = createDesignComponent<{parentSize?:{width:number|string,h
 export const Garbage = createDesignComponent<{parentSize?:{width:number|string,height:number|string},width?:number|string,height?:number|string}>(canvas, "id_HR4CWbh0Q", {}, 17,16);
 export const Home = createDesignComponent<{parentSize?:{width:number|string,height:number|string},width?:number|string,height?:number|string}>(canvas, "id_Ixyetc5wu", {}, 1336,706);
 export const IDE = createDesignComponent<{parentSize?:{width:number|string,height:number|string},width?:number|string,height?:number|string}>(canvas, "id_IDjoR3U8v", {}, 440,492);
+export const Layers = createDesignComponent<{parentSize?:{width:number|string,height:number|string},width?:number|string,height?:number|string}>(canvas, "id_R7HojdPlE", {}, 241,651);
 export const Left_Bar_Main = createDesignComponent<{parentSize?:{width:number|string,height:number|string},width?:number|string,height?:number|string}>(canvas, "id_dk2Z1ITdQ", {}, 60,642);
 export const Left_Menu = createDesignComponent<{parentSize?:{width:number|string,height:number|string},width?:number|string,height?:number|string}>(canvas, "id_qrPxQZopj", {}, 48,348);
 export const Menu = createDesignComponent<{parentSize?:{width:number|string,height:number|string},width?:number|string,height?:number|string}>(canvas, "id_N2gghl28K", {}, 279,45);

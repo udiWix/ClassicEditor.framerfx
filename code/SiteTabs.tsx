@@ -75,7 +75,7 @@ export function SiteTabs(props) {
                 padding={0}
                 width={56}
                 gap={-1}
-                height={94}
+                height={56}
             >
                 <IconBtn
                     icon={"layers"}

@@ -14,7 +14,7 @@ import {
 import PanelGroup from "react-panelgroup"
 import { SiteTabs } from "./SiteTabs"
 import { IDETabs2 } from "./IDETabs2"
-import { IDE, Left_Bar_Main } from "./canvas"
+import { IDE, Left_Bar_Main, Layers } from "./canvas"
 import { CodeFiles } from "./CodeFiles"
 import { DataView } from "./DataView"
 import { Pages } from "./Pages"
@@ -59,6 +59,8 @@ export function Grid3(props) {
             return <Tools />
         } else if (st === "learn") {
             return <Learn />
+        } else if (st === "layers") {
+            return <Layers style={{ width: "100%" }} />
         }
     }
 
