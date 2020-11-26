@@ -20,6 +20,7 @@ export const Layers = createDesignComponent<{parentSize?:{width:number|string,he
 export const Left_Bar_Main = createDesignComponent<{parentSize?:{width:number|string,height:number|string},width?:number|string,height?:number|string}>(canvas, "id_dk2Z1ITdQ", {}, 60,642);
 export const Left_Menu = createDesignComponent<{parentSize?:{width:number|string,height:number|string},width?:number|string,height?:number|string}>(canvas, "id_qrPxQZopj", {}, 48,348);
 export const Menu = createDesignComponent<{parentSize?:{width:number|string,height:number|string},width?:number|string,height?:number|string}>(canvas, "id_N2gghl28K", {}, 279,45);
+export const MiniLeftBar = createDesignComponent<{parentSize?:{width:number|string,height:number|string},width?:number|string,height?:number|string}>(canvas, "id_YQUygAJ_8", {}, 60,200);
 export const Mobile = createDesignComponent<{parentSize?:{width:number|string,height:number|string},width?:number|string,height?:number|string}>(canvas, "id_GfdEXPvO2", {}, 93,45);
 export const PopOver = createDesignComponent<{parentSize?:{width:number|string,height:number|string},width?:number|string,height?:number|string}>(canvas, "id_mDQ_Lasm9", {}, 288,173);
 export const PropsEmpty = createDesignComponent<{parentSize?:{width:number|string,height:number|string},width?:number|string,height?:number|string}>(canvas, "id_R3U5uvV3B", {}, 258,180);

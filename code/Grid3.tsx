@@ -1,6 +1,6 @@
 import * as React from "react"
 import { useState, useEffect, useCallback } from "react"
-import { Frame, Scroll, addPropertyControls, ControlType } from "framer"
+import { Frame, Stack, Scroll, addPropertyControls, ControlType } from "framer"
 import { Stage } from "./Stage"
 import {
     currentPage,
@@ -123,11 +123,39 @@ export function Grid3(props) {
                             { minSize: 200, resize: "dynamic" },
                         ]}
                     >
-                        <div>
-                            <SiteTabs
-                                callback={setActive}
-                                {...siteTabs(null)}
-                            />
+                        <div
+                            style={{
+                                display: "flex",
+                                height: "100%",
+                                background: "blue",
+                                alignContent: "stretch",
+                            }}
+                        >
+                            <div>
+                                <div
+                                    style={{
+                                        width: "56px",
+                                        height: "200px",
+                                        background: "red",
+                                    }}
+                                />
+                                <div
+                                    style={{
+                                        width: "56px",
+                                        background: "green",
+                                        height: "auto",
+                                    }}
+                                />
+                                //{" "}
+                                <SiteTabs
+                                    style={{
+                                        width: "56px",
+                                        background: "red",
+                                    }}
+                                    callback={setActive}
+                                    {...siteTabs(null)}
+                                />
+                            </div>
                         </div>
                         <div style={menu}>{setPanel(active)}</div>
                         <div
@@ -194,3 +222,11 @@ const menu: React.CSSProperties = {
     width: "inherit",
 }
 // Learn more: https://framer.com/api/property-controls/
+// <SiteTabs
+//     style={{
+//         width: "56px",
+//         background: "red",
+//     }}
+//     callback={setActive}
+//     {...siteTabs(null)}
+// />
