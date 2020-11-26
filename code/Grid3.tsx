@@ -151,14 +151,8 @@ export function Grid3(props) {
                     <PanelGroup
                         borderColor="#E4E4E4"
                         panelColor="white"
-                        panelWidths={[
-                            { size: 60, resize: "fixed" },
-                            { minSize: 200, resize: "dynamic" },
-                        ]}
+                        panelWidths={[{ minSize: 200, resize: "dynamic" }]}
                     >
-                        <div>
-                            <Left_Bar_Main style={{ height: "100%" }} />
-                        </div>
                         <div
                             style={{
                                 height: "100%",

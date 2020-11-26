@@ -1,10 +1,9 @@
 import * as React from "react"
 import { Frame, addPropertyControls, ControlType, Stack } from "framer"
-import { Home } from "./canvas"
-import { About } from "./canvas"
-import { Gallery, Left_Menu } from "./canvas"
+import { Home, About, Left_Bar_Main, Gallery, Left_Menu } from "./canvas"
 import { IDEcontainer } from "./IDEcontainer"
 import { ideContainer } from "./App"
+
 // Open Preview: Command + P
 // Learn more: https://framer.com/api
 
@@ -60,10 +59,18 @@ export function Stage(props) {
                 flexDirection: "column-reverse",
             }}
         >
-            <Frame width={"100%"} height={"100%"} background={"white"}>
-                {selectPage()}
-            </Frame>
+            <Stack
+                width={"100%"}
+                height={"100%"}
+                direction="horizontal"
+                gap={0}
+            >
+                <Left_Bar_Main style={{ height: "100%" }} />
 
+                <Frame width={"100%"} height={"100%"} background={"white"}>
+                    {selectPage()}
+                </Frame>
+            </Stack>
             <div
                 style={{
                     width: "100%",

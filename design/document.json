@@ -46524,8 +46524,8 @@
                 "rotation" : 0,
                 "top" : 0,
                 "visible" : true,
-                "width" : 1,
-                "widthType" : 1
+                "width" : 60,
+                "widthType" : 0
               },
               {
                 "__class" : "FrameNode",
@@ -50635,8 +50635,8 @@
                 "stackGap" : 0,
                 "top" : 17,
                 "visible" : true,
-                "width" : 1,
-                "widthType" : 1
+                "width" : 60,
+                "widthType" : 0
               }
             ],
             "clip" : false,
