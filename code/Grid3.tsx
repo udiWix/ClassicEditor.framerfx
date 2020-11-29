@@ -14,7 +14,7 @@ import {
 import PanelGroup from "react-panelgroup"
 import { SiteTabs } from "./SiteTabs"
 import { IDETabs2 } from "./IDETabs2"
-import { IDE, Left_Bar_Main, Layers } from "./canvas"
+import { IDE, Left_Bar_Main, Layers, MiniLeftBar } from "./canvas"
 import { CodeFiles } from "./CodeFiles"
 import { DataView } from "./DataView"
 import { Pages } from "./Pages"
@@ -138,15 +138,10 @@ export function Grid3(props) {
                                         height: "200px",
                                         background: "red",
                                     }}
-                                />
-                                <div
-                                    style={{
-                                        width: "56px",
-                                        background: "green",
-                                        height: "auto",
-                                    }}
-                                />
-                                //{" "}
+                                >
+                                    <MiniLeftBar />
+                                </div>
+
                                 <SiteTabs
                                     style={{
                                         width: "56px",
