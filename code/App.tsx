@@ -210,6 +210,7 @@ const data = Data({
     treeFocus: "Home",
     devMode: false,
     propPop: false,
+    addPanel: false,
     IDEtabs: [
         {
             tab: "Home",
@@ -652,5 +653,23 @@ export function updateCode(page) {
         data.codeString = defaultCode
     } else if (section === "code") {
         data.codeString = defaultBackend
+    }
+}
+
+export function addPanel(): Override {
+    let panel = data.addPanel ? 0 : -680
+
+    return {
+        left: panel,
+    }
+}
+
+export function addBtn(): Override {
+    let panel = data.addPanel
+
+    return {
+        callback() {
+            data.addPanel = !panel
+        },
     }
 }

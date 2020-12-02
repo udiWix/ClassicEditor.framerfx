@@ -10,11 +10,14 @@ import {
     syntax,
     IDEtabs,
     siteTabs,
+    addPanel,
+    addBtn,
 } from "./App"
 import PanelGroup from "react-panelgroup"
 import { SiteTabs } from "./SiteTabs"
 import { IDETabs2 } from "./IDETabs2"
 import { IDE, Left_Bar_Main, Layers } from "./canvas"
+import { AddPanel_ } from "./AddPanel_"
 import { CodeFiles } from "./CodeFiles"
 import { DataView } from "./DataView"
 import { Pages } from "./Pages"
@@ -22,6 +25,7 @@ import { Tools } from "./Tools"
 import { Syntax } from "./Syntax"
 import { Search } from "./Search"
 import { Learn } from "./Learn"
+import { ToolBar } from "./ToolBar"
 import { PropertiesPanelContainer } from "./PropertiesPanelContainer"
 
 export function Grid3(props) {
@@ -148,31 +152,45 @@ export function Grid3(props) {
             }
             case "stage": {
                 return (
-                    <PanelGroup
-                        borderColor="#E4E4E4"
-                        panelColor="white"
-                        panelWidths={[
-                            { size: 60, resize: "fixed" },
-                            { minSize: 200, resize: "dynamic" },
-                        ]}
+                    <div
+                        style={{
+                            position: "relative",
+                            width: "100%",
+                            height: "100%",
+                        }}
                     >
-                        <div>
-                            <Left_Bar_Main style={{ height: "100%" }} />
+                        <div
+                            style={{
+                                width: "60px",
+                                position: "absolute",
+                                top: 0,
+                                left: 0,
+                                height: "100%",
+                            }}
+                        >
+                            <ToolBar style={{ height: "100%" }} {...addBtn()} />
                         </div>
                         <div
                             style={{
+                                marginLeft: "60px",
+                                top: 0,
                                 height: "100%",
-                                width: "100%",
-                                position: "absolute",
                             }}
                         >
-                            <Stage
-                                height={"100%"}
-                                width={"100%"}
-                                {...currentPage()}
-                            />
+                            <Stage {...currentPage()} />
                         </div>
-                    </PanelGroup>
+                        <div
+                            style={{
+                                position: "absolute",
+                                width: 700,
+                                top: 0,
+                                left: 60,
+                                height: "100%",
+                            }}
+                        >
+                            <AddPanel_ {...addPanel()} />
+                        </div>
+                    </div>
                 )
             }
         }
