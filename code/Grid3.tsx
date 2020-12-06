@@ -10,6 +10,8 @@ import {
     syntax,
     IDEtabs,
     siteTabs,
+    addPanel,
+    addBtn,
 } from "./App"
 import PanelGroup from "react-panelgroup"
 import { SiteTabs } from "./SiteTabs"
@@ -23,6 +25,8 @@ import { Syntax } from "./Syntax"
 import { Search } from "./Search"
 import { Learn } from "./Learn"
 import { PropertiesPanelContainer } from "./PropertiesPanelContainer"
+import { ToolBar } from "./ToolBar"
+import { AddPanel_ } from "./AddPanel_"
 
 export function Grid3(props) {
     const [active, setActive] = React.useState("pages")
@@ -148,25 +152,19 @@ export function Grid3(props) {
             }
             case "stage": {
                 return (
-                    <PanelGroup
-                        borderColor="#E4E4E4"
-                        panelColor="white"
-                        panelWidths={[{ minSize: 200, resize: "dynamic" }]}
+                    <div
+                        style={{
+                            height: "100%",
+                            width: "100%",
+                            position: "absolute",
+                        }}
                     >
-                        <div
-                            style={{
-                                height: "100%",
-                                width: "100%",
-                                position: "absolute",
-                            }}
-                        >
-                            <Stage
-                                height={"100%"}
-                                width={"100%"}
-                                {...currentPage()}
-                            />
-                        </div>
-                    </PanelGroup>
+                        <Stage
+                            height={"100%"}
+                            width={"100%"}
+                            {...currentPage()}
+                        />
+                    </div>
                 )
             }
         }

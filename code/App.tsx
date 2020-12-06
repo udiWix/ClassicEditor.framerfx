@@ -224,6 +224,7 @@ const data = Data({
     codeString: defaultCode,
     contentOffsetY: 0,
     corvidDropDown: false,
+    addPanel: false,
 })
 
 export function enableCorvid(props): Override {
@@ -652,5 +653,24 @@ export function updateCode(page) {
         data.codeString = defaultCode
     } else if (section === "code") {
         data.codeString = defaultBackend
+    }
+}
+
+export function addPanel(): Override {
+    let panel = data.addPanel ? 0 : -680
+
+    return {
+        left: panel,
+    }
+}
+
+export function addBtn(): Override {
+    let panel = data.addPanel
+
+    return {
+        callback() {
+            data.addPanel = !panel
+            console.log("Click")
+        },
     }
 }

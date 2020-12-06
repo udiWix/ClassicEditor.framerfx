@@ -3,6 +3,7 @@ import { createDesignComponent, CanvasStore } from "framer"
 const canvas = CanvasStore.shared(); // CANVAS_DATA;
 export const About = createDesignComponent<{parentSize?:{width:number|string,height:number|string},width?:number|string,height?:number|string}>(canvas, "id_MgcH2yo0F", {}, 1336,706);
 export const AddBtn = createDesignComponent<{parentSize?:{width:number|string,height:number|string},width?:number|string,height?:number|string}>(canvas, "id_ZPylIWeAS", {}, 15,15);
+export const AddPanel = createDesignComponent<{parentSize?:{width:number|string,height:number|string},width?:number|string,height?:number|string}>(canvas, "id_bxbc3eyPW", {}, 680,874);
 export const Component = createDesignComponent<{parentSize?:{width:number|string,height:number|string},width?:number|string,height?:number|string}>(canvas, "id_ZMwAG4fyK", {}, 450,501);
 export const CorvidMenu = createDesignComponent<{parentSize?:{width:number|string,height:number|string},width?:number|string,height?:number|string}>(canvas, "id_vfUoOiQh2", {}, 379,263);
 export const DevMode = createDesignComponent<{parentSize?:{width:number|string,height:number|string},width?:number|string,height?:number|string}>(canvas, "id_qrypV2FJK", {}, 95,44);
