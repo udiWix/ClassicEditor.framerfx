@@ -14,7 +14,7 @@ import {
 import PanelGroup from "react-panelgroup"
 import { SiteTabs } from "./SiteTabs"
 import { IDETabs2 } from "./IDETabs2"
-import { IDE, Left_Bar_Main, Layers, MiniLeftBar } from "./canvas"
+import { IDE, Left_Bar_Main, Layers, LayersTab } from "./canvas"
 import { CodeFiles } from "./CodeFiles"
 import { DataView } from "./DataView"
 import { Pages } from "./Pages"
@@ -123,15 +123,27 @@ export function Grid3(props) {
                             { minSize: 200, resize: "dynamic" },
                         ]}
                     >
-                        <div
-                            style={{
-                                display: "flex",
-                                height: "100%",
-                                background: "blue",
-                                alignContent: "stretch",
-                            }}
-                        >
-                            <div>
+                        <div style={{ width: 60, height: "100%" }}>
+                            <PanelGroup
+                                direction="column"
+                                borderColor="#D4E3ED"
+                                panelWidths={[
+                                    {
+                                        size: 300,
+                                        resize: "dynamic",
+                                    },
+                                    { resize: "stretch" },
+                                ]}
+                            >
+                                <div style={{ height: "10px" }}>
+                                    <SiteTabs
+                                        style={{
+                                            width: 56,
+                                        }}
+                                        callback={setActive}
+                                        {...siteTabs(null)}
+                                    />
+                                </div>
                                 <div
                                     style={{
                                         width: "56px",
@@ -139,17 +151,19 @@ export function Grid3(props) {
                                         background: "red",
                                     }}
                                 >
-                                    <MiniLeftBar />
+                                    <Left_Bar_Main />
                                 </div>
-
-                                <SiteTabs
-                                    style={{
-                                        width: "56px",
-                                        background: "red",
-                                    }}
-                                    callback={setActive}
-                                    {...siteTabs(null)}
-                                />
+                            </PanelGroup>
+                            <div
+                                style={{
+                                    position: "absolute",
+                                    bottom: 0,
+                                    left: 0,
+                                    width: 60,
+                                    height: 60,
+                                }}
+                            >
+                                <LayersTab />
                             </div>
                         </div>
                         <div style={menu}>{setPanel(active)}</div>
@@ -181,6 +195,17 @@ export function Grid3(props) {
                     >
                         <div>
                             <Left_Bar_Main style={{ height: "100%" }} />
+                            <div
+                                style={{
+                                    position: "absolute",
+                                    bottom: 0,
+                                    left: 0,
+                                    width: 60,
+                                    height: 60,
+                                }}
+                            >
+                                <LayersTab />
+                            </div>
                         </div>
                         <div
                             style={{
@@ -217,6 +242,24 @@ const menu: React.CSSProperties = {
     width: "inherit",
 }
 // Learn more: https://framer.com/api/property-controls/
+// <SiteTabs
+//     style={{
+//         width: "56px",
+//         background: "red",
+//     }}
+//     callback={setActive}
+//     {...siteTabs(null)}
+// />
+// <div
+//     style={{
+//         width: "56px",
+//         height: "200px",
+//         background: "red",
+//     }}
+// >
+//     <MiniLeftBar />
+// </div>
+
 // <SiteTabs
 //     style={{
 //         width: "56px",

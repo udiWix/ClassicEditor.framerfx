@@ -68,24 +68,6 @@ export function SiteTabs(props) {
                     activeTab={active}
                 />
             </Stack>
-            <Stack
-                left={0}
-                bottom={0}
-                direction="vertical"
-                padding={0}
-                width={56}
-                gap={-1}
-                height={56}
-            >
-                <IconBtn
-                    icon={"layers"}
-                    set={"feather"}
-                    width={props.iconSize}
-                    height={props.iconSize}
-                    callback={activate}
-                    activeTab={active}
-                />
-            </Stack>
         </div>
     )
 }
