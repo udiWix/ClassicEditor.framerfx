@@ -10,6 +10,8 @@ import {
     syntax,
     IDEtabs,
     siteTabs,
+    addBtn,
+    addPanel,
 } from "./App"
 import PanelGroup from "react-panelgroup"
 import { SiteTabs } from "./SiteTabs"
@@ -22,6 +24,8 @@ import { Tools } from "./Tools"
 import { Syntax } from "./Syntax"
 import { Search } from "./Search"
 import { Learn } from "./Learn"
+import { AddBtn_ } from "./AddBtn_"
+import { AddPanel_ } from "./AddPanel_"
 import { PropertiesPanelContainer } from "./PropertiesPanelContainer"
 
 export function Grid3(props) {
@@ -113,114 +117,164 @@ export function Grid3(props) {
             }
             case "bottom": {
                 return (
-                    <PanelGroup
-                        borderColor="#E4E4E4"
-                        panelColor="white"
-                        panelWidths={[
-                            { size: 56, resize: "fixed" },
-                            { size: 220, minSize: 100, resize: "dynamic" },
-                            { size: 500, minSize: 200, resize: "dynamic" },
-                            { minSize: 200, resize: "dynamic" },
-                        ]}
+                    <div
+                        style={{
+                            position: "absolute",
+                            top: 0,
+                            left: 0,
+                            width: "100%",
+                            height: "100%",
+                        }}
                     >
-                        <div style={{ width: 60, height: "100%" }}>
-                            <PanelGroup
-                                direction="column"
-                                borderColor="#D4E3ED"
-                                panelWidths={[
-                                    {
-                                        size: 300,
-                                        resize: "dynamic",
-                                    },
-                                    { resize: "stretch" },
-                                ]}
-                            >
-                                <div style={{ height: "10px" }}>
-                                    <SiteTabs
+                        <PanelGroup
+                            borderColor="#E4E4E4"
+                            panelColor="white"
+                            panelWidths={[
+                                { size: 56, resize: "fixed" },
+                                { size: 220, minSize: 100, resize: "dynamic" },
+                                { size: 500, minSize: 200, resize: "dynamic" },
+                                { minSize: 200, resize: "dynamic" },
+                            ]}
+                        >
+                            <div style={{ width: 60, height: "100%" }}>
+                                <PanelGroup
+                                    direction="column"
+                                    borderColor="#D4E3ED"
+                                    panelWidths={[
+                                        {
+                                            size: 300,
+                                            resize: "dynamic",
+                                        },
+                                        { resize: "stretch" },
+                                    ]}
+                                >
+                                    <div style={{ height: "10px" }}>
+                                        <SiteTabs
+                                            style={{
+                                                width: 56,
+                                            }}
+                                            callback={setActive}
+                                            {...siteTabs(null)}
+                                        />
+                                    </div>
+                                    <div
                                         style={{
-                                            width: 56,
+                                            width: "56px",
+                                            height: "200px",
+                                            background: "red",
                                         }}
-                                        callback={setActive}
-                                        {...siteTabs(null)}
-                                    />
-                                </div>
+                                    >
+                                        <Left_Bar_Main />
+                                        <AddBtn_ {...addBtn()} />
+                                    </div>
+                                </PanelGroup>
                                 <div
                                     style={{
-                                        width: "56px",
-                                        height: "200px",
-                                        background: "red",
+                                        position: "absolute",
+                                        bottom: 0,
+                                        left: 0,
+                                        width: 60,
+                                        height: 60,
                                     }}
                                 >
-                                    <Left_Bar_Main />
+                                    <LayersTab />
                                 </div>
-                            </PanelGroup>
+                            </div>
+                            <div style={menu}>{setPanel(active)}</div>
                             <div
                                 style={{
+                                    height: "100%",
+                                    width: "100%",
                                     position: "absolute",
-                                    bottom: 0,
-                                    left: 0,
-                                    width: 60,
-                                    height: 60,
                                 }}
                             >
-                                <LayersTab />
+                                <Stage
+                                    height={"100%"}
+                                    width={"100%"}
+                                    {...currentPage()}
+                                />
                             </div>
-                        </div>
-                        <div style={menu}>{setPanel(active)}</div>
+                        </PanelGroup>
                         <div
                             style={{
-                                height: "100%",
-                                width: "100%",
                                 position: "absolute",
+                                top: 0,
+                                left: 56,
+                                width: 700,
+                                height: "100%",
                             }}
                         >
-                            <Stage
-                                height={"100%"}
-                                width={"100%"}
-                                {...currentPage()}
+                            <AddPanel_
+                                style={{ height: "100%" }}
+                                {...addPanel()}
                             />
                         </div>
-                    </PanelGroup>
+                    </div>
                 )
             }
             case "stage": {
                 return (
-                    <PanelGroup
-                        borderColor="#E4E4E4"
-                        panelColor="white"
-                        panelWidths={[
-                            { size: 60, resize: "fixed" },
-                            { minSize: 200, resize: "dynamic" },
-                        ]}
+                    <div
+                        style={{
+                            position: "absolute",
+                            top: 0,
+                            left: 0,
+                            width: "100%",
+                            height: "100%",
+                        }}
                     >
-                        <div>
-                            <Left_Bar_Main style={{ height: "100%" }} />
+                        <PanelGroup
+                            borderColor="#E4E4E4"
+                            panelColor="white"
+                            panelWidths={[
+                                { size: 60, resize: "fixed" },
+                                { minSize: 200, resize: "dynamic" },
+                            ]}
+                        >
+                            <div>
+                                <Left_Bar_Main style={{ height: "100%" }} />
+                                <AddBtn_ {...addBtn()} />
+                                <div
+                                    style={{
+                                        position: "absolute",
+                                        bottom: 0,
+                                        left: 0,
+                                        width: 60,
+                                        height: 60,
+                                    }}
+                                >
+                                    <LayersTab />
+                                </div>
+                            </div>
                             <div
                                 style={{
+                                    height: "100%",
+                                    width: "100%",
                                     position: "absolute",
-                                    bottom: 0,
-                                    left: 0,
-                                    width: 60,
-                                    height: 60,
                                 }}
                             >
-                                <LayersTab />
+                                <Stage
+                                    height={"100%"}
+                                    width={"100%"}
+                                    {...currentPage()}
+                                />
                             </div>
-                        </div>
+                        </PanelGroup>
                         <div
                             style={{
-                                height: "100%",
-                                width: "100%",
                                 position: "absolute",
+                                top: 0,
+                                left: 60,
+                                width: 700,
+                                height: "100%",
                             }}
                         >
-                            <Stage
-                                height={"100%"}
-                                width={"100%"}
-                                {...currentPage()}
+                            <AddPanel_
+                                style={{ height: "100%" }}
+                                {...addPanel()}
                             />
                         </div>
-                    </PanelGroup>
+                    </div>
                 )
             }
         }

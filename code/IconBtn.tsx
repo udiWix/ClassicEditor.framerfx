@@ -57,7 +57,7 @@ export function findIcon(icon) {
         }
 
         case "tools": {
-            return "list"
+            return "tools"
             break
         }
         case "search": {

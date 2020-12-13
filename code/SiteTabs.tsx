@@ -60,6 +60,14 @@ export function SiteTabs(props) {
                     activeTab={active}
                 />
                 <IconBtn
+                    icon={"tools"}
+                    set={"feather"}
+                    width={props.iconSize}
+                    height={props.iconSize}
+                    callback={activate}
+                    activeTab={active}
+                />
+                <IconBtn
                     icon={"help"}
                     set={"feather"}
                     width={props.iconSize}
