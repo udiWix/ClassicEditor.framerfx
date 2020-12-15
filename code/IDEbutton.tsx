@@ -40,6 +40,6 @@ export function IDEbutton(props) {
 
 IDEbutton.defaultProps = {
     setLayout: () => {},
-    layout: "none",
+    canvasLayout: "none",
     full: false,
 }

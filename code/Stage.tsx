@@ -73,7 +73,7 @@ export function Stage(props) {
                 }}
             >
                 <div />
-                <IDEcontainer height={400} {...ideContainer(null)} />
+                <IDEcontainer height={400} />
             </div>
         </div>
     )

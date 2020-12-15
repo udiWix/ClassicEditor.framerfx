@@ -225,13 +225,14 @@ const data = Data({
     contentOffsetY: 0,
     corvidDropDown: false,
     addPanel: false,
+    toolbarHeight: 290,
 })
 
 export function enableCorvid(props): Override {
     return {
-        layout: data.layout,
+        canvasLayout: data.layout,
         IDETabs: data.IDEtabs,
-
+        toolbarHeight: data.toolbarHeight,
         updateTabs(array, element) {
             data.IDEtabs = remove(array, element)
         },
@@ -244,6 +245,11 @@ export function enableCorvid(props): Override {
                 data.layout = "stage"
             }
         },
+        update(panel) {
+            let h = panel[2].size
+            console.log(h)
+            // data.toolbarHeight = h
+        },
     }
 }
 
@@ -253,7 +259,6 @@ export function onUpdateTabs(props): Override {
         activeIndex: data.activeIndex,
         tab: data.section,
         onTabClick(x, y, z) {
-            console.log(x)
             data.activeIndex = y
 
             let page = data.IDEtabs[y].tab
@@ -269,7 +274,6 @@ export function onUpdateTabs(props): Override {
             }
         },
         onCloseTab(x, y) {
-            console.log(x, y)
             let tabs = data.IDEtabs
             let newTabs = tabs.filter((tab) => tab.id !== x)
             data.IDEtabs = newTabs
@@ -462,8 +466,9 @@ export function designLabel(props): Override {
 
 export function toggleFullIDE(props): Override {
     return {
-        layout: data.previousLayout,
+        canvasLayout: data.previousLayout,
         full: data.layout === "bottom" ? false : true,
+
         setLayout(ly) {
             data.layout = ly
             data.propsBtnDisabled =
@@ -474,7 +479,8 @@ export function toggleFullIDE(props): Override {
 
 export function IDEswitch(props): Override {
     return {
-        visible: data.layout === "bottom" ? true : false,
+        visible:
+            data.layout === "bottom" ? (data.addPanel ? false : true) : false,
     }
 }
 export function IDEheader(props): Override {
@@ -568,16 +574,11 @@ export function compClick(props): Override {
     }
 }
 
-export function ideContainer(props): Override {
-    return {}
-}
-
 export function popOver(props): Override {
     return {
         isVisible: data.propPop,
         callback() {
             data.propPop = false
-            console.log("callback")
         },
     }
 }
@@ -617,8 +618,6 @@ export function onEditorClick(props): Override {
             let x = e.clientX // Get the horizontal coordinate
             let y = e.clientY // Get the vertical coordinate
 
-            console.log(x + " " + y)
-
             data.contextualMenuP.x = x
             data.contextualMenuP.y = y
 
@@ -627,7 +626,6 @@ export function onEditorClick(props): Override {
         },
         onClick() {
             data.contextualMenu = false
-            console.log("click")
         },
     }
 }
@@ -662,7 +660,6 @@ export function addBtn(): Override {
     return {
         callback() {
             data.addPanel = !panel
-            console.log("click")
         },
     }
 }
@@ -672,5 +669,8 @@ export function addPanel(): Override {
 
     return {
         left: panel,
+        callBack() {
+            data.addPanel = false
+        },
     }
 }

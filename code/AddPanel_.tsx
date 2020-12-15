@@ -16,10 +16,17 @@ export function AddPanel_(props) {
         >
             <Frame
                 animate={{ left: props.left }}
-                transition={{ ease: "easeIn" }}
+                transition={{ ease: "easeOut", duration: 0.3 }}
                 height={"100%"}
             >
                 <AddPanel style={{ height: "100%" }} />
+                <Frame
+                    left={630}
+                    width={50}
+                    height={60}
+                    onClick={props.callBack}
+                    background={"transparent"}
+                />
             </Frame>
         </div>
     )
@@ -27,4 +34,5 @@ export function AddPanel_(props) {
 
 AddPanel_.defaultProps = {
     left: -680,
+    callBack: () => {},
 }

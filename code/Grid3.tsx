@@ -47,6 +47,7 @@ export function Grid3(props) {
     //         document.removeEventListener("keydown", escFunction, false)
     //     }
     // }, [])
+    let toolbar = props.toolbarHeight
 
     const setPanel = (st) => {
         if (st === "code") {
@@ -142,11 +143,16 @@ export function Grid3(props) {
                                     borderColor="#D4E3ED"
                                     panelWidths={[
                                         {
-                                            size: 300,
+                                            size: props.toolbarHeight,
                                             resize: "dynamic",
+                                            minSize: 290,
                                         },
+                                        { size: 10, resize: "fixed" },
+
                                         { resize: "stretch" },
                                     ]}
+                                    onResizeEnd={props.resizeEnd}
+                                    onUpdate={props.update}
                                 >
                                     <div style={{ height: "10px" }}>
                                         <SiteTabs
@@ -156,6 +162,43 @@ export function Grid3(props) {
                                             callback={setActive}
                                             {...siteTabs(null)}
                                         />
+                                    </div>
+                                    <div
+                                        style={{
+                                            width: 56,
+                                            height: 10,
+                                            background: "white",
+                                        }}
+                                    >
+                                        <div
+                                            style={{
+                                                position: "absolute",
+                                                top: -5,
+                                                left: 24,
+                                                width: 6,
+                                                height: 6,
+                                            }}
+                                        >
+                                            <svg
+                                                width="8px"
+                                                height="4px"
+                                                viewBox="0 0 8 4"
+                                            >
+                                                <g
+                                                    id="Page-1"
+                                                    stroke="none"
+                                                    stroke-width="1"
+                                                    fill="none"
+                                                    fill-rule="evenodd"
+                                                >
+                                                    <path
+                                                        d="M1,0 L1,4 M4,0 L4,4 M7,0 L7,4"
+                                                        id="Combined-Shape"
+                                                        stroke="#7A92A5"
+                                                    ></path>
+                                                </g>
+                                            </svg>
+                                        </div>
                                     </div>
                                     <div
                                         style={{
@@ -282,15 +325,18 @@ export function Grid3(props) {
 
     return (
         <Frame width={"100%"} height={"100%"} background={"#F4F4F4"}>
-            {applyLayout(props.layout)}
+            {applyLayout(props.canvasLayout)}
         </Frame>
     )
 }
 
 Grid3.defaultProps = {
-    layout: "bottom",
+    canvasLayout: "bottom",
     onTabFocusChange: (x) => {},
     setLayout: () => {},
+    resizeEnd: () => {},
+    toolbarHeight: 290,
+    update: () => {},
 }
 const menu: React.CSSProperties = {
     width: "inherit",
