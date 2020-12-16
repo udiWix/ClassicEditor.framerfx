@@ -470,6 +470,7 @@ export function toggleFullIDE(props): Override {
         full: data.layout === "bottom" ? false : true,
 
         setLayout(ly) {
+            console.log(ly)
             data.layout = ly
             data.propsBtnDisabled =
                 ly === "bottom" && data.activeIndex === 0 ? false : true
