@@ -34,7 +34,7 @@ export function EditorTools(props) {
                     height: "100%",
                 }}
             >
-                <AddPanel_ {...addPanel()} />
+                <AddPanel_ {...addPanel()} style={{ height: "100%" }} />
             </div>
         </div>
     )

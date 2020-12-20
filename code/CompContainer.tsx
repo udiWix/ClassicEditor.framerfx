@@ -9,7 +9,7 @@ export function CompContainer(props) {
     const compStyle = { position: "relative" }
     const [active, setActive] = React.useState()
 
-    const activate = v => {
+    const activate = (v) => {
         setActive(v)
         console.log(v)
     }

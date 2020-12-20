@@ -8,7 +8,7 @@ export function IDEbutton(props) {
     let lastLayout
 
     const onTap = () => {
-        let ly = full ? props.layout : "full"
+        let ly = full ? props.canvasLayout : "full"
         props.setLayout(ly)
         setFull(!full)
     }
@@ -40,6 +40,6 @@ export function IDEbutton(props) {
 
 IDEbutton.defaultProps = {
     setLayout: () => {},
-    layout: "none",
+    canvasLayout: "none",
     full: false,
 }

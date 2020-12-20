@@ -172,13 +172,13 @@ export function Grid3(props) {
 
     return (
         <Frame width={"100%"} height={"100%"} background={"#F4F4F4"}>
-            {applyLayout(props.layout)}
+            {applyLayout(props.canvasLayout)}
         </Frame>
     )
 }
 
 Grid3.defaultProps = {
-    layout: "bottom",
+    canvasLayout: "bottom",
     onTabFocusChange: (x) => {},
     setLayout: () => {},
 }

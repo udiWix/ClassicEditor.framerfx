@@ -229,7 +229,7 @@ const data = Data({
 
 export function enableCorvid(props): Override {
     return {
-        layout: data.layout,
+        canvasLayout: data.layout,
         IDETabs: data.IDEtabs,
 
         updateTabs(array, element) {
@@ -441,6 +441,7 @@ export function corvidToggle(props): Override {
         onClick() {
             let m = data.layout
             data.layout = m == "stage" ? "bottom" : "stage"
+            data.addPanel = false
         },
     }
 }
@@ -462,13 +463,19 @@ export function designLabel(props): Override {
 
 export function toggleFullIDE(props): Override {
     return {
-        layout: data.previousLayout,
+        canvasLayout: data.previousLayout,
         full: data.layout === "bottom" ? false : true,
         setLayout(ly) {
             data.layout = ly
             data.propsBtnDisabled =
                 ly === "bottom" && data.activeIndex === 0 ? false : true
         },
+    }
+}
+
+export function hideIde(props): Override {
+    return {
+        visible: true,
     }
 }
 
@@ -568,10 +575,6 @@ export function compClick(props): Override {
     }
 }
 
-export function ideContainer(props): Override {
-    return {}
-}
-
 export function popOver(props): Override {
     return {
         isVisible: data.propPop,
@@ -661,16 +664,22 @@ export function addPanel(): Override {
 
     return {
         left: panel,
+        callback() {
+            data.addPanel = false
+        },
     }
 }
 
 export function addBtn(): Override {
     let panel = data.addPanel
+    let layout = data.layout
 
     return {
         callback() {
             data.addPanel = !panel
-            console.log("Click")
+            // data.layout = panel
+            //     ? layout
+            //     : (layout = "bottom" ? "stage" : "bottom")
         },
     }
 }

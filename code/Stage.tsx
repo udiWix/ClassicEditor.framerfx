@@ -2,7 +2,6 @@ import * as React from "react"
 import { Frame, addPropertyControls, ControlType, Stack } from "framer"
 import { Home, About, Left_Bar_Main, Gallery, Left_Menu } from "./canvas"
 import { IDEcontainer } from "./IDEcontainer"
-import { ideContainer } from "./App"
 import { EditorTools } from "./EditorTools"
 
 // Open Preview: Command + P
@@ -65,20 +64,21 @@ export function Stage(props) {
                         top: 0,
                         left: 0,
                         height: "100%",
+                        width: 800,
                     }}
                 >
                     <EditorTools style={{ height: "100%" }} />
                 </div>
-                <div
-                    style={{
-                        position: "absolute",
-                        height: 400,
-                        bottom: 0,
-                        width: "100%",
-                    }}
+                <Frame
+                    position={"absolute"}
+                    height={400}
+                    bottom={0}
+                    width={"100%"}
+                    background={"transparent"}
+                    visible={props.visible}
                 >
-                    <IDEcontainer {...ideContainer(null)} />
-                </div>
+                    <IDEcontainer />
+                </Frame>
             </div>
         </div>
     )
@@ -86,6 +86,7 @@ export function Stage(props) {
 
 Stage.defaultProps = {
     page: "Home.js",
+    visible: true,
 }
 
 //
