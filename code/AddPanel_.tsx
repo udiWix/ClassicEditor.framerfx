@@ -12,6 +12,7 @@ export function AddPanel_(props) {
                 height: "100%",
                 width: "700px",
                 overflow: "hidden",
+                pointerEvents: "none",
             }}
         >
             <Frame

@@ -10,7 +10,6 @@ export function EditorTools(props) {
         <div
             style={{
                 position: "relative",
-                width: "100%",
                 height: "100%",
             }}
         >
@@ -28,7 +27,6 @@ export function EditorTools(props) {
             <div
                 style={{
                     position: "absolute",
-                    width: 700,
                     top: 0,
                     left: 60,
                     height: "100%",

@@ -150,6 +150,38 @@ export function Grid3(props) {
                     </PanelGroup>
                 )
             }
+            case "collapse": {
+                return (
+                    <PanelGroup
+                        borderColor="#E4E4E4"
+                        panelColor="white"
+                        panelWidths={[
+                            { size: 56, resize: "fixed" },
+                            { minSize: 200, resize: "dynamic" },
+                        ]}
+                    >
+                        <div>
+                            <SiteTabs
+                                callback={setActive}
+                                {...siteTabs(null)}
+                            />
+                        </div>
+                        <div
+                            style={{
+                                height: "100%",
+                                width: "100%",
+                                position: "absolute",
+                            }}
+                        >
+                            <Stage
+                                height={"100%"}
+                                width={"100%"}
+                                {...currentPage()}
+                            />
+                        </div>
+                    </PanelGroup>
+                )
+            }
             case "stage": {
                 return (
                     <div
@@ -178,7 +210,7 @@ export function Grid3(props) {
 }
 
 Grid3.defaultProps = {
-    canvasLayout: "bottom",
+    canvasLayout: "collapse",
     onTabFocusChange: (x) => {},
     setLayout: () => {},
 }

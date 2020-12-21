@@ -366,7 +366,12 @@ export function pageSwitch(props): Override {
 export function siteTabs(): Override {
     return {
         updateTab(t) {
+            if (data.section === t) {
+                let layout = data.layout
+                data.layout = layout == "bottom" ? "collapse" : "bottom"
+            }
             data.section = t
+
             if (t != "pages") {
                 data.propsBtn = false
                 data.propsBtnDisabled = true
@@ -481,7 +486,10 @@ export function hideIde(props): Override {
 
 export function IDEswitch(props): Override {
     return {
-        visible: data.layout === "bottom" ? true : false,
+        visible:
+            data.layout === "bottom" || data.layout === "collapse"
+                ? true
+                : false,
     }
 }
 export function IDEheader(props): Override {
@@ -681,5 +689,11 @@ export function addBtn(): Override {
             //     ? layout
             //     : (layout = "bottom" ? "stage" : "bottom")
         },
+    }
+}
+
+export function layersTab(props): Override {
+    return {
+        visible: data.layout === "stage" ? true : false,
     }
 }

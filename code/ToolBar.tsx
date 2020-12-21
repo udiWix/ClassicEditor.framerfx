@@ -1,6 +1,7 @@
 import * as React from "react"
 import { Frame } from "framer"
-import { Left_Bar_Main } from "./canvas"
+import { Left_Bar_Main, Layers_tab } from "./canvas"
+import { layersTab } from "./App"
 // Learn more: https://framer.com/api
 
 export function ToolBar(props) {
@@ -32,6 +33,9 @@ export function ToolBar(props) {
                     </svg>
                 </div>
             </Frame>
+            <div style={{ position: "absolute", left: 0, bottom: 60 }}>
+                <Layers_tab {...layersTab()} />
+            </div>
         </div>
     )
 }

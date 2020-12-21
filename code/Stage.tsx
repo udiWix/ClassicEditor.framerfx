@@ -64,7 +64,7 @@ export function Stage(props) {
                         top: 0,
                         left: 0,
                         height: "100%",
-                        width: 800,
+                        backgroundColor: "red",
                     }}
                 >
                     <EditorTools style={{ height: "100%" }} />
@@ -85,7 +85,7 @@ export function Stage(props) {
 }
 
 Stage.defaultProps = {
-    page: "Home.js",
+    page: "Home",
     visible: true,
 }
 

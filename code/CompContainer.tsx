@@ -14,13 +14,16 @@ export function CompContainer(props) {
         console.log(v)
     }
 
+    const onclick = () => {
+        console.log("click")
+    }
     return (
         <Stack
             height={"100%"}
             width={"100%"}
-            background={"transparent"}
             paddingLeft={100}
             alignment="start"
+            onClick={onclick}
         >
             <ContainerBg callback={activate} {...compClick(null)} />
             {React.Children.map(
@@ -89,9 +92,9 @@ export function CompRaper(props) {
     const isMaster = props.id === "#Menu1" ? true : false
 
     const onclick = () => {
+        console.log("click")
         props.callback(props.id)
         props.setComp(props.id)
-        console.log(props.id)
     }
 
     return (
@@ -200,6 +203,7 @@ export function ContainerBg(props) {
     const onClick = () => {
         props.setComp("")
         props.callback("")
+        console.log("Bgclick")
     }
     return <div style={bgStyle} onClick={onClick} />
 }
