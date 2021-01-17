@@ -9,7 +9,7 @@ export function CompContainer(props) {
     const compStyle = { position: "relative" }
     const [active, setActive] = React.useState()
 
-    const activate = v => {
+    const activate = (v) => {
         setActive(v)
         console.log(v)
     }
@@ -36,6 +36,7 @@ export function CompContainer(props) {
                         top={0}
                         drag
                         dragMomentum={false}
+                        left={100}
                     >
                         <CompRaper
                             label={props._label[i]}
